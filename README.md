@@ -1,11 +1,11 @@
-# 🤖 Portfolio - Yannis Loum
+#  Portfolio - Yannis Loumouamou
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://yannisloum63.github.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> Portfolio personnel d'élève ingénieur en Robotique et Intelligence Artificielle
+> Portfolio personnel 
 
-## 🎯 À propos
+## À propos
 
 Ce site web présente mon parcours, mes compétences et mes projets dans les domaines de la **robotique** et de l'**intelligence artificielle**. Conçu avec un design moderne et responsive, il met en valeur mes réalisations techniques.
 
@@ -89,8 +89,8 @@ Ce projet est sous licence MIT. Vous êtes libre de l'utiliser comme template po
 
 ## 📬 Contact
 
-- 📧 Email: [yannis.loum@example.com](mailto:yannis.loum@example.com)
-- 💼 LinkedIn: [Votre profil](https://linkedin.com/in/votreprofil)
+- 📧 Email: [yannisloum@gmail.com](mailto:yannisloum@gmail.com)
+- 💼 LinkedIn: [Votre profil](https://www.linkedin.com/in/yannis-loumouamou-697409253/)
 - 🐙 GitHub: [@Yannisloum63](https://github.com/Yannisloum63)
 
 ---
