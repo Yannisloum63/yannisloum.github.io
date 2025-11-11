@@ -171,6 +171,15 @@
             border-bottom: 1px solid var(--beige-dark);
         }
 
+        nav .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -178,6 +187,41 @@
             gap: 3rem;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .language-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+        }
+
+        .language-switch button {
+            border: none;
+            background: transparent;
+            color: inherit;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            padding: 0.3rem 0.6rem;
+            transition: color 0.3s, background 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .language-switch button:hover {
+            color: var(--accent);
+        }
+
+        .language-switch button.active {
+            border-color: var(--accent);
+            color: var(--primary);
+            background: rgba(139, 128, 112, 0.1);
+        }
+
+        .language-switch span {
+            opacity: 0.6;
+            font-size: 0.85rem;
         }
 
         nav a {
@@ -255,6 +299,178 @@
             grid-template-columns: 2fr 1fr;
             gap: 4rem;
             align-items: start;
+        }
+
+        /* Section Education */
+        .education-timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--beige-dark);
+        }
+
+        .education-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--beige-dark);
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .education-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .education-period {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-family: 'Segoe UI', sans-serif;
+            font-style: italic;
+        }
+
+        .education-institution {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+
+        .education-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-top: 0.5rem;
+        }
+
+        .education-description ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .education-description li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Section Experience */
+        .experience-timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--beige-dark);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--beige-dark);
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--primary);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .experience-period {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-family: 'Segoe UI', sans-serif;
+            font-style: italic;
+        }
+
+        .experience-company {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+
+        .experience-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-top: 0.5rem;
+        }
+
+        .experience-description ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.3rem;
         }
 
         .about-text {
@@ -555,13 +771,32 @@
                 height: 140px;
             }
 
+            nav .nav-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
             nav ul {
                 flex-direction: column;
                 gap: 0.8rem;
             }
 
+            .language-switch {
+                gap: 0.6rem;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
+            }
+
+            .education-timeline,
+            .experience-timeline {
+                padding-left: 2rem;
+            }
+
+            .education-item,
+            .experience-item {
+                padding-left: 1.5rem;
             }
 
             .skills-container {
@@ -600,41 +835,52 @@
                 <img src="images/monprofile.jpg" alt="Yannis LOUMOUAMOU">
             </div>
             <h1 class="header-title">Yannis LOUMOUAMOU</h1>
-            <p class="header-subtitle">Élève Ingénieur en Robotique & Intelligence Artificielle</p>
-            <p class="header-description">
+            <p class="header-subtitle" data-i18n="header.subtitle">Élève Ingénieur en Robotique & Intelligence Artificielle</p>
+            <p class="header-description" data-i18n="header.description">
                 Passionné par les technologies de pointe, je combine robotique, IA et vision par ordinateur 
                 pour créer des solutions innovantes et intelligentes.
             </p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                <a href="#projects" class="btn btn-primary" data-i18n="cta.projects">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="cta.contact">Me contacter</a>
             </div>
         </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-inner">
+            <ul>
+                <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#education" data-i18n="nav.education">Formation</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="language-switch" role="group" aria-label="Sélection de la langue">
+                <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+                <span>|</span>
+                <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+            </div>
+        </div>
     </nav>
 
     <div class="container">
         <section id="about">
-            <h2>À propos de moi</h2>
+            <h2 data-i18n="about.title">À propos de moi</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        En tant qu'élève ingénieur spécialisé en <strong>robotique et intelligence artificielle</strong>, 
-                        je suis fasciné par la manière dont la technologie peut transformer notre monde. 
-                        Mon parcours m'a permis d'acquérir des compétences solides en programmation, 
-                        en apprentissage automatique, et en conception de systèmes robotiques.
+                    <p data-i18n="about.paragraph1">
+                        Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en 
+                        <strong>Robotique et Interaction</strong> (TAF). Passionné par les technologies de pointe, 
+                        je combine robotique, intelligence artificielle et vision par ordinateur pour créer des 
+                        solutions innovantes et intelligentes.
                     </p>
                     <br>
-                    <p>
-                        Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, 
+                    <p data-i18n="about.paragraph2">
+                        Mon parcours m'a permis de travailler sur des projets concrets comme le développement 
+                        d'un dispositif de localisation indoor basée vision (IRT B<>COM) et la conception d'une 
+                        mini voiture autonome. Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, 
                         au <strong>deep learning</strong>, et aux systèmes autonomes. Mon objectif est de contribuer 
                         au développement de technologies qui améliorent la vie quotidienne tout en repoussant 
                         les limites de l'innovation.
@@ -646,8 +892,8 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <div>
-                            <h4>Robotique Avancée</h4>
-                            <p>Conception et programmation de systèmes robotiques</p>
+                            <h4 data-i18n="about.highlight.robotics.title">Robotique Avancée</h4>
+                            <p data-i18n="about.highlight.robotics.text">Conception et programmation de systèmes robotiques</p>
                         </div>
                     </div>
                     <div class="highlight-item">
@@ -655,8 +901,8 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <div>
-                            <h4>Intelligence Artificielle</h4>
-                            <p>Machine Learning & Deep Learning</p>
+                            <h4 data-i18n="about.highlight.ai.title">Intelligence Artificielle</h4>
+                            <p data-i18n="about.highlight.ai.text">Machine Learning & Deep Learning</p>
                         </div>
                     </div>
                     <div class="highlight-item">
@@ -664,92 +910,209 @@
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div>
-                            <h4>Formation Continue</h4>
-                            <p>Toujours à la recherche de nouveaux défis</p>
+                            <h4 data-i18n="about.highlight.learning.title">Formation Continue</h4>
+                            <p data-i18n="about.highlight.learning.text">Toujours à la recherche de nouveaux défis</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 data-i18n="education.title">Formation Académique</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-title" data-i18n="education.imt.degree">Diplôme d'Ingénieur</h3>
+                            <p class="education-institution" data-i18n="education.imt.school">IMT Atlantique</p>
+                        </div>
+                        <span class="education-period" data-i18n="education.imt.period">2022 - 2025</span>
+                    </div>
+                    <div class="education-description">
+                        <p data-i18n="education.imt.description">
+                            Formation d'ingénieur généraliste avec spécialisation (TAF) en <strong>Robotique et Interaction</strong>. 
+                            Actuellement en 2e année, je me spécialise dans les systèmes robotiques, l'intelligence artificielle 
+                            et la vision par ordinateur.
+                        </p>
+                        <ul>
+                            <li data-i18n="education.imt.course1">Robotique et systèmes autonomes</li>
+                            <li data-i18n="education.imt.course2">Intelligence artificielle et machine learning</li>
+                            <li data-i18n="education.imt.course3">Vision par ordinateur et traitement d'images</li>
+                            <li data-i18n="education.imt.course4">Programmation embarquée et systèmes temps réel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-title" data-i18n="education.license.degree">Licence en Sciences pour l'Ingénieur</h3>
+                            <p class="education-institution" data-i18n="education.license.school">Université Clermont Auvergne</p>
+                        </div>
+                        <span class="education-period" data-i18n="education.license.period">2019 - 2022</span>
+                    </div>
+                    <div class="education-description">
+                        <p data-i18n="education.license.description">
+                            Formation pluridisciplinaire en sciences pour l'ingénieur avec focus sur les mathématiques appliquées, 
+                            la physique, l'informatique et l'électronique. Projet de fin de licence : <strong>Mini voiture autonome 
+                            avec assistance au stationnement</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 data-i18n="experience.title">Expérience Professionnelle</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title" data-i18n="experience.pascal.title">Stage - Deep Learning & Vision</h3>
+                            <p class="experience-company" data-i18n="experience.pascal.company">Institut Pascal, Clermont-Ferrand</p>
+                        </div>
+                        <span class="experience-period" data-i18n="experience.pascal.period">À venir</span>
+                    </div>
+                    <div class="experience-description">
+                        <p data-i18n="experience.pascal.description">
+                            Stage prévu sur l'<strong>adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR)</strong>. 
+                            Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges.
+                        </p>
+                        <ul>
+                            <li data-i18n="experience.pascal.task1">Adaptation et optimisation de modèles YOLOv8</li>
+                            <li data-i18n="experience.pascal.task2">Traitement de données multimodales (RVB/SWIR)</li>
+                            <li data-i18n="experience.pascal.task3">Entraînement et évaluation de modèles de détection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title" data-i18n="experience.irt.title">Projet IRT B<>COM</h3>
+                            <p class="experience-company" data-i18n="experience.irt.company">Institut de Recherche Technologique</p>
+                        </div>
+                        <span class="experience-period" data-i18n="experience.irt.period">2024</span>
+                    </div>
+                    <div class="experience-description">
+                        <p data-i18n="experience.irt.description">
+                            Développement d'un <strong>dispositif de localisation indoor basée vision</strong>. 
+                            Conception et implémentation d'un système de navigation utilisant la vision par ordinateur 
+                            pour la localisation précise en environnement intérieur.
+                        </p>
+                        <ul>
+                            <li data-i18n="experience.irt.task1">Développement d'algorithmes de localisation par vision</li>
+                            <li data-i18n="experience.irt.task2">Intégration de capteurs et traitement d'images</li>
+                            <li data-i18n="experience.irt.task3">Optimisation des performances en temps réel</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills">
-            <h2>Compétences Techniques</h2>
+            <h2 data-i18n="skills.title">Compétences Techniques</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Robotique</h3>
+                    <h3 data-i18n="skills.robotics.title">Robotique</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">ROS (Robot Operating System)</span>
+                        <span class="skill-tag">ROS2</span>
                         <span class="skill-tag">Arduino</span>
                         <span class="skill-tag">Raspberry Pi</span>
-                        <span class="skill-tag">Systèmes embarqués</span>
-                        <span class="skill-tag">Contrôle moteur</span>
-                        <span class="skill-tag">Capteurs & Actionneurs</span>
+                        <span class="skill-tag" data-i18n="skills.robotics.embedded">Systèmes embarqués</span>
+                        <span class="skill-tag" data-i18n="skills.robotics.motor">Contrôle moteur</span>
+                        <span class="skill-tag" data-i18n="skills.robotics.sensors">Capteurs & Actionneurs</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Intelligence Artificielle</h3>
+                    <h3 data-i18n="skills.ai.title">Intelligence Artificielle</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">TensorFlow</span>
                         <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Computer Vision</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">YOLOv8</span>
                         <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag" data-i18n="skills.ai.computervision">Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Scikit-learn</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Programmation</h3>
+                    <h3 data-i18n="skills.programming.title">Programmation</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">MATLAB</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">MATLAB/Simulink</span>
+                        <span class="skill-tag">LabVIEW</span>
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">Linux</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Outils & Frameworks</h3>
+                    <h3 data-i18n="skills.tools.title">Outils & CAO</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">CATIA V5</span>
+                        <span class="skill-tag">SolidWorks</span>
                         <span class="skill-tag">Jupyter</span>
-                        <span class="skill-tag">Docker</span>
                         <span class="skill-tag">NumPy</span>
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">SolidWorks</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projets Réalisés</h2>
+            <h2 data-i18n="projects.title">Projets Réalisés</h2>
             <div class="projects">
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Robot Autonome</h3>
-                        <p>
-                            Conception et programmation d'un robot mobile capable de naviguer de manière autonome 
-                            dans un environnement complexe grâce à des algorithmes de SLAM et de planification de trajectoire.
+                        <h3 data-i18n="projects.irt.title">Localisation Indoor Basée Vision</h3>
+                        <p data-i18n="projects.irt.description">
+                            Développement d'un dispositif de localisation indoor basée vision dans le cadre d'un projet IRT B<>COM. 
+                            Système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-badge">ROS</span>
-                            <span class="tech-badge">Python</span>
                             <span class="tech-badge">OpenCV</span>
-                            <span class="tech-badge">Raspberry Pi</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Computer Vision</span>
+                            <span class="tech-badge">ROS2</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Yannisloum63" class="project-link">
+                            <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
                                 <i class="fab fa-github"></i> Code source
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" data-i18n="projects.irt.more">
+                                <i class="fas fa-external-link-alt"></i> En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="projects.car.title">Mini Voiture Autonome</h3>
+                        <p data-i18n="projects.car.description">
+                            Projet de fin de licence : conception et développement d'une mini voiture autonome avec assistance 
+                            au stationnement. Intégration de capteurs, algorithmes de navigation et système de contrôle embarqué.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">Capteurs</span>
+                            <span class="tech-badge">Systèmes embarqués</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="project-link" data-i18n="projects.car.demo">
                                 <i class="fas fa-external-link-alt"></i> Démo
                             </a>
                         </div>
@@ -761,76 +1124,23 @@
                         <i class="fas fa-eye"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Système de Vision par Ordinateur</h3>
-                        <p>
-                            Développement d'un système de détection et reconnaissance d'objets en temps réel 
-                            utilisant des réseaux de neurones convolutifs (CNN) pour applications industrielles.
+                        <h3 data-i18n="projects.yolo.title">Adaptation YOLOv8 Multimodale</h3>
+                        <p data-i18n="projects.yolo.description">
+                            Adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR). Développement de modèles 
+                            de deep learning pour la fusion de données visuelles et infrarouges, optimisé pour applications industrielles.
                         </p>
                         <div class="project-tech">
+                            <span class="tech-badge">YOLOv8</span>
                             <span class="tech-badge">PyTorch</span>
-                            <span class="tech-badge">YOLO</span>
-                            <span class="tech-badge">OpenCV</span>
                             <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Deep Learning</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Yannisloum63" class="project-link">
+                            <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
                                 <i class="fab fa-github"></i> Code source
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> En savoir plus
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Modèle de Deep Learning</h3>
-                        <p>
-                            Création et entraînement d'un réseau de neurones profond pour la classification d'images 
-                            avec une précision de 95%+. Application de techniques d'augmentation de données et de transfer learning.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">TensorFlow</span>
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Jupyter</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Yannisloum63" class="project-link">
-                                <i class="fab fa-github"></i> Code source
-                            </a>
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" data-i18n="projects.yolo.docs">
                                 <i class="fas fa-file-alt"></i> Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Système Embarqué IoT</h3>
-                        <p>
-                            Développement d'un système de capteurs connectés pour la surveillance environnementale 
-                            avec transmission de données en temps réel et visualisation web.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Arduino</span>
-                            <span class="tech-badge">C++</span>
-                            <span class="tech-badge">MQTT</span>
-                            <span class="tech-badge">Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Yannisloum63" class="project-link">
-                                <i class="fab fa-github"></i> Code source
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-play"></i> Voir démo
                             </a>
                         </div>
                     </div>
@@ -839,8 +1149,8 @@
         </section>
 
         <section id="contact">
-            <h2>Contactez-moi</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+            <h2 data-i18n="contact.title">Contactez-moi</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;" data-i18n="contact.description">
                 Je suis toujours ouvert à de nouvelles opportunités, collaborations ou simplement 
                 pour discuter de robotique et d'intelligence artificielle !
             </p>
@@ -862,8 +1172,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">
+        <p data-i18n="footer.rights">&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;" data-i18n="footer.subtitle">
             Portfolio — Robotique & Intelligence Artificielle
         </p>
         <div class="social-links">
@@ -880,6 +1190,207 @@
     </footer>
 
     <script>
+        const translations = {
+            en: {
+                "meta.title": "Yannis LOUMOUAMOU - Robotics & AI",
+                "meta.description": "Portfolio of Yannis LOUMOUAMOU - Robotics and Artificial Intelligence Engineering student.",
+                "header.subtitle": "Robotics & Artificial Intelligence Engineering Student",
+                "header.description": "Passionate about cutting-edge technologies, I combine robotics, AI, and computer vision to create innovative, intelligent solutions.",
+                "cta.projects": "View my projects",
+                "cta.contact": "Get in touch",
+                "nav.about": "About",
+                "nav.education": "Education",
+                "nav.experience": "Experience",
+                "nav.skills": "Skills",
+                "nav.projects": "Projects",
+                "nav.contact": "Contact",
+                "about.title": "About Me",
+                "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong>, I specialize in <strong>Robotics and Interaction</strong> (TAF). Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
+                "about.paragraph2": "My journey has allowed me to work on concrete projects such as developing a vision-based indoor localization device (IRT B<>COM) and designing an autonomous mini car. I am particularly interested in <strong>computer vision</strong>, <strong>deep learning</strong>, and autonomous systems. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
+                "about.highlight.robotics.title": "Advanced Robotics",
+                "about.highlight.robotics.text": "Designing and programming robotic systems",
+                "about.highlight.ai.title": "Artificial Intelligence",
+                "about.highlight.ai.text": "Machine Learning & Deep Learning",
+                "about.highlight.learning.title": "Continuous Learning",
+                "about.highlight.learning.text": "Always looking for new challenges",
+                "skills.title": "Technical Skills",
+                "skills.robotics.title": "Robotics",
+                "skills.robotics.embedded": "Embedded systems",
+                "skills.robotics.motor": "Motor control",
+                "skills.robotics.sensors": "Sensors & Actuators",
+                "skills.ai.title": "Artificial Intelligence",
+                "skills.ai.computervision": "Computer Vision",
+                "skills.programming.title": "Programming",
+                "skills.tools.title": "Tools & CAD",
+                "education.title": "Academic Background",
+                "education.imt.degree": "Engineering Degree",
+                "education.imt.school": "IMT Atlantique",
+                "education.imt.period": "2022 - 2025",
+                "education.imt.description": "Generalist engineering training with specialization (TAF) in <strong>Robotics and Interaction</strong>. Currently in 2nd year, I specialize in robotic systems, artificial intelligence, and computer vision.",
+                "education.imt.course1": "Robotics and autonomous systems",
+                "education.imt.course2": "Artificial intelligence and machine learning",
+                "education.imt.course3": "Computer vision and image processing",
+                "education.imt.course4": "Embedded programming and real-time systems",
+                "education.license.degree": "Bachelor's in Engineering Sciences",
+                "education.license.school": "Université Clermont Auvergne",
+                "education.license.period": "2019 - 2022",
+                "education.license.description": "Multidisciplinary training in engineering sciences with focus on applied mathematics, physics, computer science, and electronics. Final year project: <strong>Autonomous mini car with parking assistance</strong>.",
+                "experience.title": "Professional Experience",
+                "experience.pascal.title": "Internship - Deep Learning & Vision",
+                "experience.pascal.company": "Institut Pascal, Clermont-Ferrand",
+                "experience.pascal.period": "Upcoming",
+                "experience.pascal.description": "Planned internship on <strong>adapting YOLOv8 for multimodal object detection (RGB/SWIR)</strong>. Development of deep learning models for fusion of visual and infrared data.",
+                "experience.pascal.task1": "Adaptation and optimization of YOLOv8 models",
+                "experience.pascal.task2": "Multimodal data processing (RGB/SWIR)",
+                "experience.pascal.task3": "Training and evaluation of detection models",
+                "experience.irt.title": "IRT B<>COM Project",
+                "experience.irt.company": "Technological Research Institute",
+                "experience.irt.period": "2024",
+                "experience.irt.description": "Development of a <strong>vision-based indoor localization device</strong>. Design and implementation of a navigation system using computer vision for precise indoor localization.",
+                "experience.irt.task1": "Development of vision-based localization algorithms",
+                "experience.irt.task2": "Sensor integration and image processing",
+                "experience.irt.task3": "Real-time performance optimization",
+                "projects.title": "Completed Projects",
+                "projects.irt.title": "Vision-Based Indoor Localization",
+                "projects.irt.description": "Development of a vision-based indoor localization device as part of an IRT B<>COM project. Navigation system using computer vision for precise indoor localization.",
+                "projects.irt.more": "<i class=\"fas fa-external-link-alt\"></i> Learn more",
+                "projects.car.title": "Autonomous Mini Car",
+                "projects.car.description": "Final year bachelor's project: design and development of an autonomous mini car with parking assistance. Integration of sensors, navigation algorithms, and embedded control system.",
+                "projects.car.demo": "<i class=\"fas fa-external-link-alt\"></i> Demo",
+                "projects.yolo.title": "Multimodal YOLOv8 Adaptation",
+                "projects.yolo.description": "Adaptation of YOLOv8 for multimodal object detection (RGB/SWIR). Development of deep learning models for fusion of visual and infrared data, optimized for industrial applications.",
+                "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
+                "projects.links.source": "<i class=\"fab fa-github\"></i> Source code",
+                "contact.title": "Contact Me",
+                "contact.description": "I am always open to new opportunities, collaborations, or simply a conversation about robotics and artificial intelligence!",
+                "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. All rights reserved.",
+                "footer.subtitle": "Portfolio — Robotics & Artificial Intelligence"
+            },
+            fr: {
+                "meta.title": "Yannis LOUMOUAMOU - Robotique & IA",
+                "meta.description": "Portfolio de Yannis LOUMOUAMOU - Élève Ingénieur en Robotique et Intelligence Artificielle",
+                "header.subtitle": "Élève Ingénieur en Robotique & Intelligence Artificielle",
+                "header.description": "Passionné par les technologies de pointe, je combine robotique, IA et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
+                "cta.projects": "Voir mes projets",
+                "cta.contact": "Me contacter",
+                "nav.about": "À propos",
+                "nav.education": "Formation",
+                "nav.experience": "Expérience",
+                "nav.skills": "Compétences",
+                "nav.projects": "Projets",
+                "nav.contact": "Contact",
+                "about.title": "À propos de moi",
+                "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong> (TAF). Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
+                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets comme le développement d'un dispositif de localisation indoor basée vision (IRT B<>COM) et la conception d'une mini voiture autonome. Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, au <strong>deep learning</strong>, et aux systèmes autonomes. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
+                "about.highlight.robotics.title": "Robotique Avancée",
+                "about.highlight.robotics.text": "Conception et programmation de systèmes robotiques",
+                "about.highlight.ai.title": "Intelligence Artificielle",
+                "about.highlight.ai.text": "Machine Learning & Deep Learning",
+                "about.highlight.learning.title": "Formation Continue",
+                "about.highlight.learning.text": "Toujours à la recherche de nouveaux défis",
+                "skills.title": "Compétences Techniques",
+                "skills.robotics.title": "Robotique",
+                "skills.robotics.embedded": "Systèmes embarqués",
+                "skills.robotics.motor": "Contrôle moteur",
+                "skills.robotics.sensors": "Capteurs & Actionneurs",
+                "skills.ai.title": "Intelligence Artificielle",
+                "skills.ai.computervision": "Vision par ordinateur",
+                "skills.programming.title": "Programmation",
+                "skills.tools.title": "Outils & CAO",
+                "education.title": "Formation Académique",
+                "education.imt.degree": "Diplôme d'Ingénieur",
+                "education.imt.school": "IMT Atlantique",
+                "education.imt.period": "2022 - 2025",
+                "education.imt.description": "Formation d'ingénieur généraliste avec spécialisation (TAF) en <strong>Robotique et Interaction</strong>. Actuellement en 2e année, je me spécialise dans les systèmes robotiques, l'intelligence artificielle et la vision par ordinateur.",
+                "education.imt.course1": "Robotique et systèmes autonomes",
+                "education.imt.course2": "Intelligence artificielle et machine learning",
+                "education.imt.course3": "Vision par ordinateur et traitement d'images",
+                "education.imt.course4": "Programmation embarquée et systèmes temps réel",
+                "education.license.degree": "Licence en Sciences pour l'Ingénieur",
+                "education.license.school": "Université Clermont Auvergne",
+                "education.license.period": "2019 - 2022",
+                "education.license.description": "Formation pluridisciplinaire en sciences pour l'ingénieur avec focus sur les mathématiques appliquées, la physique, l'informatique et l'électronique. Projet de fin de licence : <strong>Mini voiture autonome avec assistance au stationnement</strong>.",
+                "experience.title": "Expérience Professionnelle",
+                "experience.pascal.title": "Stage - Deep Learning & Vision",
+                "experience.pascal.company": "Institut Pascal, Clermont-Ferrand",
+                "experience.pascal.period": "À venir",
+                "experience.pascal.description": "Stage prévu sur l'<strong>adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR)</strong>. Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges.",
+                "experience.pascal.task1": "Adaptation et optimisation de modèles YOLOv8",
+                "experience.pascal.task2": "Traitement de données multimodales (RVB/SWIR)",
+                "experience.pascal.task3": "Entraînement et évaluation de modèles de détection",
+                "experience.irt.title": "Projet IRT B<>COM",
+                "experience.irt.company": "Institut de Recherche Technologique",
+                "experience.irt.period": "2024",
+                "experience.irt.description": "Développement d'un <strong>dispositif de localisation indoor basée vision</strong>. Conception et implémentation d'un système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
+                "experience.irt.task1": "Développement d'algorithmes de localisation par vision",
+                "experience.irt.task2": "Intégration de capteurs et traitement d'images",
+                "experience.irt.task3": "Optimisation des performances en temps réel",
+                "projects.title": "Projets Réalisés",
+                "projects.irt.title": "Localisation Indoor Basée Vision",
+                "projects.irt.description": "Développement d'un dispositif de localisation indoor basée vision dans le cadre d'un projet IRT B<>COM. Système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
+                "projects.irt.more": "<i class=\"fas fa-external-link-alt\"></i> En savoir plus",
+                "projects.car.title": "Mini Voiture Autonome",
+                "projects.car.description": "Projet de fin de licence : conception et développement d'une mini voiture autonome avec assistance au stationnement. Intégration de capteurs, algorithmes de navigation et système de contrôle embarqué.",
+                "projects.car.demo": "<i class=\"fas fa-external-link-alt\"></i> Démo",
+                "projects.yolo.title": "Adaptation YOLOv8 Multimodale",
+                "projects.yolo.description": "Adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR). Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges, optimisé pour applications industrielles.",
+                "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
+                "projects.links.source": "<i class=\"fab fa-github\"></i> Code source",
+                "contact.title": "Contactez-moi",
+                "contact.description": "Je suis toujours ouvert à de nouvelles opportunités, collaborations ou simplement pour discuter de robotique et d'intelligence artificielle !",
+                "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.",
+                "footer.subtitle": "Portfolio — Robotique & Intelligence Artificielle"
+            }
+        };
+
+        const langButtons = document.querySelectorAll('.lang-btn');
+
+        function setLanguage(lang, persist = true) {
+            const dictionary = translations[lang];
+            if (!dictionary) {
+                return;
+            }
+
+            document.documentElement.setAttribute('lang', lang);
+
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription && dictionary["meta.description"]) {
+                metaDescription.setAttribute('content', dictionary["meta.description"]);
+            }
+
+            if (dictionary["meta.title"]) {
+                document.title = dictionary["meta.title"];
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const key = element.dataset.i18n;
+                const value = dictionary[key];
+                if (value !== undefined) {
+                    element.innerHTML = value;
+                }
+            });
+
+            langButtons.forEach((button) => {
+                const isActive = button.dataset.lang === lang;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+
+            if (persist) {
+                localStorage.setItem('portfolio-lang', lang);
+            }
+        }
+
+        const savedLanguage = localStorage.getItem('portfolio-lang');
+        setLanguage(savedLanguage || 'en', false);
+
+        langButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const selectedLang = button.dataset.lang;
+                setLanguage(selectedLang);
+            });
+        });
+
         // Animation au scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
