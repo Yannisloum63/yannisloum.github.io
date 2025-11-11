@@ -716,6 +716,118 @@
             color: var(--accent);
         }
 
+        /* IMT Atlantique Banner */
+        .imt-banner {
+            background: linear-gradient(135deg, var(--beige-light) 0%, var(--white) 100%);
+            border: 2px solid var(--accent);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .imt-logo {
+            width: 120px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .imt-content h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .imt-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .imt-rankings {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .ranking-item {
+            background: var(--white);
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--beige-dark);
+            font-size: 0.9rem;
+        }
+
+        .ranking-item strong {
+            color: var(--accent);
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .imt-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .imt-link:hover {
+            color: var(--primary);
+        }
+
+        /* Section Projets Associatifs */
+        .associative-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .associative-card {
+            background: var(--beige-light);
+            border: 1px solid var(--beige-dark);
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .associative-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .associative-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+            object-fit: contain;
+        }
+
+        .associative-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .associative-role {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .associative-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
         /* Footer */
         footer {
             background: var(--primary);
@@ -803,6 +915,24 @@
                 grid-template-columns: 1fr;
             }
 
+            .imt-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 1.5rem;
+            }
+
+            .imt-logo {
+                width: 100px;
+            }
+
+            .imt-rankings {
+                justify-content: center;
+            }
+
+            .associative-grid {
+                grid-template-columns: 1fr;
+            }
+
             .projects {
                 grid-template-columns: 1fr;
             }
@@ -835,10 +965,9 @@
                 <img src="images/monprofile.jpg" alt="Yannis LOUMOUAMOU">
             </div>
             <h1 class="header-title">Yannis LOUMOUAMOU</h1>
-            <p class="header-subtitle" data-i18n="header.subtitle">Élève Ingénieur en Robotique & Intelligence Artificielle</p>
+            <p class="header-subtitle" data-i18n="header.subtitle">Élève Ingénieur en Robotique & Intelligence Artificielle - <a href="https://www.imt-atlantique.fr" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--accent);">IMT Atlantique</a></p>
             <p class="header-description" data-i18n="header.description">
-                Passionné par les technologies de pointe, je combine robotique, IA et vision par ordinateur 
-                pour créer des solutions innovantes et intelligentes.
+                Passionné par l'IA et la robotique, je me spécialise dans le développement de systèmes intelligents et autonomes. Mon objectif : créer des solutions innovantes qui repoussent les limites de la technologie.
             </p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary" data-i18n="cta.projects">Voir mes projets</a>
@@ -853,6 +982,7 @@
                 <li><a href="#about" data-i18n="nav.about">À propos</a></li>
                 <li><a href="#education" data-i18n="nav.education">Formation</a></li>
                 <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+                <li><a href="#associative" data-i18n="nav.associative">Associatif</a></li>
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -918,26 +1048,60 @@
             </div>
         </section>
 
+        <!-- IMT Atlantique Banner -->
+        <div class="container">
+            <div class="imt-banner">
+                <img src="images/logo_IMT_Atlantique.png" alt="IMT Atlantique" class="imt-logo">
+                <div class="imt-content">
+                    <h3>IMT Atlantique - Grande École d'Ingénieurs</h3>
+                    <p>
+                        IMT Atlantique est une grande école d'ingénieurs française reconnue internationalement pour son excellence académique et sa recherche de pointe. 
+                        L'école forme des ingénieurs généralistes hautement qualifiés dans les domaines du numérique, de l'énergie et de l'environnement.
+                    </p>
+                    <div class="imt-rankings">
+                        <div class="ranking-item">
+                            <strong>Top 500</strong>
+                            <span>Mondial - THE 2026</span>
+                        </div>
+                        <div class="ranking-item">
+                            <strong>3ème</strong>
+                            <span>France - L'Étudiant 2025</span>
+                        </div>
+                        <div class="ranking-item">
+                            <strong>Top 100</strong>
+                            <span>Impact - THE 2025</span>
+                        </div>
+                        <div class="ranking-item">
+                            <strong>[51-100]</strong>
+                            <span>IA & Data Science - QS</span>
+                        </div>
+                    </div>
+                    <a href="https://www.imt-atlantique.fr" target="_blank" class="imt-link">
+                        Découvrir IMT Atlantique <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <section id="education">
             <h2 data-i18n="education.title">Formation Académique</h2>
             <div class="education-timeline">
                 <div class="education-item">
                     <div class="education-header">
                         <div>
-                            <h3 class="education-title" data-i18n="education.imt.degree">Diplôme d'Ingénieur</h3>
-                            <p class="education-institution" data-i18n="education.imt.school">IMT Atlantique</p>
+                            <h3 class="education-title" data-i18n="education.imt.degree">Diplôme d'Ingénieur Généraliste</h3>
+                            <p class="education-institution" data-i18n="education.imt.school">IMT Atlantique (ex Télécom Bretagne), Brest</p>
                         </div>
-                        <span class="education-period" data-i18n="education.imt.period">2022 - 2025</span>
+                        <span class="education-period" data-i18n="education.imt.period">2023 - 2026</span>
                     </div>
                     <div class="education-description">
                         <p data-i18n="education.imt.description">
                             Formation d'ingénieur généraliste avec spécialisation (TAF) en <strong>Robotique et Interaction</strong>. 
-                            Actuellement en 2e année, je me spécialise dans les systèmes robotiques, l'intelligence artificielle 
-                            et la vision par ordinateur.
+                            Actuellement en 3e année du cycle ingénieur.
                         </p>
                         <ul>
                             <li data-i18n="education.imt.course1">Robotique et systèmes autonomes</li>
-                            <li data-i18n="education.imt.course2">Intelligence artificielle et machine learning</li>
+                            <li data-i18n="education.imt.course2">Intelligence artificielle et deep learning</li>
                             <li data-i18n="education.imt.course3">Vision par ordinateur et traitement d'images</li>
                             <li data-i18n="education.imt.course4">Programmation embarquée et systèmes temps réel</li>
                         </ul>
@@ -946,16 +1110,30 @@
                 <div class="education-item">
                     <div class="education-header">
                         <div>
-                            <h3 class="education-title" data-i18n="education.license.degree">Licence en Sciences pour l'Ingénieur</h3>
-                            <p class="education-institution" data-i18n="education.license.school">Université Clermont Auvergne</p>
+                            <h3 class="education-title" data-i18n="education.license.degree">Licence Sciences pour l'Ingénieur</h3>
+                            <p class="education-institution" data-i18n="education.license.school">Université Clermont Auvergne (UCA), Clermont-Ferrand</p>
                         </div>
-                        <span class="education-period" data-i18n="education.license.period">2019 - 2022</span>
+                        <span class="education-period" data-i18n="education.license.period">2020 - 2023</span>
                     </div>
                     <div class="education-description">
                         <p data-i18n="education.license.description">
-                            Formation pluridisciplinaire en sciences pour l'ingénieur avec focus sur les mathématiques appliquées, 
-                            la physique, l'informatique et l'électronique. Projet de fin de licence : <strong>Mini voiture autonome 
-                            avec assistance au stationnement</strong>.
+                            Formation pluridisciplinaire en sciences pour l'ingénieur avec bases solides en mathématiques appliquées, 
+                            physique, informatique et électronique.
+                        </p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-title" data-i18n="education.bac.degree">Baccalauréat Scientifique</h3>
+                            <p class="education-institution" data-i18n="education.bac.school">Lycée Professionnel Jean Mermoz, Vaulx-en-Velin</p>
+                        </div>
+                        <span class="education-period" data-i18n="education.bac.period">2020</span>
+                    </div>
+                    <div class="education-description">
+                        <p data-i18n="education.bac.description">
+                            Spécialité <strong>Systèmes Numériques option C (Réseaux Informatiques et Systèmes Communicants)</strong>. 
+                            Mention Bien.
                         </p>
                     </div>
                 </div>
@@ -968,43 +1146,77 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title" data-i18n="experience.pascal.title">Stage - Deep Learning & Vision</h3>
-                            <p class="experience-company" data-i18n="experience.pascal.company">Institut Pascal, Clermont-Ferrand</p>
+                            <h3 class="experience-title" data-i18n="experience.pascal.title">Stage - Deep Learning & Vision par Ordinateur</h3>
+                            <p class="experience-company" data-i18n="experience.pascal.company">
+                                <img src="images/institut_pascal_logo.png" alt="Institut Pascal" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+                                Institut Pascal (UMR 6602 CNRS), Clermont-Ferrand
+                            </p>
                         </div>
-                        <span class="experience-period" data-i18n="experience.pascal.period">À venir</span>
+                        <span class="experience-period" data-i18n="experience.pascal.period">Avril - Septembre 2025</span>
                     </div>
                     <div class="experience-description">
                         <p data-i18n="experience.pascal.description">
-                            Stage prévu sur l'<strong>adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR)</strong>. 
-                            Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges.
+                            Stage de fin d'études sur l'<strong>adaptation de YOLOv8 pour la détection d'objets multimodale (RGB/SWIR)</strong>. 
+                            Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges à ondes courtes, 
+                            dans le cadre du projet CONDOR (Collaborative Object detectioN and Dataset cOoRdination).
                         </p>
                         <ul>
-                            <li data-i18n="experience.pascal.task1">Adaptation et optimisation de modèles YOLOv8</li>
-                            <li data-i18n="experience.pascal.task2">Traitement de données multimodales (RVB/SWIR)</li>
-                            <li data-i18n="experience.pascal.task3">Entraînement et évaluation de modèles de détection</li>
+                            <li data-i18n="experience.pascal.task1">Adaptation et optimisation de modèles YOLOv8 pour données multimodales</li>
+                            <li data-i18n="experience.pascal.task2">Traitement et fusion de données RGB/SWIR</li>
+                            <li data-i18n="experience.pascal.task3">Entraînement, évaluation et déploiement de modèles de détection</li>
+                            <li data-i18n="experience.pascal.task4">Collaboration dans un projet de recherche multipartenaire</li>
                         </ul>
                     </div>
                 </div>
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title" data-i18n="experience.irt.title">Projet IRT B<>COM</h3>
-                            <p class="experience-company" data-i18n="experience.irt.company">Institut de Recherche Technologique</p>
+                            <h3 class="experience-title" data-i18n="experience.irt.title">Projet Étudiant - Localisation Indoor</h3>
+                            <p class="experience-company" data-i18n="experience.irt.company">
+                                <img src="images/collaboration_imt-irtbcom_banner.png" alt="IRT B<>COM" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+                                IRT B<>COM en collaboration avec IMT Atlantique
+                            </p>
                         </div>
-                        <span class="experience-period" data-i18n="experience.irt.period">2024</span>
+                        <span class="experience-period" data-i18n="experience.irt.period">Septembre 2024 - Janvier 2025</span>
                     </div>
                     <div class="experience-description">
                         <p data-i18n="experience.irt.description">
-                            Développement d'un <strong>dispositif de localisation indoor basée vision</strong>. 
-                            Conception et implémentation d'un système de navigation utilisant la vision par ordinateur 
+                            Développement d'un <strong>système de localisation indoor basé vision</strong> en équipe de 5 étudiants. 
+                            Conception et implémentation d'un dispositif de navigation utilisant la vision par ordinateur 
                             pour la localisation précise en environnement intérieur.
                         </p>
                         <ul>
-                            <li data-i18n="experience.irt.task1">Développement d'algorithmes de localisation par vision</li>
-                            <li data-i18n="experience.irt.task2">Intégration de capteurs et traitement d'images</li>
-                            <li data-i18n="experience.irt.task3">Optimisation des performances en temps réel</li>
+                            <li data-i18n="experience.irt.task1">Développement d'algorithmes de localisation par vision (SLAM visuel)</li>
+                            <li data-i18n="experience.irt.task2">Intégration de caméras et traitement d'images en temps réel</li>
+                            <li data-i18n="experience.irt.task3">Travail en équipe agile avec méthodologie Scrum</li>
+                            <li data-i18n="experience.irt.task4">Présentation des résultats devant un jury professionnel</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="associative">
+            <h2 data-i18n="associative.title">Engagements Associatifs</h2>
+            <div class="associative-grid">
+                <div class="associative-card">
+                    <img src="images/LogoAFNEUS.png" alt="AFNEUS" class="associative-logo">
+                    <h3>AFNEUS</h3>
+                    <p class="associative-role">Membre Actif</p>
+                    <p>
+                        Association des étudiants noirs de l'enseignement supérieur. Participation active aux événements et initiatives 
+                        visant à promouvoir la diversité et l'inclusion dans l'enseignement supérieur.
+                    </p>
+                </div>
+
+                <div class="associative-card">
+                    <img src="images/logo roboticlermont.png" alt="Robotic Lermont" class="associative-logo">
+                    <h3>Robotic Lermont</h3>
+                    <p class="associative-role">Membre</p>
+                    <p>
+                        Association de robotique de Clermont-Ferrand. Participation à des projets de robotique collaborative, 
+                        développement de compétences techniques et partage de connaissances avec la communauté locale.
+                    </p>
                 </div>
             </div>
         </section>
@@ -1093,27 +1305,32 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-car"></i>
+                    <div class="project-image" style="background: none; padding: 0; height: auto;">
+                        <video controls style="width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid var(--beige-dark);">
+                            <source src="videos/park_assist_creneau.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture vidéo.
+                        </video>
                     </div>
                     <div class="project-content">
-                        <h3 data-i18n="projects.car.title">Mini Voiture Autonome</h3>
+                        <h3 data-i18n="projects.car.title">Park Assist - Voiture Autonome</h3>
                         <p data-i18n="projects.car.description">
-                            Projet de fin de licence : conception et développement d'une mini voiture autonome avec assistance 
-                            au stationnement. Intégration de capteurs, algorithmes de navigation et système de contrôle embarqué.
+                            Projet de fin de licence : conception et développement d'une <strong>mini voiture autonome avec système d'assistance au stationnement</strong>. 
+                            Implémentation de deux modes : créneau automatique et bataille. Intégration de capteurs ultrasons, 
+                            algorithmes de navigation et contrôle embarqué avec Arduino.
                         </p>
                         <div class="project-tech">
                             <span class="tech-badge">Arduino</span>
-                            <span class="tech-badge">C++</span>
-                            <span class="tech-badge">Capteurs</span>
+                            <span class="tech-badge">C/C++</span>
+                            <span class="tech-badge">Capteurs Ultrasons</span>
                             <span class="tech-badge">Systèmes embarqués</span>
+                            <span class="tech-badge">Contrôle Moteur</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
-                                <i class="fab fa-github"></i> Code source
+                            <a href="videos/park_assist_bataille.mp4" target="_blank" class="project-link" data-i18n="projects.car.demo">
+                                <i class="fas fa-play-circle"></i> Vidéo Bataille
                             </a>
-                            <a href="#" class="project-link" data-i18n="projects.car.demo">
-                                <i class="fas fa-external-link-alt"></i> Démo
+                            <a href="videos/park_assist_creneau.mp4" target="_blank" class="project-link">
+                                <i class="fas fa-play-circle"></i> Vidéo Créneau
                             </a>
                         </div>
                     </div>
