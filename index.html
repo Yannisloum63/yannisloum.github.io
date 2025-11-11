@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Yannis Loum - Développeur Web">
-    <title>Yannis Loum - Portfolio</title>
+    <meta name="description" content="Portfolio de Yannis Loum - Élève Ingénieur en Robotique et Intelligence Artificielle">
+    <title>Yannis Loum - Robotique & IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #00d9ff;
+            --secondary: #0066ff;
+            --accent: #ff00ff;
+            --dark: #0a0e27;
+            --light: #f5f7fa;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-tech: linear-gradient(135deg, #00d9ff 0%, #0066ff 50%, #6366f1 100%);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,41 +24,159 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: var(--light);
+            overflow-x: hidden;
         }
 
+        /* Header avec effet parallax */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--dark);
             color: white;
-            padding: 2rem 0;
+            padding: 8rem 2rem 4rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-tech);
+            opacity: 0.8;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #00d9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .header-description {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--secondary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--secondary);
+        }
+
+        /* Navigation sticky */
         nav {
-            background: #333;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
             padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         nav a:hover {
-            color: #667eea;
+            color: var(--primary);
         }
 
         .container {
@@ -57,158 +186,656 @@
         }
 
         section {
-            margin: 3rem 0;
+            margin: 4rem 0;
+            animation: fadeIn 1s ease-out;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         h2 {
-            color: #667eea;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
         }
 
-        .projects {
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-tech);
+            border-radius: 2px;
+        }
+
+        /* Section À propos */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 102, 255, 0.1));
+            border-radius: 12px;
+        }
+
+        /* Section Compétences */
+        .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .project-card {
+        .skill-category {
             background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
-        .project-card:hover {
+        .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        .skills {
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-category h3 i {
+            font-size: 1.5rem;
+        }
+
+        .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .skill-tag {
-            background: #667eea;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 102, 255, 0.1));
+            color: var(--secondary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
             font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 102, 255, 0.2);
+            transition: all 0.3s;
         }
 
+        .skill-tag:hover {
+            background: var(--gradient-tech);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Section Projets */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 102, 255, 0.2);
+        }
+
+        .project-image {
+            height: 200px;
+            background: var(--gradient-tech);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-badge {
+            background: rgba(0, 102, 255, 0.1);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        /* Section Contact */
+        #contact {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .contact-item a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
         footer {
-            background: #333;
+            background: var(--dark);
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         .social-links a {
             color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .social-links a:hover {
-            color: #667eea;
+            background: var(--gradient-tech);
+            transform: translateY(-5px);
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .header-title {
+                font-size: 2.5rem;
             }
             
+            .header-subtitle {
+                font-size: 1.2rem;
+            }
+
             nav ul {
                 flex-direction: column;
                 gap: 1rem;
             }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations supplémentaires */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Yannis Loum</h1>
-        <p>Développeur Web Full Stack</p>
+        <div class="header-content">
+            <h1 class="header-title">Yannis Loum</h1>
+            <p class="header-subtitle">🤖 Élève Ingénieur en Robotique & Intelligence Artificielle</p>
+            <p class="header-description">
+                Passionné par les technologies de pointe, je combine robotique, IA et vision par ordinateur 
+                pour créer des solutions innovantes et intelligentes.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Voir mes projets
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Me contacter
+                </a>
+            </div>
+        </div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> À propos</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Compétences</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projets</a></li>
+            <li><a href="#contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <section id="about">
             <h2>À propos de moi</h2>
-            <p>Passionné par le développement web, je crée des applications modernes et performantes. 
-            Mon objectif est de transformer des idées en solutions digitales innovantes.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        En tant qu'élève ingénieur spécialisé en <strong>robotique et intelligence artificielle</strong>, 
+                        je suis fasciné par la manière dont la technologie peut transformer notre monde. 
+                        Mon parcours m'a permis d'acquérir des compétences solides en programmation, 
+                        en apprentissage automatique, et en conception de systèmes robotiques.
+                    </p>
+                    <br>
+                    <p>
+                        Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, 
+                        au <strong>deep learning</strong>, et aux systèmes autonomes. Mon objectif est de contribuer 
+                        au développement de technologies qui améliorent la vie quotidienne tout en repoussant 
+                        les limites de l'innovation.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h4>Robotique Avancée</h4>
+                            <p>Conception et programmation de systèmes robotiques</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4>Intelligence Artificielle</h4>
+                            <p>Machine Learning & Deep Learning</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h4>Formation Continue</h4>
+                            <p>Toujours à la recherche de nouveaux défis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="skills">
-            <h2>Compétences</h2>
-            <div class="skills">
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Python</span>
+            <h2>Compétences Techniques</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Robotique</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS (Robot Operating System)</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">Systèmes embarqués</span>
+                        <span class="skill-tag">Contrôle moteur</span>
+                        <span class="skill-tag">Capteurs & Actionneurs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Intelligence Artificielle</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">OpenCV</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programmation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Outils & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">SolidWorks</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Mes Projets</h2>
+            <h2>Projets Réalisés</h2>
             <div class="projects">
                 <div class="project-card">
-                    <h3>Projet 1</h3>
-                    <p>Description de votre projet. Technologies utilisées et objectifs atteints.</p>
-                    <a href="#">Voir le projet →</a>
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Robot Autonome</h3>
+                        <p>
+                            Conception et programmation d'un robot mobile capable de naviguer de manière autonome 
+                            dans un environnement complexe grâce à des algorithmes de SLAM et de planification de trajectoire.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">ROS</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">OpenCV</span>
+                            <span class="tech-badge">Raspberry Pi</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Yannisloum63" class="project-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Démo
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Projet 2</h3>
-                    <p>Description de votre projet. Technologies utilisées et objectifs atteints.</p>
-                    <a href="#">Voir le projet →</a>
+                    <div class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Système de Vision par Ordinateur</h3>
+                        <p>
+                            Développement d'un système de détection et reconnaissance d'objets en temps réel 
+                            utilisant des réseaux de neurones convolutifs (CNN) pour applications industrielles.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">YOLO</span>
+                            <span class="tech-badge">OpenCV</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Yannisloum63" class="project-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> En savoir plus
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="project-card">
-                    <h3>Projet 3</h3>
-                    <p>Description de votre projet. Technologies utilisées et objectifs atteints.</p>
-                    <a href="#">Voir le projet →</a>
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Modèle de Deep Learning</h3>
+                        <p>
+                            Création et entraînement d'un réseau de neurones profond pour la classification d'images 
+                            avec une précision de 95%+. Application de techniques d'augmentation de données et de transfer learning.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">TensorFlow</span>
+                            <span class="tech-badge">Keras</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Jupyter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Yannisloum63" class="project-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Système Embarqué IoT</h3>
+                        <p>
+                            Développement d'un système de capteurs connectés pour la surveillance environnementale 
+                            avec transmission de données en temps réel et visualisation web.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">C++</span>
+                            <span class="tech-badge">MQTT</span>
+                            <span class="tech-badge">Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Yannisloum63" class="project-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-play"></i> Voir démo
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Vous souhaitez collaborer ou discuter d'un projet ? N'hésitez pas à me contacter !</p>
-            <p>Email: <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
+            <h2>Contactez-moi</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Je suis toujours ouvert à de nouvelles opportunités, collaborations ou simplement 
+                pour discuter de robotique et d'intelligence artificielle !
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:yannis.loum@example.com">yannis.loum@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Yannisloum63" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/votreprofil" target="_blank">LinkedIn</a>
+                </div>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Yannis Loum. Tous droits réservés.</p>
+        <p>&copy; 2025 Yannis Loum. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">
+            <i class="fas fa-robot"></i> Fait avec passion pour la robotique et l'IA
+        </p>
         <div class="social-links">
-            <a href="https://github.com/yannisloum" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/votreprofil" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Yannisloum63" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/votreprofil" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:yannis.loum@example.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://twitter.com/votreprofil" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
     </footer>
+
+    <script>
+        // Animation au scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
