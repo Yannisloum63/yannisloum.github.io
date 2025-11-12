@@ -842,6 +842,59 @@
             font-size: 0.95rem;
         }
 
+        .associative-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .associative-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.9rem;
+            border: 1px solid var(--beige-dark);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-decoration: none;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .associative-links a i {
+            font-size: 0.9rem;
+        }
+
+        .associative-links a:hover {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .cv-section {
+            background: var(--beige-light);
+            border: 1px solid var(--beige-dark);
+            padding: 3rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cv-section p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .cv-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
         /* Footer */
         footer {
             background: var(--primary);
@@ -999,6 +1052,7 @@
                 <li><a href="#associative" data-i18n="nav.associative">Associatif</a></li>
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="language-switch" role="group" aria-label="Sélection de la langue">
@@ -1016,7 +1070,7 @@
                 <div class="about-text">
                     <p data-i18n="about.paragraph1">
                         Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en 
-                        <strong>Robotique et Interaction</strong> (TAF). Passionné par les technologies de pointe, 
+                        <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, 
                         je combine robotique, intelligence artificielle et vision par ordinateur pour créer des 
                         solutions innovantes et intelligentes.
                     </p>
@@ -1113,15 +1167,9 @@
                     </div>
                     <div class="education-description">
                         <p data-i18n="education.imt.description">
-                            Formation d'ingénieur généraliste avec spécialisation (TAF) en <strong>Robotique et Interaction</strong>. 
+                            Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>. 
                             Actuellement en 3e année du cycle ingénieur.
                         </p>
-                        <ul>
-                            <li data-i18n="education.imt.course1">Robotique et systèmes autonomes</li>
-                            <li data-i18n="education.imt.course2">Intelligence artificielle et deep learning</li>
-                            <li data-i18n="education.imt.course3">Vision par ordinateur et traitement d'images</li>
-                            <li data-i18n="education.imt.course4">Programmation embarquée et systèmes temps réel</li>
-                        </ul>
                     </div>
                 </div>
                 <div class="education-item">
@@ -1202,7 +1250,7 @@
                             <li data-i18n="experience.pascal.task1">Adaptation et optimisation de modèles YOLOv8 pour données multimodales</li>
                             <li data-i18n="experience.pascal.task2">Traitement et fusion de données RGB/SWIR</li>
                             <li data-i18n="experience.pascal.task3">Entraînement, évaluation et déploiement de modèles de détection</li>
-                            <li data-i18n="experience.pascal.task4">Collaboration dans un projet de recherche multipartenaire</li>
+                            <li data-i18n="experience.pascal.task4">Présentation des résultats devant un jury professionnel</li>
                         </ul>
                     </div>
                 </div>
@@ -1228,7 +1276,7 @@
                             <li data-i18n="experience.irt.task1">Développement d'algorithmes de localisation par vision (SLAM visuel)</li>
                             <li data-i18n="experience.irt.task2">Intégration de caméras et traitement d'images en temps réel</li>
                             <li data-i18n="experience.irt.task3">Travail en équipe agile avec méthodologie Scrum</li>
-                            <li data-i18n="experience.irt.task4">Présentation des résultats devant un jury professionnel</li>
+                            <li data-i18n="experience.irt.task4">Collaboration dans un projet de recherche multipartenaire</li>
                         </ul>
                     </div>
                 </div>
@@ -1247,6 +1295,20 @@
                         Participation active aux événements et initiatives visant à promouvoir la diversité et l'inclusion 
                         dans l'enseignement supérieur. En tant que Vice-Trésorier, je gère les partenariats et la trésorerie de l'association.
                     </p>
+                    <div class="associative-links">
+                        <a href="https://fr.wikipedia.org/wiki/Association_f%C3%A9d%C3%A9rative_nationale_des_%C3%A9tudiants_universitaires_scientifiques" target="_blank" rel="noopener noreferrer" title="AFNEUS sur Wikipédia">
+                            <i class="fab fa-wikipedia-w"></i>
+                            Wikipedia
+                        </a>
+                        <a href="https://www.linkedin.com/company/afneus/posts/?feedView=all" target="_blank" rel="noopener noreferrer" title="AFNEUS sur LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/afneus/" target="_blank" rel="noopener noreferrer" title="AFNEUS sur Instagram">
+                            <i class="fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                    </div>
                 </div>
 
                 <div class="associative-card">
@@ -1258,6 +1320,12 @@
                         je participe activement à l'organisation de projets de robotique collaborative, au développement de compétences 
                         techniques et au partage de connaissances avec la communauté locale.
                     </p>
+                    <div class="associative-links">
+                        <a href="https://www.linkedin.com/company/roboticlermont/posts/?feedView=all" target="_blank" rel="noopener noreferrer" title="RobotiClermont sur LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1311,6 +1379,20 @@
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">Matplotlib</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2 data-i18n="cv.title">Mon CV</h2>
+            <div class="cv-section">
+                <p data-i18n="cv.description">
+                    Téléchargez mon CV pour obtenir une vue d'ensemble détaillée de mon parcours, de mes expériences et de mes compétences.
+                </p>
+                <div class="cv-actions">
+                    <a href="CV_YannisL_2.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cv.button">
+                        Télécharger mon CV (PDF)
+                    </a>
                 </div>
             </div>
         </section>
@@ -1463,7 +1545,7 @@
                 "nav.projects": "Projects",
                 "nav.contact": "Contact",
                 "about.title": "About Me",
-                "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong>, I specialize in <strong>Robotics and Interaction</strong> (TAF). Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
+                "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong> (equivalent to M1/Bac+4 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
                 "about.paragraph2": "My journey has allowed me to work on concrete projects such as developing a vision-based indoor localization device (IRT B<>COM) and designing an autonomous mini car. I am particularly interested in <strong>computer vision</strong>, <strong>deep learning</strong>, and autonomous systems. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
                 "about.highlight.robotics.title": "Advanced Robotics",
                 "about.highlight.robotics.text": "Designing and programming robotic systems",
@@ -1484,11 +1566,7 @@
                 "education.imt.degree": "Engineering Degree",
                 "education.imt.school": "IMT Atlantique",
                 "education.imt.period": "2025 - 2027",
-                "education.imt.description": "Generalist engineering training with specialization (TAF) in <strong>Robotics and Interaction</strong>. Currently in 2nd year, I specialize in robotic systems, artificial intelligence, and computer vision.",
-                "education.imt.course1": "Robotics and autonomous systems",
-                "education.imt.course2": "Artificial intelligence and machine learning",
-                "education.imt.course3": "Computer vision and image processing",
-                "education.imt.course4": "Embedded programming and real-time systems",
+                "education.imt.description": "Generalist engineering training with a specialization in <strong>Robotics and Interaction</strong>. Currently in 2nd year (equivalent to M1/Bac+4), I focus on robotic systems, artificial intelligence, and computer vision.",
                 "education.master1.degree": "Master 1 - Automation & Robotics",
                 "education.master1.school": "Université Clermont Auvergne (UCA), Clermont-Ferrand",
                 "education.master1.period": "2024 - 2025",
@@ -1509,13 +1587,15 @@
                 "experience.pascal.task1": "Adaptation and optimization of YOLOv8 models",
                 "experience.pascal.task2": "Multimodal data processing (RGB/SWIR)",
                 "experience.pascal.task3": "Training and evaluation of detection models",
+                "experience.pascal.task4": "Presentation of results to a professional jury",
                 "experience.irt.title": "Diplomation Project - Indoor Localization",
                 "experience.irt.company": "IRT B<>COM & IMT Atlantique",
                 "experience.irt.period": "Ongoing",
                 "experience.irt.description": "Diplomation project in collaboration between <strong>IRT B<>COM and IMT Atlantique</strong>. Development of a <strong>vision-based indoor localization device</strong> in a team of 5 students. Design and implementation of a navigation system using computer vision for precise indoor localization.",
                 "experience.irt.task1": "Development of vision-based localization algorithms",
                 "experience.irt.task2": "Sensor integration and image processing",
-                "experience.irt.task3": "Real-time performance optimization",
+                "experience.irt.task3": "Agile teamwork with Scrum methodology",
+                "experience.irt.task4": "Collaboration within a multi-partner research project",
                 "projects.title": "Completed Projects",
                 "projects.irt.title": "Vision-Based Indoor Localization",
                 "projects.irt.description": "Development of a vision-based indoor localization device as part of an IRT B<>COM project. Navigation system using computer vision for precise indoor localization.",
@@ -1530,6 +1610,10 @@
                 "projects.yolo.description": "Adaptation of YOLOv8 for multimodal object detection (RGB/SWIR). Development of deep learning models for fusion of visual and infrared data, optimized for industrial applications.",
                 "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
                 "projects.links.source": "<i class=\"fab fa-github\"></i> Source code",
+                "nav.cv": "CV",
+                "cv.title": "Curriculum Vitae",
+                "cv.description": "Download my resume to get a comprehensive overview of my background, experiences, and skills.",
+                "cv.button": "Download my CV (PDF)",
                 "imt.title": "IMT Atlantique - Grande École d'Ingénieurs",
                 "imt.description": "IMT Atlantique is a French engineering school internationally recognized for its academic excellence and cutting-edge research. The school trains highly qualified generalist engineers in the fields of digital technology, energy, and environment.",
                 "imt.ranking1.value": "Top 500",
@@ -1568,7 +1652,7 @@
                 "nav.projects": "Projets",
                 "nav.contact": "Contact",
                 "about.title": "À propos de moi",
-                "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong> (TAF). Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
+                "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
                 "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets comme le développement d'un dispositif de localisation indoor basée vision (IRT B<>COM) et la conception d'une mini voiture autonome. Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, au <strong>deep learning</strong>, et aux systèmes autonomes. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
                 "about.highlight.robotics.title": "Robotique Avancée",
                 "about.highlight.robotics.text": "Conception et programmation de systèmes robotiques",
@@ -1589,11 +1673,7 @@
                 "education.imt.degree": "Diplôme d'Ingénieur",
                 "education.imt.school": "IMT Atlantique",
                 "education.imt.period": "2025 - 2027",
-                "education.imt.description": "Formation d'ingénieur généraliste avec spécialisation (TAF) en <strong>Robotique et Interaction</strong>. Actuellement en 2e année, je me spécialise dans les systèmes robotiques, l'intelligence artificielle et la vision par ordinateur.",
-                "education.imt.course1": "Robotique et systèmes autonomes",
-                "education.imt.course2": "Intelligence artificielle et machine learning",
-                "education.imt.course3": "Vision par ordinateur et traitement d'images",
-                "education.imt.course4": "Programmation embarquée et systèmes temps réel",
+                "education.imt.description": "Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>. Actuellement en 2e année, je me spécialise dans les systèmes robotiques, l'intelligence artificielle et la vision par ordinateur.",
                 "education.master1.degree": "Master 1 - Automatique & Robotique",
                 "education.master1.school": "Université Clermont Auvergne (UCA), Clermont-Ferrand",
                 "education.master1.period": "2024 - 2025",
@@ -1614,13 +1694,15 @@
                 "experience.pascal.task1": "Adaptation et optimisation de modèles YOLOv8",
                 "experience.pascal.task2": "Traitement de données multimodales (RVB/SWIR)",
                 "experience.pascal.task3": "Entraînement et évaluation de modèles de détection",
+                "experience.pascal.task4": "Présentation des résultats devant un jury professionnel",
                 "experience.irt.title": "Projet de Diplomatisation - Localisation Indoor",
                 "experience.irt.company": "IRT B<>COM & IMT Atlantique",
                 "experience.irt.period": "En cours",
                 "experience.irt.description": "Projet de diplomation en collaboration entre <strong>IRT B<>COM et IMT Atlantique</strong>. Développement d'un <strong>système de localisation indoor basé vision</strong> en équipe de 5 étudiants. Conception et implémentation d'un dispositif de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
                 "experience.irt.task1": "Développement d'algorithmes de localisation par vision",
                 "experience.irt.task2": "Intégration de capteurs et traitement d'images",
-                "experience.irt.task3": "Optimisation des performances en temps réel",
+                "experience.irt.task3": "Travail en équipe agile avec méthodologie Scrum",
+                "experience.irt.task4": "Collaboration dans un projet de recherche multipartenaire",
                 "projects.title": "Projets Réalisés",
                 "projects.irt.title": "Localisation Indoor Basée Vision",
                 "projects.irt.description": "Développement d'un dispositif de localisation indoor basée vision dans le cadre d'un projet IRT B<>COM. Système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
@@ -1635,6 +1717,10 @@
                 "projects.yolo.description": "Adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR). Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges, optimisé pour applications industrielles.",
                 "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
                 "projects.links.source": "<i class=\"fab fa-github\"></i> Code source",
+                "nav.cv": "CV",
+                "cv.title": "Mon CV",
+                "cv.description": "Téléchargez mon CV pour obtenir une vue d'ensemble détaillée de mon parcours, de mes expériences et de mes compétences.",
+                "cv.button": "Télécharger mon CV (PDF)",
                 "imt.title": "IMT Atlantique - Grande École d'Ingénieurs",
                 "imt.description": "IMT Atlantique est une grande école d'ingénieurs française reconnue internationalement pour son excellence académique et sa recherche de pointe. L'école forme des ingénieurs généralistes hautement qualifiés dans les domaines du numérique, de l'énergie et de l'environnement.",
                 "imt.ranking1.value": "Top 500",
