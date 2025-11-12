@@ -64,12 +64,12 @@
         }
 
         .profile-image-container {
-            width: 180px;
-            height: 180px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             overflow: hidden;
-            border: 4px solid var(--white);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 5px solid var(--white);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
             background: var(--beige);
         }
 
@@ -113,6 +113,35 @@
             margin: 0 auto 2rem;
             line-height: 1.8;
             font-family: 'Segoe UI', sans-serif;
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .header-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .header-contact-item i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .header-contact-item:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
         }
 
         .cta-buttons {
@@ -1036,9 +1065,23 @@
             <p class="header-description" data-i18n="header.description">
                 Passionné par les technologies de pointe, j'envisage de combiner Robotique, IA et Vision par Ordinateur pour créer des solutions innovantes et intelligentes.
             </p>
+            <div class="header-contact">
+                <a href="mailto:yannisloum@gmail.com" class="header-contact-item" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span>yannisloum@gmail.com</span>
+                </a>
+                <a href="https://github.com/Yannisloum63" target="_blank" class="header-contact-item" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>Yannisloum63</span>
+                </a>
+                <a href="https://www.linkedin.com/in/yannis-loumouamou-697409253" target="_blank" class="header-contact-item" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>Yannis Loumouamou</span>
+                </a>
+            </div>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary" data-i18n="cta.projects">Voir mes projets</a>
-                <a href="#contact" class="btn btn-secondary" data-i18n="cta.contact">Me contacter</a>
+                <a href="#skills" class="btn btn-secondary" data-i18n="cta.skills">Mes compétences</a>
             </div>
         </div>
     </header>
@@ -1052,8 +1095,6 @@
                 <li><a href="#associative" data-i18n="nav.associative">Associatif</a></li>
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
-                <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="language-switch" role="group" aria-label="Sélection de la langue">
                 <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
@@ -1485,27 +1526,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact">
-            <h2 data-i18n="contact.title">Contactez-moi</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;" data-i18n="contact.description">
-                Je suis toujours ouvert à de nouvelles opportunités, collaborations ou simplement 
-                pour discuter de robotique et d'intelligence artificielle !
-            </p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:yannisloum@gmail.com">yannisloum@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/Yannisloum63" target="_blank">GitHub</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/yannis-loumouamou-697409253/" target="_blank">LinkedIn</a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="projects.wavegame.title">Challenge WaveGame</h3>
+                        <p data-i18n="projects.wavegame.description">
+                            Participation au <strong>WaveGame Challenge</strong> organisé par Wavestone, un défi de programmation 
+                            compétitif axé sur la résolution de problèmes algorithmiques complexes. Mise en pratique de 
+                            compétences en algorithmique, optimisation et pensée logique dans un environnement compétitif.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge" data-i18n="projects.wavegame.tech.algorithms">Algorithmique</span>
+                            <span class="tech-badge" data-i18n="projects.wavegame.tech.problem">Résolution de Problèmes</span>
+                            <span class="tech-badge" data-i18n="projects.wavegame.tech.optimization">Optimisation</span>
+                            <span class="tech-badge" data-i18n="projects.wavegame.tech.competition">Compétition</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.wavestone.com/fr/push/wavegame/" target="_blank" class="project-link" data-i18n="projects.wavegame.link">
+                                <i class="fas fa-external-link-alt"></i> WaveGame Challenge
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
