@@ -1140,6 +1140,56 @@
                 display: block;
             }
 
+            /* Horizontal scroll for wide content inside accordion */
+            .mobile-accordion .projects,
+            .mobile-accordion .associative-grid,
+            .mobile-accordion .skills-container {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 1rem;
+                padding: 0.5rem 0 1rem;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .mobile-accordion .project-card,
+            .mobile-accordion .associative-item,
+            .mobile-accordion .skill-category {
+                flex: 0 0 85%;
+                scroll-snap-align: start;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+                border: 1px solid var(--beige-dark);
+            }
+
+            .mobile-accordion .project-card video {
+                height: 200px !important;
+            }
+
+            /* Hide default grid behavior inside accordion */
+            .mobile-accordion .associative-grid,
+            .mobile-accordion .projects {
+                grid-template-columns: none;
+            }
+
+            /* Prevent clipping of right-side content */
+            .accordion-body { overflow-x: visible; }
+
+            /* Remove left padding from timelines in accordion context */
+            .mobile-accordion .education-timeline,
+            .mobile-accordion .experience-timeline { padding-left: 0; }
+
+            /* Scrollbar styling (optional subtle) */
+            .mobile-accordion .projects::-webkit-scrollbar,
+            .mobile-accordion .associative-grid::-webkit-scrollbar,
+            .mobile-accordion .skills-container::-webkit-scrollbar { height: 6px; }
+            .mobile-accordion .projects::-webkit-scrollbar-thumb,
+            .mobile-accordion .associative-grid::-webkit-scrollbar-thumb,
+            .mobile-accordion .skills-container::-webkit-scrollbar-thumb { background: var(--beige-dark); border-radius: 3px; }
+            .mobile-accordion .projects::-webkit-scrollbar-track,
+            .mobile-accordion .associative-grid::-webkit-scrollbar-track,
+            .mobile-accordion .skills-container::-webkit-scrollbar-track { background: var(--beige-light); }
+
             /* Cacher les sections desktop sur mobile */
             section#education,
             section#experience,
@@ -2189,16 +2239,35 @@
             observer.observe(section);
         });
 
-        // Smooth scroll
+        // Smooth scroll + mobile accordion integration
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+                if (!href) return;
+                const targetId = href.substring(1);
+                // Mobile behavior: open accordion section instead of scrolling to hidden original section
+                if (window.innerWidth <= 768) {
+                    const accordionHeader = document.querySelector(`.accordion-header[data-section="${targetId}"]`);
+                    if (accordionHeader) {
+                        e.preventDefault();
+                        // Trigger accordion opening
+                        accordionHeader.click();
+                        // Scroll accordion header into view
+                        accordionHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Close hamburger menu if open
+                        if (hamburger && hamburger.classList.contains('active')) {
+                            hamburger.classList.remove('active');
+                            navMenu.classList.remove('active');
+                            navOverlay.classList.remove('active');
+                        }
+                        return;
+                    }
+                }
+                // Desktop or non-accordion target
+                const target = document.getElementById(targetId);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
