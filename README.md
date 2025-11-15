@@ -1,98 +1,105 @@
-#  Portfolio - Yannis Loumouamou
+git clone https://github.com/Yannisloum63/yannisloum63.github.io.git
+# Yannis Loumouamou – Engineering Portfolio
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://yannisloum63.github.io)
+[![Live Site](https://img.shields.io/badge/Site-Live-blue?logo=github)](https://yannisloum63.github.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> Portfolio personnel 
+Minimal, bilingual (FR/EN) portfolio showcasing my work in Robotics, Computer Vision and Applied AI. Designed for clarity, fast loading, and a pleasant mobile experience.
 
-## À propos
+## Overview
 
-Ce site web présente mon parcours, mes compétences et mes projets dans les domaines de la **robotique** et de l'**intelligence artificielle**. Conçu avec un design moderne et responsive, il met en valeur mes réalisations techniques.
+This site presents:
+* Education and academic milestones (IMT Atlantique, UCA, CPGE)
+* Professional and project experience (vision-based indoor localization, autonomous mini car, multimodal YOLOv8 adaptation, WaveGame challenge)
+* Technical skills (Robotics, AI, Programming, Tools/CAD)
+* Associative engagement (AFNEUS, RobotiClermont)
+* CV download (final section)
 
-## ✨ Fonctionnalités
+The landing header immediately shows my profile photo, role, IMT Atlantique link, and direct contact links (email/GitHub/LinkedIn). No separate contact section to reduce scroll friction.
 
-- 🎨 **Design moderne** avec dégradés et animations
-- 📱 **Responsive** - fonctionne sur tous les appareils
-- ⚡ **Performances optimisées** - chargement rapide
-- 🎭 **Animations fluides** au scroll et au survol
-- 🔗 **Navigation smooth** entre les sections
-- 💼 **Présentation de projets** avec détails techniques
-- 📧 **Section contact** avec liens vers réseaux sociaux
+## Features
 
-## 🛠️ Technologies utilisées
+* Neutral minimalist design (beige / black / soft accent) – typography: Georgia + Segoe UI
+* Fully responsive: desktop sections, mobile accordion panels, adaptive image sizes
+* Bilingual content (French / English) via lightweight translation dictionary (`data-i18n` attributes)
+* Mobile hamburger navigation with overlay + smooth section activation
+* Accordion interface on screens ≤ 768px for Education, Experience, Associative, Skills, Projects (space-efficient)
+* Horizontal swipeable carousels (projects / associative / skills) on mobile to avoid excessive vertical length and clipping
+* Video integration (autonomous car parking demos) + logos and ranking banner (IMT Atlantique)
+* Smooth scrolling and intersection fade-in animations
+* Accessible hit areas (minimum touch sizes for buttons & interactive elements)
+* CV section relocated to end for logical flow
 
-- HTML5
-- CSS3 (avec variables CSS et Grid/Flexbox)
-- JavaScript vanilla (animations et interactions)
-- Font Awesome (icônes)
-- GitHub Pages (hébergement)
+## Tech Stack
 
-## 🚀 Sections du site
+| Layer | Tools |
+|-------|-------|
+| Markup | HTML5 |
+| Styling | CSS3 (Custom Properties, Flexbox, Grid, media queries) |
+| Interactivity | Vanilla JavaScript (DOM, observers, language switch, accordion logic) |
+| Icons | Font Awesome |
+| Hosting | GitHub Pages |
 
-1. **Header** - Présentation avec appel à l'action
-2. **À propos** - Mon parcours et mes objectifs
-3. **Compétences** - Technologies maîtrisées (Robotique, IA, Programmation)
-4. **Projets** - Portfolio de mes réalisations techniques
-5. **Contact** - Moyens de me contacter
+No build step, no external JS framework—intentionally lightweight.
 
-## 📦 Installation locale
+## Project Structure
 
-Pour tester le site en local :
+```
+index.html          # Single-page application (markup, styles, translations, scripts)
+images/             # Profile photo, logos, banners
+videos/             # Project demo videos (MP4)
+LICENSE             # MIT license
+README.md           # This file
+```
 
-```bash
-# Cloner le repository
-git clone https://github.com/Yannisloum63/yannisloum63.github.io.git
+## Getting Started
 
-# Naviguer dans le dossier
-cd yannisloum63.github.io
+```powershell
+# Clone
+git clone https://github.com/Yannisloum63/yannisloum.github.io.git
+cd yannisloum.github.io
 
-# Ouvrir index.html dans votre navigateur
-# Ou utiliser un serveur local (par exemple avec Python)
+# Run a simple local server (Python 3)
 python -m http.server 8000
 ```
+Open http://localhost:8000 in your browser.
 
-Puis ouvrir `http://localhost:8000` dans votre navigateur.
+Alternatively just open `index.html` directly (some features like smooth scroll still work; no build required).
 
-## 🎨 Personnalisation
+## Customization
 
-### Couleurs
-Les couleurs principales sont définies dans les variables CSS au début du fichier :
+Edit `index.html`:
+* Update header text, profile image (`images/monprofile.jpg`)
+* Add/remove projects (follow existing card structure)
+* Adjust skill categories (`skills-container`)
+* Tweak color palette in `:root` custom properties
+* Extend translations in the `translations` object for FR/EN
+* Replace CV file (update link in the CV section)
 
-```css
-:root {
-    --primary: #00d9ff;
-    --secondary: #0066ff;
-    --accent: #ff00ff;
-    --dark: #0a0e27;
-    --light: #f5f7fa;
-}
-```
+For additional languages: add a new key in `translations` and apply the same `data-i18n` attribute mapping.
 
-### Contenu
-Modifiez directement le fichier `index.html` pour :
-- Mettre à jour vos informations personnelles
-- Ajouter/modifier des projets
-- Changer les compétences listées
-- Modifier les liens vers vos réseaux sociaux
+## Internationalization (i18n)
 
-## 📝 À faire
+Each translatable element has a `data-i18n` key. The language buttons trigger a dictionary swap and update `localStorage` for persistence. Adding a language is a matter of extending the `translations` object—no HTML duplication.
 
-- [ ] Ajouter une version anglaise
-- [ ] Intégrer un blog technique
-- [ ] Ajouter des captures d'écran de projets
-- [ ] Créer une section CV téléchargeable
-- [ ] Ajouter un mode sombre/clair
+## Mobile Experience
 
-## 📄 Licence
+Below 768px:
+* Desktop sections hidden; accordion substitutes content (cloned dynamically to avoid duplication)
+* Horizontal scrolling areas with snap for dense content
+* Hamburger menu + overlay for focused navigation
+* Larger tap targets, reduced typography sizes for readability
 
-Ce projet est sous licence MIT. Vous êtes libre de l'utiliser comme template pour votre propre portfolio.
+## License
 
-## 📬 Contact
+MIT – freely reuse, adapt, and build upon this portfolio template. Attribution appreciated but not required.
 
-- 📧 Email: [yannisloum@gmail.com](mailto:yannisloum@gmail.com)
-- 💼 LinkedIn: [Votre profil](https://www.linkedin.com/in/yannis-loumouamou-697409253/)
-- 🐙 GitHub: [@Yannisloum63](https://github.com/Yannisloum63)
+## Contact
+
+Email: yannisloum@gmail.com  
+GitHub: https://github.com/Yannisloum63  
+LinkedIn: https://www.linkedin.com/in/yannis-loumouamou-697409253/
 
 ---
 
-⭐ N'hésitez pas à star ce repository si vous l'avez trouvé utile !
+If this portfolio inspires you, consider adding a star. Thank you!
