@@ -1,5 +1,4 @@
-git clone https://github.com/Yannisloum63/yannisloum63.github.io.git
-# Yannis Loumouamou – Engineering Portfolio
+# Yannis Loumouamou – Engineering student Portfolio
 
 [![Live Site](https://img.shields.io/badge/Site-Live-blue?logo=github)](https://yannisloum63.github.io/yannisloum.github.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
