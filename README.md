@@ -24,10 +24,10 @@ The landing header immediately shows my profile photo, role, IMT Atlantique link
 * Mobile hamburger navigation with overlay + smooth section activation
 * Accordion interface on screens ≤ 768px for Education, Experience, Associative, Skills, Projects (space-efficient)
 * Horizontal swipeable carousels (projects / associative / skills) on mobile to avoid excessive vertical length and clipping
-* Video integration (autonomous car parking demos) + logos and ranking banner (IMT Atlantique)
+* Video integration + logos and ranking banner 
 * Smooth scrolling and intersection fade-in animations
 * Accessible hit areas (minimum touch sizes for buttons & interactive elements)
-* CV section relocated to end for logical flow
+
 
 ## Tech Stack
 
