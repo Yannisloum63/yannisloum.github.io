@@ -1,34 +1,34 @@
 # Contributing to my Portfolio
 
-Merci de votre intérêt pour contribuer à ce projet ! 🎉
+Thank you for your interest in contributing to this project!
 
-## Comment contribuer
+## How to contribute
 
-### 🐛 Signaler un bug
+### 🐛 Report a bug
 
-Si vous trouvez un bug, veuillez ouvrir une issue en incluant :
-- Description détaillée du problème
-- Étapes pour reproduire
-- Navigateur et version
-- Captures d'écran si pertinent
+If you find a bug, please open an issue including:
+- Detailed description of the problem
+- Steps to reproduce
+- Browser and version
+- Screenshots if relevant
 
-### 💡 Suggérer une amélioration
+### 💡 Suggest an improvement
 
-Les suggestions sont les bienvenues ! Ouvrez une issue en décrivant :
-- La fonctionnalité proposée
-- Pourquoi elle serait utile
-- Comment elle pourrait être implémentée
+Suggestions are welcome! Open an issue describing:
+- The proposed feature
+- Why it would be useful
+- How it could be implemented
 
-### 🔧 Proposer des changements
+### 🔧 Propose changes
 
-1. Fork le projet
-2. Créez une branche (`git checkout -b feature/AmazingFeature`)
-3. Commitez vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
+1. Fork the project
+2. Create a branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Code de conduite
+## Code of Conduct
 
-Soyez respectueux et constructif dans vos interactions.
+Be respectful and constructive in your interactions.
 
-Merci ! 🙏
+Thank you! 🙏
