@@ -14,7 +14,7 @@ This site presents:
 * Associative engagement
 * CV download (final section)
 
-The landing header immediately shows my profile photo, role, IMT Atlantique link, and direct contact links (email/GitHub/LinkedIn). No separate contact section to reduce scroll friction.
+The landing header immediately shows my profile photo, role, and direct contact links (email/GitHub/LinkedIn). No separate contact section to reduce scroll friction.
 
 ## Features
 
