@@ -8,10 +8,10 @@ Minimal, bilingual (FR/EN) portfolio showcasing my work in Robotics, Computer Vi
 ## Overview
 
 This site presents:
-* Education and academic milestones (IMT Atlantique, UCA, CPGE)
-* Professional and project experience (vision-based indoor localization, autonomous mini car, multimodal YOLOv8 adaptation, WaveGame challenge)
-* Technical skills (Robotics, AI, Programming, Tools/CAD)
-* Associative engagement (AFNEUS, RobotiClermont)
+* Education and academic milestones 
+* Professional and project experience 
+* Technical skills
+* Associative engagement
 * CV download (final section)
 
 The landing header immediately shows my profile photo, role, IMT Atlantique link, and direct contact links (email/GitHub/LinkedIn). No separate contact section to reduce scroll friction.
@@ -24,10 +24,10 @@ The landing header immediately shows my profile photo, role, IMT Atlantique link
 * Mobile hamburger navigation with overlay + smooth section activation
 * Accordion interface on screens ≤ 768px for Education, Experience, Associative, Skills, Projects (space-efficient)
 * Horizontal swipeable carousels (projects / associative / skills) on mobile to avoid excessive vertical length and clipping
-* Video integration (autonomous car parking demos) + logos and ranking banner (IMT Atlantique)
+* Video integration + logos and ranking banner 
 * Smooth scrolling and intersection fade-in animations
 * Accessible hit areas (minimum touch sizes for buttons & interactive elements)
-* CV section relocated to end for logical flow
+
 
 ## Tech Stack
 
