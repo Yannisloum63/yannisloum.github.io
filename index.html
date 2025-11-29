@@ -300,6 +300,18 @@
             transform: rotate(180deg);
         }
 
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            z-index: 10000;
+            transition: width 0.1s ease-out;
+        }
+
         .language-switch button {
             border: none;
             background: transparent;
@@ -696,6 +708,44 @@
             border-color: var(--primary);
         }
 
+        /* Filtres de projets */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.7rem 1.5rem;
+            border: 1px solid var(--beige-dark);
+            background: var(--white);
+            color: var(--text-dark);
+            cursor: pointer;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-btn:hover {
+            background: var(--beige-light);
+            border-color: var(--accent);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .filter-btn i {
+            font-size: 1rem;
+        }
+
         /* Section Projets */
         .projects {
             display: grid;
@@ -709,6 +759,10 @@
             border: 1px solid var(--beige-dark);
             transition: all 0.3s;
             position: relative;
+        }
+
+        .project-card.hidden {
+            display: none;
         }
 
         .project-card:hover {
@@ -831,6 +885,92 @@
 
         .contact-item a:hover {
             color: var(--accent);
+        }
+
+        /* Formulaire de contact */
+        .contact-intro {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid var(--beige-dark);
+            background: var(--white);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(139, 128, 112, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button[type="submit"] {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .form-status {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .form-status.success {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-status.error {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
 
         /* IMT Atlantique Banner */
@@ -1371,6 +1511,12 @@
                 padding: 0.4rem 0.8rem;
             }
 
+            /* GitHub Stats responsive */
+            .github-stats-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .imt-banner {
                 flex-direction: column;
                 text-align: center;
@@ -1434,6 +1580,9 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
     <header>
         <div class="header-content">
             <div class="profile-image-container">
@@ -1482,6 +1631,7 @@
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
                 <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="language-switch" role="group" aria-label="Sélection de la langue">
                 <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="true">FR</button>
@@ -1871,8 +2021,28 @@
 
         <section id="projects">
             <h2 data-i18n="projects.title">Projets Réalisés</h2>
+            
+            <!-- Filtres de projets -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> <span data-i18n="projects.filter.all">Tous</span>
+                </button>
+                <button class="filter-btn" data-filter="ai">
+                    <i class="fas fa-brain"></i> <span>AI/ML</span>
+                </button>
+                <button class="filter-btn" data-filter="robotics">
+                    <i class="fas fa-robot"></i> <span data-i18n="projects.filter.robotics">Robotique</span>
+                </button>
+                <button class="filter-btn" data-filter="vision">
+                    <i class="fas fa-eye"></i> <span data-i18n="projects.filter.vision">Vision</span>
+                </button>
+                <button class="filter-btn" data-filter="embedded">
+                    <i class="fas fa-microchip"></i> <span data-i18n="projects.filter.embedded">Embarqué</span>
+                </button>
+            </div>
+            
             <div class="projects">
-                <div class="project-card">
+                <div class="project-card" data-category="vision robotics">
                     <div class="project-image">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
@@ -1899,7 +2069,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="robotics embedded vision">
                     <div class="project-image" style="background: none; padding: 0; height: auto;">
                         <img src="images/prototype_final1.jpg" alt="Prototype final de la mini voiture autonome avec système Park Assist" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid var(--beige-dark);" loading="lazy">
                     </div>
@@ -1925,7 +2095,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="ai vision">
                     <div class="project-image">
                         <i class="fas fa-eye"></i>
                     </div>
@@ -1952,7 +2122,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="ai">
                     <div class="project-image">
                         <i class="fas fa-gamepad"></i>
                     </div>
@@ -1995,6 +2165,38 @@
                 </div>
             </div>
         </section>
+
+        <section id="contact">
+            <h2 data-i18n="contact.title">Me Contacter</h2>
+            <p class="contact-intro" data-i18n="contact.intro">
+                Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !
+            </p>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.name">Nom *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject" data-i18n="contact.form.subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="contact.form.message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.send">Envoyer</span>
+                </button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </section>
     </div>
 
     <footer>
@@ -2034,6 +2236,8 @@
                 "nav.experience": "Experience",
                 "nav.skills": "Skills",
                 "nav.projects": "Projects",
+                "nav.cv": "CV",
+                "nav.github": "GitHub",
                 "nav.contact": "Contact",
                 "about.title": "About Me",
                 "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong> (equivalent to M1/Bac+4 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
@@ -2107,6 +2311,20 @@
                 "projects.wavegame.tech.competition": "Competition",
                 "projects.wavegame.link": "<i class=\"fas fa-external-link-alt\"></i> WaveGame Challenge",
                 "projects.links.source": "<i class=\"fab fa-github\"></i> Source code",
+                "projects.filter.all": "All",
+                "projects.filter.robotics": "Robotics",
+                "projects.filter.vision": "Vision",
+                "projects.filter.embedded": "Embedded",
+                "github.title": "GitHub Activity",
+                "github.intro": "My real-time GitHub statistics and contributions",
+                                "github.profile": "View my GitHub profile",
+                "contact.title": "Contact Me",
+                "contact.intro": "Have a project, a question, or just want to chat? Feel free to reach out!",
+                "contact.form.name": "Name *",
+                "contact.form.email": "Email *",
+                "contact.form.subject": "Subject *",
+                "contact.form.message": "Message *",
+                "contact.form.send": "Send",
                 "cta.skills": "My skills",
                 "nav.cv": "CV",
                 "cv.title": "Curriculum Vitae",
@@ -2133,7 +2351,24 @@
                 "associative.roboticlermont.description": "Student robotics association in Clermont-Ferrand. As a founding member and secretary, I actively participate in organizing collaborative robotics projects, developing technical skills, and sharing knowledge with the local community.",
                 "nav.associative": "Associative",
                 "contact.title": "Contact Me",
+                "contact.intro": "Have a project, a question, or just want to chat? Feel free to reach out!",
+                "contact.form.name": "Name *",
+                "contact.form.email": "Email *",
+                "contact.form.subject": "Subject *",
+                "contact.form.message": "Message *",
+                "contact.form.send": "Send",
                 "contact.description": "I am always open to new opportunities, collaborations, or simply a conversation about robotics and artificial intelligence!",
+                "projects.filter.all": "All",
+                "projects.filter.robotics": "Robotics",
+                "projects.filter.vision": "Vision",
+                "projects.filter.embedded": "Embedded",
+                "contact.title": "Contact Me",
+                "contact.intro": "Have a project, a question, or just want to chat? Feel free to reach out!",
+                "contact.form.name": "Name *",
+                "contact.form.email": "Email *",
+                "contact.form.subject": "Subject *",
+                "contact.form.message": "Message *",
+                "contact.form.send": "Send",
                 "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. All rights reserved.",
                 "footer.subtitle": "Portfolio — Robotics & Artificial Intelligence"
             },
@@ -2149,6 +2384,8 @@
                 "nav.experience": "Expérience",
                 "nav.skills": "Compétences",
                 "nav.projects": "Projets",
+                "nav.cv": "CV",
+                "nav.github": "GitHub",
                 "nav.contact": "Contact",
                 "about.title": "À propos de moi",
                 "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
@@ -2247,8 +2484,25 @@
                 "associative.roboticlermont.role": "Secrétaire & Membre Fondateur",
                 "associative.roboticlermont.description": "Association étudiante de robotique de Clermont-Ferrand. En tant que membre fondateur et secrétaire, je participe activement à l'organisation de projets de robotique collaborative, au développement de compétences techniques et au partage de connaissances avec la communauté locale.",
                 "nav.associative": "Associatif",
-                "contact.title": "Contactez-moi",
+                "contact.title": "Me Contacter",
+                "contact.intro": "Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !",
+                "contact.form.name": "Nom *",
+                "contact.form.email": "Email *",
+                "contact.form.subject": "Sujet *",
+                "contact.form.message": "Message *",
+                "contact.form.send": "Envoyer",
                 "contact.description": "Je suis toujours ouvert à de nouvelles opportunités, collaborations ou simplement pour discuter de robotique et d'intelligence artificielle !",
+                "projects.filter.all": "Tous",
+                "projects.filter.robotics": "Robotique",
+                "projects.filter.vision": "Vision",
+                "projects.filter.vision": "Embarqué",
+                "contact.title": "Me Contacter",
+                "contact.intro": "Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !",
+                "contact.form.name": "Nom *",
+                "contact.form.email": "Email *",
+                "contact.form.subject": "Sujet *",
+                "contact.form.message": "Message *",
+                "contact.form.send": "Envoyer",
                 "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.",
                 "footer.subtitle": "Portfolio — Robotique & Intelligence Artificielle"
             }
@@ -2293,7 +2547,15 @@
         }
 
         const savedLanguage = localStorage.getItem('portfolio-lang');
-        setLanguage(savedLanguage || 'en', false);
+        
+        // Auto-détection de la langue du navigateur
+        if (!savedLanguage) {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const detectedLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+            setLanguage(detectedLang, true);
+        } else {
+            setLanguage(savedLanguage, false);
+        }
 
         langButtons.forEach((button) => {
             button.addEventListener('click', () => {
@@ -2328,6 +2590,43 @@
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('portfolio-theme', newTheme);
             updateThemeIcon(newTheme);
+        });
+
+        /* ===== SCROLL PROGRESS BAR ===== */
+        const scrollProgress = document.getElementById('scrollProgress');
+        
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        /* ===== FILTRES DE PROJETS ===== */
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                
+                // Mise à jour des boutons actifs
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filtrage des projets
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        const categories = card.dataset.category || '';
+                        if (categories.includes(filter)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
         });
 
         // Animation au scroll
