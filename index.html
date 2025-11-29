@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Yannis LOUMOUAMOU - Élève Ingénieur en Robotique et Intelligence Artificielle">
-    <title>Yannis LOUMOUAMOU - Robotique & IA</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Yannis LOUMOUAMOU - Ingénieur Robotique & IA | IMT Atlantique">
+    <meta name="description" content="Élève ingénieur spécialisé en robotique et intelligence artificielle à IMT Atlantique. Projets en deep learning, vision par ordinateur, systèmes embarqués et voitures autonomes.">
+    <meta name="author" content="Yannis LOUMOUAMOU">
+    <meta name="keywords" content="robotique, intelligence artificielle, deep learning, vision par ordinateur, IMT Atlantique, YOLOv8, ROS2, systèmes embarqués, ingénieur IA">
+    <link rel="canonical" href="https://yannisloum63.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yannisloum63.github.io/">
+    <meta property="og:title" content="Yannis LOUMOUAMOU - Ingénieur Robotique & IA">
+    <meta property="og:description" content="Portfolio d'un élève ingénieur spécialisé en robotique et intelligence artificielle. Découvrez mes projets en deep learning, vision par ordinateur et systèmes embarqués.">
+    <meta property="og:image" content="https://yannisloum63.github.io/images/monprofile.jpg">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yannisloum63.github.io/">
+    <meta name="twitter:title" content="Yannis LOUMOUAMOU - Ingénieur Robotique & IA">
+    <meta name="twitter:description" content="Portfolio d'un élève ingénieur spécialisé en robotique et intelligence artificielle à IMT Atlantique.">
+    <meta name="twitter:image" content="https://yannisloum63.github.io/images/monprofile.jpg">
+    
+    <title>Yannis LOUMOUAMOU - Robotique & IA | IMT Atlantique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -19,6 +45,19 @@
             --white: #ffffff;
         }
 
+        /* Mode sombre */
+        [data-theme="dark"] {
+            --primary: #e8e3dc;
+            --secondary: #d4cec4;
+            --accent: #b89d7e;
+            --beige-light: #1a1a1a;
+            --beige: #2d2d2d;
+            --beige-dark: #3a3a3a;
+            --text-dark: #e8e3dc;
+            --text-light: #b0b0b0;
+            --white: #0f0f0f;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -31,6 +70,7 @@
             color: var(--text-dark);
             background: var(--white);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Header minimaliste avec photo */
@@ -224,6 +264,40 @@
             gap: 0.4rem;
             font-family: 'Segoe UI', sans-serif;
             color: var(--text-dark);
+        }
+
+        /* Bouton mode sombre */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:active i {
+            transform: rotate(180deg);
         }
 
         .language-switch button {
@@ -1363,8 +1437,8 @@
     <header>
         <div class="header-content">
             <div class="profile-image-container">
-                <!-- Remplacez le commentaire ci-dessous par votre image -->
-                <img src="images/monprofile.jpg" alt="Yannis LOUMOUAMOU">
+                <!-- Remplac ez le commentaire ci-dessous par votre image -->
+                <img src="images/monprofile.jpg" alt="Photo de profil de Yannis LOUMOUAMOU, élève ingénieur en robotique et IA" width="250" height="250">
             </div>
             <h1 class="header-title">Yannis LOUMOUAMOU</h1>
             <p class="header-subtitle" data-i18n="header.subtitle">Élève Ingénieur en Robotique & Intelligence Artificielle - <a href="https://www.imt-atlantique.fr" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--accent);">IMT Atlantique</a></p>
@@ -1394,7 +1468,7 @@
 
     <div class="nav-overlay" id="navOverlay"></div>
     <nav>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
@@ -1410,9 +1484,9 @@
                 <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
             </ul>
             <div class="language-switch" role="group" aria-label="Sélection de la langue">
-                <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+                <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="true">FR</button>
                 <span>|</span>
-                <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+                <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
             </div>
         </div>
     </nav>
@@ -1473,7 +1547,7 @@
         <!-- IMT Atlantique Banner -->
         <div class="container">
             <div class="imt-banner">
-                <img src="images/logo_IMT_Atlantique.png" alt="IMT Atlantique" class="imt-logo">
+                <img src="images/logo_IMT_Atlantique.png" alt="Logo IMT Atlantique" class="imt-logo" loading="lazy" width="80" height="80">
                 <div class="imt-content">
                     <h3 data-i18n="imt.title">IMT Atlantique - Grande École d'Ingénieurs</h3>
                     <p data-i18n="imt.description">
@@ -1571,7 +1645,7 @@
                         <div>
                             <h3 class="education-title" data-i18n="education.imt.degree">Diplôme d'Ingénieur Généraliste</h3>
                             <p class="education-institution">
-                                <img src="images/logo_IMT_Atlantique.png" alt="IMT Atlantique">
+                                <img src="images/logo_IMT_Atlantique.png" alt="Logo IMT Atlantique" loading="lazy">
                                 <span data-i18n="education.imt.school">IMT Atlantique, Nantes (ex Mines Nantes), Nantes</span>
                             </p>
                         </div>
@@ -1589,7 +1663,7 @@
                         <div>
                             <h3 class="education-title" data-i18n="education.master1.degree">Master 1 - Automatique & Robotique</h3>
                             <p class="education-institution">
-                                <img src="images/logo_UCA.jpg" alt="Université Clermont Auvergne">
+                                <img src="images/logo_UCA.jpg" alt="Logo Université Clermont Auvergne" loading="lazy">
                                 <span data-i18n="education.master1.school">Université Clermont Auvergne (UCA), Clermont-Ferrand</span>
                             </p>
                         </div>
@@ -1607,7 +1681,7 @@
                         <div>
                             <h3 class="education-title" data-i18n="education.license.degree">Licence Mécatronique</h3>
                             <p class="education-institution">
-                                <img src="images/logo_UCA.jpg" alt="Université Clermont Auvergne">
+                                <img src="images/logo_UCA.jpg" alt="Logo Université Clermont Auvergne" loading="lazy">
                                 <span data-i18n="education.license.school">Université Clermont Auvergne (UCA), Clermont-Ferrand</span>
                             </p>
                         </div>
@@ -1646,7 +1720,7 @@
                         <div>
                             <h3 class="experience-title" data-i18n="experience.pascal.title">Stage - Deep Learning & Vision par Ordinateur</h3>
                             <p class="experience-company">
-                                <img src="images/institut_pascal_logo.png" alt="Institut Pascal">
+                                <img src="images/institut_pascal_logo.png" alt="Logo Institut Pascal" loading="lazy">
                                 <span data-i18n="experience.pascal.company">Institut Pascal (UMR 6602 CNRS), Clermont-Ferrand</span>
                             </p>
                         </div>
@@ -1671,7 +1745,7 @@
                         <div>
                             <h3 class="experience-title" data-i18n="experience.irt.title">Projet de Diplomatisation - Localisation Indoor</h3>
                             <p class="experience-company">
-                                <img src="images/collaboration_imt-irtbcom_banner.png" alt="IRT B<>COM & IMT Atlantique">
+                                <img src="images/collaboration_imt-irtbcom_banner.png" alt="Collaboration IRT B<>COM et IMT Atlantique" loading="lazy">
                                 <span data-i18n="experience.irt.company">IRT B<>COM & IMT Atlantique</span>
                             </p>
                         </div>
@@ -1699,7 +1773,7 @@
             <h2 data-i18n="associative.title">Engagements Associatifs</h2>
             <div class="associative-grid">
                 <div class="associative-card">
-                    <img src="images/LogoAFNEUS.png" alt="AFNEUS" class="associative-logo">
+                    <img src="images/LogoAFNEUS.png" alt="Logo AFNEUS - Association des Étudiants" class="associative-logo" loading="lazy">
                     <h3 data-i18n="associative.afneus.title">AFNEUS</h3>
                     <p class="associative-role" data-i18n="associative.afneus.role">Vice-Trésorier en charge des partenariats</p>
                     <p data-i18n="associative.afneus.description">
@@ -1724,7 +1798,7 @@
                 </div>
 
                 <div class="associative-card">
-                    <img src="images/logo roboticlermont.png" alt="RobotiClermont" class="associative-logo">
+                    <img src="images/logo roboticlermont.png" alt="Logo RobotiClermont - Club de robotique" class="associative-logo" loading="lazy">
                     <h3 data-i18n="associative.roboticlermont.title">RobotiClermont</h3>
                     <p class="associative-role" data-i18n="associative.roboticlermont.role">Secrétaire & Membre Fondateur</p>
                     <p data-i18n="associative.roboticlermont.description">
@@ -1827,7 +1901,7 @@
 
                 <div class="project-card">
                     <div class="project-image" style="background: none; padding: 0; height: auto;">
-                        <img src="images/prototype_final1.jpg" alt="Prototype final mini voiture autonome" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid var(--beige-dark);">
+                        <img src="images/prototype_final1.jpg" alt="Prototype final de la mini voiture autonome avec système Park Assist" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid var(--beige-dark);" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 data-i18n="projects.car.title">Park Assist - Voiture Autonome</h3>
@@ -1940,6 +2014,11 @@
             </a>
         </div>
     </footer>
+
+    <!-- Bouton toggle mode sombre -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <script>
         const translations = {
@@ -2221,6 +2300,34 @@
                 const selectedLang = button.dataset.lang;
                 setLanguage(selectedLang);
             });
+        });
+
+        /* ===== MODE SOMBRE ===== */
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+                themeToggle.setAttribute('aria-label', 'Basculer en mode clair');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                themeToggle.setAttribute('aria-label', 'Basculer en mode sombre');
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('portfolio-theme', newTheme);
+            updateThemeIcon(newTheme);
         });
 
         // Animation au scroll
