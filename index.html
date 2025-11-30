@@ -930,12 +930,17 @@
 
         .github-card img,
         .github-streak img,
-        .github-graph img {
+        .github-graph img,
+        .github-trophies img {
             width: 100%;
             height: auto;
             display: block;
             min-height: 150px;
             background: var(--beige-light);
+        }
+
+        .github-trophies img {
+            min-height: 80px;
         }
 
         .github-card img[src*="top-langs"] {
@@ -2159,18 +2164,32 @@
                 Mes statistiques et contributions sur GitHub en temps réel
             </p>
             
+            <!-- GitHub Trophies -->
+            <div class="github-trophies" style="text-align: center; margin-bottom: 2rem;">
+                <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer">
+                    <img src="https://github-profile-trophy.vercel.app/?username=Yannisloum63&theme=flat&no-frame=true&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" loading="lazy" />
+                </a>
+            </div>
+            
+            <!-- GitHub Contribution Graph -->
+            <div class="github-graph" style="text-align: center; margin-bottom: 2rem;">
+                <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer">
+                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yannisloum63&theme=minimal&hide_border=true&bg_color=f5f2ed&color=1a1a1a&line=8b8070&point=8b8070&area=true&area_color=8b8070" alt="Graphique d'activité GitHub" loading="lazy" style="width: 100%; max-width: 900px;" />
+                </a>
+            </div>
+            
             <div class="github-stats-container">
                 <!-- GitHub Stats Card -->
                 <div class="github-card">
                     <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-                        <img src="https://github-readme-stats.vercel.app/api?username=Yannisloum63&show_icons=true&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&icon_color=8b8070&include_all_commits=true&count_private=true" alt="GitHub Stats de Yannis" loading="lazy" onerror="this.src='https://via.placeholder.com/495x195/f5f2ed/1a1a1a?text=GitHub+Stats+Loading...'" />
-                    </a>
+                        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Yannisloum63&show_icons=true&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&icon_color=8b8070&include_all_commits=true&count_private=true" alt="GitHub Stats de Yannis" loading="lazy" />
+                </a>
                 </div>
                 
                 <!-- Top Languages -->
                 <div class="github-card">
                     <a href="https://github.com/Yannisloum63?tab=repositories" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yannisloum63&layout=compact&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&langs_count=8" alt="Langages les plus utilisés" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/f5f2ed/1a1a1a?text=Top+Languages+Loading...'" />
+                        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Yannisloum63&layout=compact&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&langs_count=8" alt="Langages les plus utilisés" loading="lazy" />
                     </a>
                 </div>
             </div>
@@ -2178,7 +2197,7 @@
             <!-- GitHub Streak -->
             <div class="github-streak">
                 <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="display: block;">
-                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Yannisloum63&theme=default&hide_border=true&background=f5f2ed&ring=8b8070&fire=8b8070&currStreakLabel=1a1a1a&sideLabels=1a1a1a&currStreakNum=1a1a1a&sideNums=1a1a1a&dates=2d2d2d" alt="GitHub Streak" loading="lazy" onerror="this.src='https://via.placeholder.com/800x150/f5f2ed/1a1a1a?text=GitHub+Streak+Loading...'" />
+                    <img src="https://streak-stats.demolab.com/?user=Yannisloum63&theme=default&hide_border=true&background=f5f2ed&ring=8b8070&fire=8b8070&currStreakLabel=1a1a1a&sideLabels=1a1a1a&currStreakNum=1a1a1a&sideNums=1a1a1a&dates=2d2d2d" alt="GitHub Streak" loading="lazy" />
                 </a>
             </div>
             

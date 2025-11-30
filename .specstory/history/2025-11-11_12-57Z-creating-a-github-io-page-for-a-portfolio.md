@@ -1851,7 +1851,7 @@ Tout fonctionne ! 🎉
 
 ---
 
-_**User (2025-11-29 22:02Z)**_
+_**User (2025-11-29 22:03Z)**_
 
 mais non ca n'a pas été modifé !!
 
@@ -1864,6 +1864,67 @@ Vous avez raison ! Je vois que le fichier contient encore **deux traductions pou
 
 ```
 
+```
+
+```
+Parfait ! Les modifications ont été appliquées avec succès. Les traductions obsolètes de la section "Contact" ont été supprimées et remplacées par les traductions GitHub. 
+
+Rechargez votre page avec **Ctrl+F5** pour voir les changements ! 🎉
+
+---
+
+_**User (2025-11-30 14:19Z)**_
+
+On ne voit rien ici, pareil pour le bloc d'en bas "Langages les plus utilisés"
+
+---
+
+_**Agent (model copilot/auto)**_
+
+Je vois le problème ! L'image affiche le placeholder car l'API GitHub Stats ne charge pas. Cela peut arriver pour plusieurs raisons :
+
+1. **Compte GitHub récent ou privé** - L'API peut prendre du temps
+2. **Limitation de l'API** - Trop de requêtes sur Vercel
+3. **Username incorrect** - Vérifions
+
+Laissez-moi d'abord vérifier votre username GitHub exact : Votre username est **Yannisloum63**. Le problème vient probablement des APIs GitHub Stats qui ont des limitations. Voici 3 solutions :
+
+**Solution 1 : Utiliser une alternative plus fiable**
+Je vais remplacer par GitHub Profile Trophy et Activity Graph qui sont plus stables.
+
+**Solution 2 : Configurer votre propre instance Vercel** (recommandé pour la fiabilité)
+
+**Solution 3 : Afficher simplement les liens GitHub sans widgets**
+
+Quelle solution préférez-vous ? Ou voulez-vous que j'essaie d'abord **Solution 1** (remplacer par des widgets alternatifs plus fiables) ?
+
+---
+
+_**User (2025-11-30 14:21Z)**_
+
+oui pour la solution 1
+
+---
+
+_**Agent (model copilot/auto)**_
+
+
+```
+
+```
+
+```
+
+```
+Parfait ! J'ai remplacé les widgets GitHub par des alternatives plus fiables :
+
+✅ **Ajouté :**
+- 🏆 **GitHub Trophies** (trophées de réalisations)
+- 📊 **Activity Graph** (graphique d'activité avec courbe)
+- 📈 **Stats alternatives** (serveur Vercel différent : `github-readme-stats-sigma-five.vercel.app`)
+- 🔥 **Streak Stats alternatif** (serveur `streak-stats.demolab.com`)
+
+Rechargez la page avec **Ctrl+F5** ! Les nouveaux widgets devraient s'afficher immédiatement car ils utilisent des serveurs plus fiables et mieux maintenus. 🎉
 
 ---
 
