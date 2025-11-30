@@ -887,90 +887,77 @@
             color: var(--accent);
         }
 
-        /* Formulaire de contact */
-        .contact-intro {
+        /* GitHub Stats Section */
+        #github-stats {
+            background: var(--beige-light);
+            padding: 4rem 2rem;
+        }
+
+        .github-intro {
             text-align: center;
             color: var(--text-light);
             font-size: 1.05rem;
             margin-bottom: 3rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .contact-form {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .form-row {
+        .github-stats-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.9rem 1.2rem;
-            border: 1px solid var(--beige-dark);
+        .github-card {
             background: var(--white);
-            color: var(--text-dark);
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--beige-dark);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             transition: all 0.3s ease;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
+        .github-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(139, 128, 112, 0.1);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .contact-form button[type="submit"] {
+        .github-card img,
+        .github-streak img,
+        .github-graph img {
             width: 100%;
-            margin-top: 1rem;
+            height: auto;
+            display: block;
+            min-height: 150px;
+            background: var(--beige-light);
         }
 
-        .form-status {
-            margin-top: 1.5rem;
+        .github-card img[src*="top-langs"] {
+            min-height: 200px;
+        }
+
+        .github-streak,
+        .github-graph {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: var(--white);
             padding: 1rem;
-            text-align: center;
-            font-family: 'Segoe UI', sans-serif;
-            border-radius: 4px;
-            display: none;
+            border: 1px solid var(--beige-dark);
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
-        .form-status.success {
-            display: block;
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .form-status.error {
-            display: block;
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+        .github-streak:hover,
+        .github-graph:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
         }
 
         /* IMT Atlantique Banner */
@@ -1631,7 +1618,7 @@
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
                 <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="#github-stats" data-i18n="nav.github">GitHub</a></li>
             </ul>
             <div class="language-switch" role="group" aria-label="Sélection de la langue">
                 <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="true">FR</button>
@@ -2166,36 +2153,41 @@
             </div>
         </section>
 
-        <section id="contact">
-            <h2 data-i18n="contact.title">Me Contacter</h2>
-            <p class="contact-intro" data-i18n="contact.intro">
-                Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !
+        <section id="github-stats">
+            <h2 data-i18n="github.title">Activité GitHub</h2>
+            <p class="github-intro" data-i18n="github.intro">
+                Mes statistiques et contributions sur GitHub en temps réel
             </p>
             
-            <form id="contactForm" class="contact-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name" data-i18n="contact.form.name">Nom *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" data-i18n="contact.form.email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+            <div class="github-stats-container">
+                <!-- GitHub Stats Card -->
+                <div class="github-card">
+                    <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="width: 100%;">
+                        <img src="https://github-readme-stats.vercel.app/api?username=Yannisloum63&show_icons=true&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&icon_color=8b8070&include_all_commits=true&count_private=true" alt="GitHub Stats de Yannis" loading="lazy" onerror="this.src='https://via.placeholder.com/495x195/f5f2ed/1a1a1a?text=GitHub+Stats+Loading...'" />
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="subject" data-i18n="contact.form.subject">Sujet *</label>
-                    <input type="text" id="subject" name="subject" required>
+                
+                <!-- Top Languages -->
+                <div class="github-card">
+                    <a href="https://github.com/Yannisloum63?tab=repositories" target="_blank" rel="noopener noreferrer" style="width: 100%;">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yannisloum63&layout=compact&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&langs_count=8" alt="Langages les plus utilisés" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200/f5f2ed/1a1a1a?text=Top+Languages+Loading...'" />
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="message" data-i18n="contact.form.message">Message *</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.send">Envoyer</span>
-                </button>
-                <div id="formStatus" class="form-status"></div>
-            </form>
+            </div>
+            
+            <!-- GitHub Streak -->
+            <div class="github-streak">
+                <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="display: block;">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Yannisloum63&theme=default&hide_border=true&background=f5f2ed&ring=8b8070&fire=8b8070&currStreakLabel=1a1a1a&sideLabels=1a1a1a&currStreakNum=1a1a1a&sideNums=1a1a1a&dates=2d2d2d" alt="GitHub Streak" loading="lazy" onerror="this.src='https://via.placeholder.com/800x150/f5f2ed/1a1a1a?text=GitHub+Streak+Loading...'" />
+                </a>
+            </div>
+            
+            <!-- Lien direct vers le profil GitHub -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fab fa-github"></i> <span data-i18n="github.profile">Voir mon profil GitHub</span>
+                </a>
+            </div>
         </section>
     </div>
 
@@ -2238,7 +2230,6 @@
                 "nav.projects": "Projects",
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
-                "nav.contact": "Contact",
                 "about.title": "About Me",
                 "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong> (equivalent to M1/Bac+4 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
                 "about.paragraph2": "My journey has allowed me to work on concrete projects such as a <strong>deep learning</strong> internship at Institut Pascal, focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>vision-based indoor localization device</strong> (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
@@ -2317,14 +2308,7 @@
                 "projects.filter.embedded": "Embedded",
                 "github.title": "GitHub Activity",
                 "github.intro": "My real-time GitHub statistics and contributions",
-                                "github.profile": "View my GitHub profile",
-                "contact.title": "Contact Me",
-                "contact.intro": "Have a project, a question, or just want to chat? Feel free to reach out!",
-                "contact.form.name": "Name *",
-                "contact.form.email": "Email *",
-                "contact.form.subject": "Subject *",
-                "contact.form.message": "Message *",
-                "contact.form.send": "Send",
+                "github.profile": "View my GitHub profile",
                 "cta.skills": "My skills",
                 "nav.cv": "CV",
                 "cv.title": "Curriculum Vitae",
@@ -2350,25 +2334,12 @@
                 "associative.roboticlermont.role": "Secretary & Founding Member",
                 "associative.roboticlermont.description": "Student robotics association in Clermont-Ferrand. As a founding member and secretary, I actively participate in organizing collaborative robotics projects, developing technical skills, and sharing knowledge with the local community.",
                 "nav.associative": "Associative",
-                "contact.title": "Contact Me",
-                "contact.intro": "Have a project, a question, or just want to chat? Feel free to reach out!",
-                "contact.form.name": "Name *",
-                "contact.form.email": "Email *",
-                "contact.form.subject": "Subject *",
-                "contact.form.message": "Message *",
-                "contact.form.send": "Send",
-                "contact.description": "I am always open to new opportunities, collaborations, or simply a conversation about robotics and artificial intelligence!",
                 "projects.filter.all": "All",
                 "projects.filter.robotics": "Robotics",
                 "projects.filter.vision": "Vision",
                 "projects.filter.embedded": "Embedded",
-                "contact.title": "Contact Me",
-                "contact.intro": "Have a project, a question, or just want to chat? Feel free to reach out!",
-                "contact.form.name": "Name *",
-                "contact.form.email": "Email *",
-                "contact.form.subject": "Subject *",
-                "contact.form.message": "Message *",
-                "contact.form.send": "Send",
+                "github.title": "GitHub Activity",
+                "github.intro": "My real-time GitHub statistics and contributions",
                 "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. All rights reserved.",
                 "footer.subtitle": "Portfolio — Robotics & Artificial Intelligence"
             },
@@ -2386,7 +2357,6 @@
                 "nav.projects": "Projets",
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
-                "nav.contact": "Contact",
                 "about.title": "À propos de moi",
                 "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
                 "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets comme le développement d'un dispositif de localisation indoor basée vision (IRT B<>COM) et la conception d'une mini voiture autonome. Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, au <strong>deep learning</strong>, et aux systèmes autonomes. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
@@ -2496,13 +2466,9 @@
                 "projects.filter.robotics": "Robotique",
                 "projects.filter.vision": "Vision",
                 "projects.filter.vision": "Embarqué",
-                "contact.title": "Me Contacter",
-                "contact.intro": "Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !",
-                "contact.form.name": "Nom *",
-                "contact.form.email": "Email *",
-                "contact.form.subject": "Sujet *",
-                "contact.form.message": "Message *",
-                "contact.form.send": "Envoyer",
+                "github.title": "Activité GitHub",
+                "github.intro": "Mes statistiques et contributions sur GitHub en temps réel",
+                "github.profile": "Voir mon profil GitHub",
                 "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.",
                 "footer.subtitle": "Portfolio — Robotique & Intelligence Artificielle"
             }
