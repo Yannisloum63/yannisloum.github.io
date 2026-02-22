@@ -31,31 +31,41 @@
     <meta name="twitter:image" content="https://yannisloum63.github.io/images/monprofile.jpg">
     
     <title>Yannis LOUMOUAMOU - Robotique & IA | IMT Atlantique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1a1a1a;
-            --secondary: #2d2d2d;
-            --accent: #8b8070;
-            --beige-light: #f5f2ed;
-            --beige: #e8e3dc;
-            --beige-dark: #d4cec4;
-            --text-dark: #2d2d2d;
-            --text-light: #666666;
+            --primary: #111827;
+            --secondary: #1f2937;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+            --beige-light: #f8fafc;
+            --beige: #e2e8f0;
+            --beige-dark: #cbd5e1;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
             --white: #ffffff;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
         }
 
         /* Mode sombre */
         [data-theme="dark"] {
-            --primary: #e8e3dc;
-            --secondary: #d4cec4;
-            --accent: #b89d7e;
-            --beige-light: #1a1a1a;
-            --beige: #2d2d2d;
-            --beige-dark: #3a3a3a;
-            --text-dark: #e8e3dc;
-            --text-light: #b0b0b0;
-            --white: #0f0f0f;
+            --primary: #f1f5f9;
+            --secondary: #e2e8f0;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --beige-light: #0f172a;
+            --beige: #1e293b;
+            --beige-dark: #334155;
+            --text-dark: #f1f5f9;
+            --text-light: #94a3b8;
+            --white: #020617;
         }
 
         * {
@@ -65,7 +75,7 @@
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: var(--font-body);
             line-height: 1.8;
             color: var(--text-dark);
             background: var(--white);
@@ -132,18 +142,19 @@
 
         .header-title {
             font-size: 3rem;
-            font-weight: 400;
+            font-weight: 700;
             color: var(--primary);
             margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
+            font-family: var(--font-heading);
         }
 
         .header-subtitle {
             font-size: 1.2rem;
             color: var(--text-light);
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 1rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         .header-description {
@@ -152,7 +163,7 @@
             max-width: 600px;
             margin: 0 auto 2rem;
             line-height: 1.8;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         .header-contact {
@@ -171,7 +182,7 @@
             text-decoration: none;
             font-size: 0.95rem;
             transition: all 0.3s;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         .header-contact-item i {
@@ -193,29 +204,29 @@
 
         .btn {
             padding: 0.9rem 2.5rem;
-            border-radius: 0;
+            border-radius: var(--radius-md);
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 500;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-size: 0.95rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         .btn-primary {
-            background: var(--primary);
-            color: var(--white);
-            border: 2px solid var(--primary);
+            background: var(--accent);
+            color: #ffffff;
+            border: 2px solid var(--accent);
         }
 
         .btn-primary:hover {
-            background: var(--secondary);
-            border-color: var(--secondary);
+            background: var(--accent-light);
+            border-color: var(--accent-light);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
         }
 
         .btn-secondary {
@@ -238,6 +249,12 @@
             z-index: 100;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             border-bottom: 1px solid var(--beige-dark);
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        [data-theme="dark"] nav {
+            background: rgba(2, 6, 23, 0.85);
         }
 
         nav .nav-inner {
@@ -262,7 +279,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             color: var(--text-dark);
         }
 
@@ -280,9 +297,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
+            color: #ffffff;
             font-size: 1.3rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
             transition: all 0.3s ease;
             z-index: 1000;
         }
@@ -322,6 +339,7 @@
             padding: 0.3rem 0.6rem;
             transition: color 0.3s, background 0.3s;
             border: 1px solid transparent;
+            border-radius: var(--radius-sm);
         }
 
         .language-switch button:hover {
@@ -330,8 +348,8 @@
 
         .language-switch button.active {
             border-color: var(--accent);
-            color: var(--primary);
-            background: rgba(139, 128, 112, 0.1);
+            color: var(--accent);
+            background: rgba(37, 99, 235, 0.08);
         }
 
         .language-switch span {
@@ -343,11 +361,11 @@
             color: var(--text-dark);
             text-decoration: none;
             transition: all 0.3s;
-            font-weight: 400;
+            font-weight: 500;
             position: relative;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-size: 0.95rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         nav a::after {
@@ -367,7 +385,6 @@
 
         nav a:hover {
             color: var(--accent);
-            color: var(--primary);
         }
 
         .container {
@@ -391,10 +408,11 @@
             margin-bottom: 3rem;
             font-size: 2rem;
             text-align: center;
-            font-weight: 400;
+            font-weight: 700;
             letter-spacing: -0.5px;
             position: relative;
             padding-bottom: 1.5rem;
+            font-family: var(--font-heading);
         }
 
         h2::after {
@@ -429,7 +447,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: var(--beige-dark);
+            background: linear-gradient(to bottom, var(--accent), var(--beige-dark));
         }
 
         .education-item {
@@ -466,15 +484,15 @@
 
         .education-title {
             font-size: 1.2rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--primary);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-heading);
         }
 
         .education-period {
             font-size: 0.9rem;
             color: var(--text-light);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-style: italic;
         }
 
@@ -482,7 +500,7 @@
             font-size: 1rem;
             color: var(--accent);
             margin-bottom: 0.5rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -526,7 +544,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: var(--beige-dark);
+            background: linear-gradient(to bottom, var(--accent), var(--beige-dark));
         }
 
         .experience-item {
@@ -563,15 +581,15 @@
 
         .experience-title {
             font-size: 1.2rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--primary);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-heading);
         }
 
         .experience-period {
             font-size: 0.9rem;
             color: var(--text-light);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-style: italic;
         }
 
@@ -579,7 +597,7 @@
             font-size: 1rem;
             color: var(--accent);
             margin-bottom: 0.5rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -616,6 +634,7 @@
             background: var(--beige-light);
             padding: 2.5rem;
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-lg);
         }
 
         .highlight-item {
@@ -639,22 +658,23 @@
             justify-content: center;
             background: var(--white);
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-sm);
             flex-shrink: 0;
         }
 
         .highlight-item h4 {
             font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--primary);
             margin-bottom: 0.3rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-heading);
         }
 
         .highlight-item p {
             font-size: 0.9rem;
             color: var(--text-light);
             line-height: 1.5;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         /* Section Compétences */
@@ -668,7 +688,8 @@
             background: var(--beige-light);
             padding: 2.5rem;
             border: 1px solid var(--beige-dark);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
             transition: all 0.3s;
         }
 
@@ -681,8 +702,8 @@
             color: var(--primary);
             margin-bottom: 1.8rem;
             font-size: 1.1rem;
-            font-weight: 500;
-            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            font-family: var(--font-heading);
         }
 
         .skill-tags {
@@ -698,14 +719,16 @@
             font-size: 0.85rem;
             font-weight: 400;
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-sm);
             transition: all 0.3s;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         .skill-tag:hover {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
         /* Filtres de projets */
@@ -723,12 +746,13 @@
             background: var(--white);
             color: var(--text-dark);
             cursor: pointer;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             font-size: 0.95rem;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            border-radius: var(--radius-md);
         }
 
         .filter-btn:hover {
@@ -738,7 +762,7 @@
 
         .filter-btn.active {
             background: var(--accent);
-            color: var(--white);
+            color: #ffffff;
             border-color: var(--accent);
         }
 
@@ -757,6 +781,7 @@
             background: var(--white);
             overflow: hidden;
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-lg);
             transition: all 0.3s;
             position: relative;
         }
@@ -767,7 +792,7 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
             border-color: var(--accent);
         }
 
@@ -790,7 +815,8 @@
             color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.2rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-family: var(--font-heading);
         }
 
         .project-card p {
@@ -813,7 +839,8 @@
             padding: 0.4rem 0.9rem;
             font-size: 0.8rem;
             border: 1px solid var(--beige-dark);
-            font-family: 'Segoe UI', sans-serif;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
         }
 
         .project-links {
@@ -824,13 +851,13 @@
         .project-link {
             color: var(--accent);
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 500;
             display: flex;
             align-items: center;
             gap: 0.4rem;
             transition: all 0.3s;
             font-size: 0.9rem;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         .project-link:hover {
@@ -842,6 +869,7 @@
             background: var(--beige-light);
             padding: 4rem 3rem;
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-lg);
             text-align: center;
         }
 
@@ -880,7 +908,7 @@
             text-decoration: none;
             font-weight: 400;
             transition: color 0.3s;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
         }
 
         .contact-item a:hover {
@@ -969,6 +997,7 @@
         .imt-banner {
             background: linear-gradient(135deg, var(--beige-light) 0%, var(--white) 100%);
             border: 2px solid var(--accent);
+            border-radius: var(--radius-lg);
             padding: 2.5rem;
             margin: 3rem 0;
             display: flex;
@@ -986,7 +1015,8 @@
             color: var(--primary);
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-family: var(--font-heading);
         }
 
         .imt-content p {
@@ -1006,6 +1036,7 @@
             background: var(--white);
             padding: 0.8rem 1.2rem;
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-sm);
             font-size: 0.9rem;
         }
 
@@ -1041,6 +1072,7 @@
         .associative-card {
             background: var(--beige-light);
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-lg);
             padding: 2rem;
             transition: all 0.3s;
         }
@@ -1061,7 +1093,8 @@
             color: var(--primary);
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-family: var(--font-heading);
         }
 
         .associative-role {
@@ -1111,6 +1144,7 @@
         .cv-section {
             background: var(--beige-light);
             border: 1px solid var(--beige-dark);
+            border-radius: var(--radius-lg);
             padding: 3rem;
             text-align: center;
             max-width: 700px;
@@ -1141,7 +1175,7 @@
         }
 
         footer p {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             opacity: 0.9;
         }
 
@@ -1162,6 +1196,7 @@
             align-items: center;
             justify-content: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-sm);
         }
 
         .social-links a:hover {
@@ -1249,7 +1284,7 @@
             font-size: 1.1rem;
             color: var(--primary);
             transition: background 0.3s;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: var(--font-heading);
         }
 
         .accordion-header:hover {
@@ -1568,6 +1603,84 @@
         /* Animations supplémentaires */
         .fade-in {
             animation: fadeIn 1s ease-out;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger children animation */
+        .stagger-children .reveal {
+            transition-delay: calc(var(--stagger-index, 0) * 0.1s);
+        }
+
+        /* Gradient text accent */
+        .accent-gradient {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtle hover glow on interactive elements */
+        .skill-category:hover,
+        .associative-card:hover {
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+        }
+
+        .project-card:hover {
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Profile image subtle animation */
+        .profile-image-container {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+        }
+
+        .profile-image-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2);
         }
     </style>
 </head>
@@ -2174,7 +2287,7 @@
             <!-- GitHub Contribution Graph -->
             <div class="github-graph" style="text-align: center; margin-bottom: 2rem;">
                 <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer">
-                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yannisloum63&theme=minimal&hide_border=true&bg_color=f5f2ed&color=1a1a1a&line=8b8070&point=8b8070&area=true&area_color=8b8070" alt="Graphique d'activité GitHub" loading="lazy" style="width: 100%; max-width: 900px;" />
+                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yannisloum63&theme=minimal&hide_border=true&bg_color=f8fafc&color=111827&line=2563eb&point=2563eb&area=true&area_color=2563eb" alt="Graphique d'activité GitHub" loading="lazy" style="width: 100%; max-width: 900px;" />
                 </a>
             </div>
             
@@ -2182,14 +2295,14 @@
                 <!-- GitHub Stats Card -->
                 <div class="github-card">
                     <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-                        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Yannisloum63&show_icons=true&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&icon_color=8b8070&include_all_commits=true&count_private=true" alt="GitHub Stats de Yannis" loading="lazy" />
+                        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Yannisloum63&show_icons=true&theme=default&hide_border=true&bg_color=f8fafc&title_color=111827&text_color=1e293b&icon_color=2563eb&include_all_commits=true&count_private=true" alt="GitHub Stats de Yannis" loading="lazy" />
                 </a>
                 </div>
                 
                 <!-- Top Languages -->
                 <div class="github-card">
                     <a href="https://github.com/Yannisloum63?tab=repositories" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-                        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Yannisloum63&layout=compact&theme=default&hide_border=true&bg_color=f5f2ed&title_color=1a1a1a&text_color=2d2d2d&langs_count=8" alt="Langages les plus utilisés" loading="lazy" />
+                        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Yannisloum63&layout=compact&theme=default&hide_border=true&bg_color=f8fafc&title_color=111827&text_color=1e293b&langs_count=8" alt="Langages les plus utilisés" loading="lazy" />
                     </a>
                 </div>
             </div>
@@ -2197,7 +2310,7 @@
             <!-- GitHub Streak -->
             <div class="github-streak">
                 <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="display: block;">
-                    <img src="https://streak-stats.demolab.com/?user=Yannisloum63&theme=default&hide_border=true&background=f5f2ed&ring=8b8070&fire=8b8070&currStreakLabel=1a1a1a&sideLabels=1a1a1a&currStreakNum=1a1a1a&sideNums=1a1a1a&dates=2d2d2d" alt="GitHub Streak" loading="lazy" />
+                    <img src="https://streak-stats.demolab.com/?user=Yannisloum63&theme=default&hide_border=true&background=f8fafc&ring=2563eb&fire=2563eb&currStreakLabel=111827&sideLabels=111827&currStreakNum=111827&sideNums=111827&dates=1e293b" alt="GitHub Streak" loading="lazy" />
                 </a>
             </div>
             
@@ -2208,10 +2321,30 @@
                 </a>
             </div>
         </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2 data-i18n="contact.title">Me Contacter</h2>
+            <p data-i18n="contact.intro">Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:yannisloum@gmail.com">yannisloum@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/yannis-loumouamou-697409253" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Yannisloum63" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer>
-        <p data-i18n="footer.rights">&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.</p>
+        <p data-i18n="footer.rights">&copy; 2026 Yannis LOUMOUAMOU. Tous droits réservés.</p>
         <p style="margin-top: 0.5rem; opacity: 0.8;" data-i18n="footer.subtitle">
             Portfolio — Robotique & Intelligence Artificielle
         </p>
@@ -2353,13 +2486,16 @@
                 "associative.roboticlermont.role": "Secretary & Founding Member",
                 "associative.roboticlermont.description": "Student robotics association in Clermont-Ferrand. As a founding member and secretary, I actively participate in organizing collaborative robotics projects, developing technical skills, and sharing knowledge with the local community.",
                 "nav.associative": "Associative",
+                "contact.title": "Contact Me",
+                "contact.intro": "Have a project, a question, or just want to chat? Don't hesitate to reach out!",
+                "contact.description": "I'm always open to new opportunities, collaborations, or simply discussing robotics and artificial intelligence!",
                 "projects.filter.all": "All",
                 "projects.filter.robotics": "Robotics",
                 "projects.filter.vision": "Vision",
                 "projects.filter.embedded": "Embedded",
                 "github.title": "GitHub Activity",
                 "github.intro": "My real-time GitHub statistics and contributions",
-                "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. All rights reserved.",
+                "footer.rights": "&copy; 2026 Yannis LOUMOUAMOU. All rights reserved.",
                 "footer.subtitle": "Portfolio — Robotics & Artificial Intelligence"
             },
             fr: {
@@ -2484,11 +2620,11 @@
                 "projects.filter.all": "Tous",
                 "projects.filter.robotics": "Robotique",
                 "projects.filter.vision": "Vision",
-                "projects.filter.vision": "Embarqué",
+                "projects.filter.embedded": "Embarqué",
                 "github.title": "Activité GitHub",
                 "github.intro": "Mes statistiques et contributions sur GitHub en temps réel",
                 "github.profile": "Voir mon profil GitHub",
-                "footer.rights": "&copy; 2025 Yannis LOUMOUAMOU. Tous droits réservés.",
+                "footer.rights": "&copy; 2026 Yannis LOUMOUAMOU. Tous droits réservés.",
                 "footer.subtitle": "Portfolio — Robotique & Intelligence Artificielle"
             }
         };
@@ -2614,17 +2750,45 @@
             });
         });
 
-        // Animation au scroll
-        const observer = new IntersectionObserver((entries) => {
+        // Scroll Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('revealed');
+                    // Don't unobserve so animation only plays once
+                    revealObserver.unobserve(entry.target);
                 }
             });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        // Add reveal classes to elements
+        document.querySelectorAll('section > h2').forEach(el => {
+            el.classList.add('reveal');
+            revealObserver.observe(el);
         });
 
-        document.querySelectorAll('section').forEach((section) => {
-            observer.observe(section);
+        document.querySelectorAll('.education-item, .experience-item').forEach((el, i) => {
+            el.classList.add('reveal-left');
+            el.style.setProperty('--stagger-index', i);
+            el.style.transitionDelay = `${i * 0.15}s`;
+            revealObserver.observe(el);
+        });
+
+        document.querySelectorAll('.skill-category, .associative-card').forEach((el, i) => {
+            el.classList.add('reveal-scale');
+            el.style.transitionDelay = `${i * 0.1}s`;
+            revealObserver.observe(el);
+        });
+
+        document.querySelectorAll('.project-card').forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = `${i * 0.12}s`;
+            revealObserver.observe(el);
+        });
+
+        document.querySelectorAll('.imt-banner, .cv-section, .github-card, .github-streak, .github-graph').forEach(el => {
+            el.classList.add('reveal');
+            revealObserver.observe(el);
         });
 
         // Smooth scroll + mobile accordion integration
