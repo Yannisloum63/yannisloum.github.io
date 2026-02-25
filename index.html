@@ -2220,8 +2220,8 @@
                             <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
                                 <i class="fab fa-github"></i> Code source
                             </a>
-                            <a href="#" class="project-link" data-i18n="projects.yolo.docs">
-                                <i class="fas fa-file-alt"></i> Documentation
+                            <a href="#" onclick="openPoster(); return false;" class="project-link" data-i18n="projects.yolo.poster">
+                                <i class="fas fa-image"></i> Poster de recherche
                             </a>
                         </div>
                     </div>
@@ -2446,6 +2446,7 @@
                 "projects.yolo.title": "Multimodal YOLOv8 Adaptation",
                 "projects.yolo.description": "Adaptation of YOLOv8 for multimodal object detection (RGB/SWIR). Development of deep learning models for fusion of visual and infrared data, optimized for industrial applications.",
                 "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
+                "projects.yolo.poster": "<i class=\"fas fa-image\"></i> Research Poster",
                 "projects.wavegame.title": "WaveGame Challenge",
                 "projects.wavegame.description": "Participation in the <strong>WaveGame Challenge</strong> organized by Wavestone, a competitive programming challenge focused on solving complex algorithmic problems as part of a team of 6 students from IMT Atlantique. Hands-on practice of skills in algorithms, optimization, and logical thinking in a competitive environment.",
                 "projects.wavegame.tech.algorithms": "Algorithms",
@@ -2576,6 +2577,7 @@
                 "projects.yolo.title": "Adaptation YOLOv8 Multimodale",
                 "projects.yolo.description": "Adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR). Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges, optimisé pour applications industrielles.",
                 "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
+                "projects.yolo.poster": "<i class=\"fas fa-image\"></i> Poster de recherche",
                 "projects.wavegame.title": "Challenge WaveGame",
                 "projects.wavegame.description": "Participation au <strong>WaveGame Challenge</strong> organisé par Wavestone, un défi de programmation compétitif axé sur la résolution de problèmes algorithmiques complexes en équipe de 6 étudiants d'IMT Atlantique. Mise en pratique de compétences en algorithmique, optimisation et pensée logique dans un environnement compétitif.",
                 "projects.wavegame.tech.algorithms": "Algorithmique",
@@ -2950,6 +2952,35 @@
             modal.appendChild(closeBtn);
             modal.appendChild(prevBtn);
             modal.appendChild(nextBtn);
+            modal.appendChild(content);
+            modal.appendChild(caption);
+            document.body.appendChild(modal);
+        }
+
+        // Poster viewer modal
+        function openPoster() {
+            const modal = document.createElement('div');
+            modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;';
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+            closeBtn.style.cssText = 'position:absolute;top:1rem;right:1rem;background:var(--white);color:var(--primary);border:none;font-size:1.5rem;width:48px;height:48px;border-radius:50%;cursor:pointer;z-index:10000;';
+            closeBtn.onclick = () => document.body.removeChild(modal);
+            
+            const content = document.createElement('div');
+            content.style.cssText = 'max-width:90vw;max-height:80vh;text-align:center;overflow:auto;';
+            
+            const img = document.createElement('img');
+            img.src = 'images/Poster.pptx.png';
+            img.alt = 'Research Poster - YOLOv8 Multimodal Detection';
+            img.style.cssText = 'max-width:100%;max-height:80vh;object-fit:contain;';
+            
+            const caption = document.createElement('p');
+            caption.style.cssText = 'color:var(--white);font-size:1.1rem;margin-top:1rem;';
+            caption.textContent = 'Research Poster - Multimodal YOLOv8 Detection (RGB/SWIR)';
+            
+            content.appendChild(img);
+            modal.appendChild(closeBtn);
             modal.appendChild(content);
             modal.appendChild(caption);
             document.body.appendChild(modal);
