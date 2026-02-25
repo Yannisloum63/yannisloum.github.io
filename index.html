@@ -2148,8 +2148,8 @@
             
             <div class="projects">
                 <div class="project-card" data-category="vision robotics">
-                    <div class="project-image">
-                        <i class="fas fa-map-marker-alt"></i>
+                    <div class="project-image" style="background: none; padding: 0; height: auto;">
+                        <img src="images/Poster.pptx.png" alt="Poster de recherche - Localisation Indoor Basée Vision" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid var(--beige-dark);" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3 data-i18n="projects.irt.title">Localisation Indoor Basée Vision</h3>
@@ -2167,8 +2167,8 @@
                             <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
                                 <i class="fab fa-github"></i> Code source
                             </a>
-                            <a href="#" class="project-link" data-i18n="projects.irt.more">
-                                <i class="fas fa-external-link-alt"></i> En savoir plus
+                            <a href="#" onclick="openPoster(); return false;" class="project-link" data-i18n="projects.irt.poster">
+                                <i class="fas fa-image"></i> Poster de recherche
                             </a>
                         </div>
                     </div>
@@ -2220,8 +2220,8 @@
                             <a href="https://github.com/Yannisloum63" class="project-link" data-i18n="projects.links.source">
                                 <i class="fab fa-github"></i> Code source
                             </a>
-                            <a href="#" onclick="openPoster(); return false;" class="project-link" data-i18n="projects.yolo.poster">
-                                <i class="fas fa-image"></i> Poster de recherche
+                            <a href="#" class="project-link" data-i18n="projects.yolo.docs">
+                                <i class="fas fa-file-alt"></i> Documentation
                             </a>
                         </div>
                     </div>
@@ -2437,6 +2437,7 @@
                 "projects.irt.title": "Vision-Based Indoor Localization",
                 "projects.irt.description": "Development of a vision-based indoor localization device as part of an IRT B<>COM project. Navigation system using computer vision for precise indoor localization.",
                 "projects.irt.more": "<i class=\"fas fa-external-link-alt\"></i> Learn more",
+                "projects.irt.poster": "<i class=\"fas fa-image\"></i> Research Poster",
                 "projects.car.title": "Autonomous Mini Car",
                 "projects.car.description": "Final year bachelor's project: design and development of an autonomous mini car with parking assistance. Integration of sensors, navigation algorithms, and embedded control system.",
                 "projects.car.tech.ultrasonic": "Ultrasonic Sensors",
@@ -2446,7 +2447,6 @@
                 "projects.yolo.title": "Multimodal YOLOv8 Adaptation",
                 "projects.yolo.description": "Adaptation of YOLOv8 for multimodal object detection (RGB/SWIR). Development of deep learning models for fusion of visual and infrared data, optimized for industrial applications.",
                 "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
-                "projects.yolo.poster": "<i class=\"fas fa-image\"></i> Research Poster",
                 "projects.wavegame.title": "WaveGame Challenge",
                 "projects.wavegame.description": "Participation in the <strong>WaveGame Challenge</strong> organized by Wavestone, a competitive programming challenge focused on solving complex algorithmic problems as part of a team of 6 students from IMT Atlantique. Hands-on practice of skills in algorithms, optimization, and logical thinking in a competitive environment.",
                 "projects.wavegame.tech.algorithms": "Algorithms",
@@ -2568,6 +2568,7 @@
                 "projects.irt.title": "Localisation Indoor Basée Vision",
                 "projects.irt.description": "Développement d'un dispositif de localisation indoor basée vision dans le cadre d'un projet IRT B<>COM. Système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
                 "projects.irt.more": "<i class=\"fas fa-external-link-alt\"></i> En savoir plus",
+                "projects.irt.poster": "<i class=\"fas fa-image\"></i> Poster de recherche",
                 "projects.car.title": "Mini Voiture Autonome",
                 "projects.car.description": "Projet de fin de licence : conception et développement d'une mini voiture autonome avec assistance au stationnement. Intégration de capteurs, algorithmes de navigation et système de contrôle embarqué.",
                 "projects.car.tech.ultrasonic": "Capteurs Ultrasons",
@@ -2577,7 +2578,6 @@
                 "projects.yolo.title": "Adaptation YOLOv8 Multimodale",
                 "projects.yolo.description": "Adaptation de YOLOv8 pour la détection d'objets multimodales (RVB/SWIR). Développement de modèles de deep learning pour la fusion de données visuelles et infrarouges, optimisé pour applications industrielles.",
                 "projects.yolo.docs": "<i class=\"fas fa-file-alt\"></i> Documentation",
-                "projects.yolo.poster": "<i class=\"fas fa-image\"></i> Poster de recherche",
                 "projects.wavegame.title": "Challenge WaveGame",
                 "projects.wavegame.description": "Participation au <strong>WaveGame Challenge</strong> organisé par Wavestone, un défi de programmation compétitif axé sur la résolution de problèmes algorithmiques complexes en équipe de 6 étudiants d'IMT Atlantique. Mise en pratique de compétences en algorithmique, optimisation et pensée logique dans un environnement compétitif.",
                 "projects.wavegame.tech.algorithms": "Algorithmique",
@@ -2972,17 +2972,12 @@
             
             const img = document.createElement('img');
             img.src = 'images/Poster.pptx.png';
-            img.alt = 'Research Poster - YOLOv8 Multimodal Detection';
+            img.alt = 'Research Poster - Vision-Based Indoor Localization';
             img.style.cssText = 'max-width:100%;max-height:80vh;object-fit:contain;';
-            
-            const caption = document.createElement('p');
-            caption.style.cssText = 'color:var(--white);font-size:1.1rem;margin-top:1rem;';
-            caption.textContent = 'Research Poster - Multimodal YOLOv8 Detection (RGB/SWIR)';
             
             content.appendChild(img);
             modal.appendChild(closeBtn);
             modal.appendChild(content);
-            modal.appendChild(caption);
             document.body.appendChild(modal);
         }
     </script>
