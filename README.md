@@ -28,19 +28,6 @@ The landing header immediately shows my profile photo, role, and direct contact 
 * Smooth scrolling and intersection fade-in animations
 * Accessible hit areas (minimum touch sizes for buttons & interactive elements)
 
-
-## Tech Stack
-
-| Layer | Tools |
-|-------|-------|
-| Markup | HTML5 |
-| Styling | CSS3 (Custom Properties, Flexbox, Grid, media queries) |
-| Interactivity | Vanilla JavaScript (DOM, observers, language switch, accordion logic) |
-| Icons | Font Awesome |
-| Hosting | GitHub Pages |
-
-No build step, no external JS framework—intentionally lightweight.
-
 ## Project Structure
 
 ```
