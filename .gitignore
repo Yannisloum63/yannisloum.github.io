@@ -29,18 +29,5 @@ npm-debug.log*
 *.temp
 
 # --- Fichiers privés ---
-# CVs (sauf si publié explicitement)
-CV_*.pdf
-
-# Images personnelles et prototypes (non-essentiels publiquement)
-images/monprofile.jpg
-images/prototype*.jpg
-images/CAO*.jpg
-images/rendu*.jpg
-images/*.pptx.png
-
-# Vidéos
-videos/
-
 # Spécstory (dossier interne)
 .specstory/
