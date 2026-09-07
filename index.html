@@ -1732,6 +1732,7 @@
                 <li><a href="#about" data-i18n="nav.about">À propos</a></li>
                 <li><a href="#education" data-i18n="nav.education">Formation</a></li>
                 <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
+                <li><a href="#publication" data-i18n="nav.publication">Publication</a></li>
                 <li><a href="#associative" data-i18n="nav.associative">Associatif</a></li>
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
@@ -1759,11 +1760,13 @@
                     </p>
                     <br>
                     <p data-i18n="about.paragraph2">
-                        Mon parcours m'a permis de travailler sur des projets concrets comme un stage en <strong>deep learning</strong> 
-                        à l'Institut Pascal, axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement 
-                        d'un dispositif de <strong>localisation indoor basée vision</strong> (IRT B<>COM), et la conception d'une 
-                        <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer 
-                        au développement de technologies qui améliorent la vie quotidienne tout en repoussant 
+                        Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez
+                        <strong>FORVIA Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour
+                        la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal
+                        axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module
+                        d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une
+                        <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer
+                        au développement de technologies qui améliorent la vie quotidienne tout en repoussant
                         les limites de l'innovation.
                     </p>
                 </div>
@@ -1973,6 +1976,24 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
+                            <h3 class="experience-title" data-i18n="experience.forvia.title">Stage R&D - Fusion Capteurs Radar-Caméra</h3>
+                            <p class="experience-company">
+                                <span data-i18n="experience.forvia.company">FORVIA Clarion Electronics, Bercy</span>
+                            </p>
+                        </div>
+                        <span class="experience-period" data-i18n="experience.forvia.period">Avril - Août 2026</span>
+                    </div>
+                    <div class="experience-description">
+                        <p data-i18n="experience.forvia.description">
+                            Contribution à un pipeline de <strong>fusion de capteurs radar-caméra</strong> pour un système de
+                            surveillance des occupants d'un véhicule automobile, en appliquant des méthodes de deep learning
+                            pour améliorer la robustesse par rapport aux approches de détection classiques.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
                             <h3 class="experience-title" data-i18n="experience.pascal.title">Stage - Deep Learning & Vision par Ordinateur</h3>
                             <p class="experience-company">
                                 <img src="images/institut_pascal_logo.png" alt="Logo Institut Pascal" loading="lazy">
@@ -2004,20 +2025,44 @@
                                 <span data-i18n="experience.irt.company">IRT B<>COM & IMT Atlantique</span>
                             </p>
                         </div>
-                        <span class="experience-period" data-i18n="experience.irt.period">En cours</span>
+                        <span class="experience-period" data-i18n="experience.irt.period">Sept 2025 - Janv 2026</span>
                     </div>
                     <div class="experience-description">
                         <p data-i18n="experience.irt.description">
-                            Projet de diplomation en collaboration entre <strong>IRT B<>COM et IMT Atlantique</strong>. 
-                            Développement d'un <strong>système de localisation indoor basé vision</strong> en équipe de 8 étudiants. 
-                            Conception et implémentation d'un dispositif de navigation utilisant la vision par ordinateur 
-                            pour la localisation précise en environnement intérieur.
+                            Projet de diplomation en collaboration entre <strong>IRT B<>COM et IMT Atlantique</strong>.
+                            Développement et intégration d'un module d'<strong>odométrie visuo-inertielle</strong> par fusion
+                            de données caméra et IMU, basé sur le framework <strong>OpenVINS</strong>, pour la localisation
+                            précise en environnement intérieur.
                         </p>
                         <ul>
-                            <li data-i18n="experience.irt.task1">Développement d'algorithmes de localisation par vision (SLAM visuel)</li>
-                            <li data-i18n="experience.irt.task2">Intégration de caméras et traitement d'images en temps réel</li>
+                            <li data-i18n="experience.irt.task1">Fusion de données caméra et IMU pour l'odométrie visuo-inertielle</li>
+                            <li data-i18n="experience.irt.task2">Intégration et calibration sous le framework OpenVINS</li>
                             <li data-i18n="experience.irt.task3">Travail en équipe agile avec méthodologie Scrum</li>
                             <li data-i18n="experience.irt.task4">Collaboration dans un projet de recherche multipartenaire</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publication">
+            <h2 data-i18n="publication.title">Publication</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title" data-i18n="publication.rfiap.title">Étude expérimentale du fine-tuning de YOLOv8 pour la détection routière multimodale RGB-SWIR</h3>
+                            <p class="experience-company" data-i18n="publication.rfiap.venue">RFIAP 2026 (Reconnaissance des Formes, Image, Apprentissage et Perception)</p>
+                        </div>
+                        <span class="experience-period">2026</span>
+                    </div>
+                    <div class="experience-description">
+                        <p data-i18n="publication.rfiap.description">
+                            Co-écrit avec l'Institut Pascal (M. Labussière, A. Riffard, R. Mehra), issu de mon stage sur
+                            l'adaptation de YOLOv8 pour la détection multimodale RGB/SWIR.
+                        </p>
+                        <ul>
+                            <li><a href="https://hal.science/hal-05657981v1" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;"><i class="fas fa-file-alt"></i> HAL: hal-05657981</a></li>
                         </ul>
                     </div>
                 </div>
@@ -2030,11 +2075,11 @@
                 <div class="associative-card">
                     <img src="images/LogoAFNEUS.png" alt="Logo AFNEUS - Association des Étudiants" class="associative-logo" loading="lazy">
                     <h3 data-i18n="associative.afneus.title">AFNEUS</h3>
-                    <p class="associative-role" data-i18n="associative.afneus.role">Vice-Trésorier en charge des partenariats</p>
+                    <p class="associative-role" data-i18n="associative.afneus.role">Trésorier Adjoint - Depuis Oct 2025</p>
                     <p data-i18n="associative.afneus.description">
-                        <strong>Association Fédérative Nationale des Étudiants Universitaires Scientifiques</strong>. 
-                        Participation active aux événements et initiatives visant à promouvoir la diversité et l'inclusion 
-                        dans l'enseignement supérieur. En tant que Vice-Trésorier, je gère les partenariats et la trésorerie de l'association.
+                        <strong>Association Fédérative Nationale des Étudiants Universitaires Scientifiques</strong>.
+                        En tant que Trésorier Adjoint, je gère le budget et la comptabilité de l'association et participe
+                        à l'organisation d'événements étudiants nationaux.
                     </p>
                     <div class="associative-links">
                         <a href="https://fr.wikipedia.org/wiki/Association_f%C3%A9d%C3%A9rative_nationale_des_%C3%A9tudiants_universitaires_scientifiques" target="_blank" rel="noopener noreferrer" title="AFNEUS sur Wikipédia">
@@ -2055,11 +2100,11 @@
                 <div class="associative-card">
                     <img src="images/logo roboticlermont.png" alt="Logo RobotiClermont - Club de robotique" class="associative-logo" loading="lazy">
                     <h3 data-i18n="associative.roboticlermont.title">RobotiClermont</h3>
-                    <p class="associative-role" data-i18n="associative.roboticlermont.role">Secrétaire & Membre Fondateur</p>
+                    <p class="associative-role" data-i18n="associative.roboticlermont.role">Secrétaire Général - Oct 2023 à 2025</p>
                     <p data-i18n="associative.roboticlermont.description">
-                        Association étudiante de robotique de Clermont-Ferrand. En tant que membre fondateur et secrétaire, 
-                        je participe activement à l'organisation de projets de robotique collaborative, au développement de compétences 
-                        techniques et au partage de connaissances avec la communauté locale.
+                        Association étudiante de robotique de Clermont-Ferrand. En tant que Secrétaire Général, je gère
+                        l'administratif de l'association, participe à la conception de robots et représente le club lors
+                        de compétitions nationales.
                     </p>
                     <div class="associative-links">
                         <a href="https://www.linkedin.com/company/roboticlermont/posts/?feedView=all" target="_blank" rel="noopener noreferrer" title="RobotiClermont sur LinkedIn">
@@ -2083,6 +2128,7 @@
                         <span class="skill-tag" data-i18n="skills.robotics.embedded">Systèmes embarqués</span>
                         <span class="skill-tag" data-i18n="skills.robotics.motor">Contrôle moteur</span>
                         <span class="skill-tag" data-i18n="skills.robotics.sensors">Capteurs & Actionneurs</span>
+                        <span class="skill-tag" data-i18n="skills.robotics.fusion">Fusion de Capteurs</span>
                     </div>
                 </div>
 
@@ -2406,11 +2452,12 @@
                 "nav.experience": "Experience",
                 "nav.skills": "Skills",
                 "nav.projects": "Projects",
+                "nav.publication": "Publication",
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
                 "about.title": "About Me",
                 "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong> (equivalent to M1/Bac+4 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
-                "about.paragraph2": "My journey has allowed me to work on concrete projects such as a <strong>deep learning</strong> internship at Institut Pascal, focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>vision-based indoor localization device</strong> (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
+                "about.paragraph2": "My journey has allowed me to work on concrete projects: an R&D internship at <strong>FORVIA Clarion Electronics</strong> on <strong>radar-camera sensor fusion</strong> for occupant monitoring, a <strong>deep learning</strong> internship at Institut Pascal focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>visual-inertial odometry</strong> module for indoor localization (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
                 "about.highlight.robotics.title": "Advanced Robotics",
                 "about.highlight.robotics.text": "Designing and programming robotic systems",
                 "about.highlight.ai.title": "Artificial Intelligence",
@@ -2422,6 +2469,7 @@
                 "skills.robotics.embedded": "Embedded systems",
                 "skills.robotics.motor": "Motor control",
                 "skills.robotics.sensors": "Sensors & Actuators",
+                "skills.robotics.fusion": "Sensor Fusion",
                 "skills.ai.title": "Artificial Intelligence",
                 "skills.ai.computervision": "Computer Vision",
                 "skills.programming.title": "Programming",
@@ -2444,6 +2492,10 @@
                 "education.cpge.period": "2021 - 2022",
                 "education.cpge.description": "Intensive two-year preparatory program for entrance exams to top engineering schools. Focus on mathematics, physics, and engineering sciences.",
                 "experience.title": "Professional Experience",
+                "experience.forvia.title": "R&D Internship - Radar-Camera Sensor Fusion",
+                "experience.forvia.company": "FORVIA Clarion Electronics, Bercy",
+                "experience.forvia.period": "April - August 2026",
+                "experience.forvia.description": "Contributed to a <strong>radar-camera sensor fusion</strong> pipeline for an automotive occupant monitoring system, applying deep learning methods to improve robustness over classical detection approaches.",
                 "experience.pascal.title": "Internship - Deep Learning & Vision",
                 "experience.pascal.company": "Institut Pascal, Clermont-Ferrand",
                 "experience.pascal.period": "April - August 2025",
@@ -2453,12 +2505,16 @@
                 "experience.pascal.task3": "Multimodal RGB/SWIR data processing and fusion",
                 "experience.irt.title": "Diplomation Project - Indoor Localization",
                 "experience.irt.company": "IRT B<>COM & IMT Atlantique",
-                "experience.irt.period": "Ongoing",
-                "experience.irt.description": "Diplomation project in collaboration between <strong>IRT B<>COM and IMT Atlantique</strong>. Development of a <strong>vision-based indoor localization device</strong> in a team of 5 students. Design and implementation of a navigation system using computer vision for precise indoor localization.",
-                "experience.irt.task1": "Development of vision-based localization algorithms",
-                "experience.irt.task2": "Sensor integration and image processing",
+                "experience.irt.period": "Sept 2025 - Jan 2026",
+                "experience.irt.description": "Diplomation project in collaboration between <strong>IRT B<>COM and IMT Atlantique</strong>. Development and integration of a <strong>visual-inertial odometry</strong> module through camera and IMU data fusion, based on the <strong>OpenVINS</strong> framework, for precise indoor localization.",
+                "experience.irt.task1": "Camera and IMU data fusion for visual-inertial odometry",
+                "experience.irt.task2": "Integration and calibration under the OpenVINS framework",
                 "experience.irt.task3": "Agile teamwork with Scrum methodology",
                 "experience.irt.task4": "Collaboration within a multi-partner research project",
+                "publication.title": "Publication",
+                "publication.rfiap.title": "Experimental study of YOLOv8 fine-tuning for RGB-SWIR multimodal road object detection",
+                "publication.rfiap.venue": "RFIAP 2026 (Reconnaissance des Formes, Image, Apprentissage et Perception)",
+                "publication.rfiap.description": "Co-authored with Institut Pascal (M. Labussière, A. Riffard, R. Mehra), based on my internship work on adapting YOLOv8 for multimodal RGB/SWIR detection.",
                 "projects.title": "Completed Projects",
                 "projects.irt.title": "Vision-Based Indoor Localization",
                 "projects.irt.description": "Development of a vision-based indoor localization device as part of an IRT B<>COM project. Navigation system using computer vision for precise indoor localization.",
@@ -2511,11 +2567,11 @@
                 "imt.link": "Discover IMT Atlantique <i class=\"fas fa-external-link-alt\"></i>",
                 "associative.title": "Associative Commitments",
                 "associative.afneus.title": "AFNEUS",
-                "associative.afneus.role": "Vice-Treasurer in charge of partnerships",
-                "associative.afneus.description": "<strong>Association Fédérative Nationale des Étudiants Universitaires Scientifiques</strong> (National Federative Association of Scientific University Students). Active participation in events and initiatives aimed at promoting diversity and inclusion in higher education. As Vice-Treasurer, I manage partnerships and the association's treasury.",
+                "associative.afneus.role": "Deputy Treasurer - Since Oct 2025",
+                "associative.afneus.description": "<strong>Association Fédérative Nationale des Étudiants Universitaires Scientifiques</strong> (National Federative Association of Scientific University Students). As Deputy Treasurer, I manage the association's budget and bookkeeping and help organize national student events.",
                 "associative.roboticlermont.title": "RobotiClermont",
-                "associative.roboticlermont.role": "Secretary & Founding Member",
-                "associative.roboticlermont.description": "Student robotics association in Clermont-Ferrand. As a founding member and secretary, I actively participate in organizing collaborative robotics projects, developing technical skills, and sharing knowledge with the local community.",
+                "associative.roboticlermont.role": "Secretary General - Oct 2023 to 2025",
+                "associative.roboticlermont.description": "Student robotics association in Clermont-Ferrand. As Secretary General, I handled the association's administrative management, contributed to robot design, and represented the club in national competitions.",
                 "nav.associative": "Associative",
                 "contact.title": "Contact Me",
                 "contact.intro": "Have a project, a question, or just want to chat? Don't hesitate to reach out!",
@@ -2541,11 +2597,12 @@
                 "nav.experience": "Expérience",
                 "nav.skills": "Compétences",
                 "nav.projects": "Projets",
+                "nav.publication": "Publication",
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
                 "about.title": "À propos de moi",
                 "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
-                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets comme le développement d'un dispositif de localisation indoor basée vision (IRT B<>COM) et la conception d'une mini voiture autonome. Je m'intéresse particulièrement à la <strong>vision par ordinateur</strong>, au <strong>deep learning</strong>, et aux systèmes autonomes. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
+                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez <strong>FORVIA Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
                 "about.highlight.robotics.title": "Robotique Avancée",
                 "about.highlight.robotics.text": "Conception et programmation de systèmes robotiques",
                 "about.highlight.ai.title": "Intelligence Artificielle",
@@ -2557,6 +2614,7 @@
                 "skills.robotics.embedded": "Systèmes embarqués",
                 "skills.robotics.motor": "Contrôle moteur",
                 "skills.robotics.sensors": "Capteurs & Actionneurs",
+                "skills.robotics.fusion": "Fusion de Capteurs",
                 "skills.ai.title": "Intelligence Artificielle",
                 "skills.ai.computervision": "Vision par ordinateur",
                 "skills.programming.title": "Programmation",
@@ -2579,6 +2637,10 @@
                 "education.cpge.period": "2021 - 2022",
                 "education.cpge.description": "Formation intensive de deux ans préparant aux concours d'entrée des grandes écoles d'ingénieurs. Focus sur les mathématiques, la physique et les sciences de l'ingénieur.",
                 "experience.title": "Expérience Professionnelle",
+                "experience.forvia.title": "Stage R&D - Fusion Capteurs Radar-Caméra",
+                "experience.forvia.company": "FORVIA Clarion Electronics, Bercy",
+                "experience.forvia.period": "Avril - Août 2026",
+                "experience.forvia.description": "Contribution à un pipeline de <strong>fusion de capteurs radar-caméra</strong> pour un système de surveillance des occupants d'un véhicule automobile, en appliquant des méthodes de deep learning pour améliorer la robustesse par rapport aux approches de détection classiques.",
                 "experience.pascal.title": "Stage - Deep Learning & Vision",
                 "experience.pascal.company": "Institut Pascal, Clermont-Ferrand",
                 "experience.pascal.period": "Avril - Août 2025",
@@ -2588,12 +2650,16 @@
                 "experience.pascal.task3": "Traitement et fusion de données RGB/SWIR multimodales",
                 "experience.irt.title": "Projet de Diplomatisation - Localisation Indoor",
                 "experience.irt.company": "IRT B<>COM & IMT Atlantique",
-                "experience.irt.period": "En cours",
-                "experience.irt.description": "Projet de diplomation en collaboration entre <strong>IRT B<>COM et IMT Atlantique</strong>. Développement d'un <strong>système de localisation indoor basé vision</strong> en équipe de 5 étudiants. Conception et implémentation d'un dispositif de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
-                "experience.irt.task1": "Développement d'algorithmes de localisation par vision",
-                "experience.irt.task2": "Intégration de capteurs et traitement d'images",
+                "experience.irt.period": "Sept 2025 - Janv 2026",
+                "experience.irt.description": "Projet de diplomation en collaboration entre <strong>IRT B<>COM et IMT Atlantique</strong>. Développement et intégration d'un module d'<strong>odométrie visuo-inertielle</strong> par fusion de données caméra et IMU, basé sur le framework <strong>OpenVINS</strong>, pour la localisation précise en environnement intérieur.",
+                "experience.irt.task1": "Fusion de données caméra et IMU pour l'odométrie visuo-inertielle",
+                "experience.irt.task2": "Intégration et calibration sous le framework OpenVINS",
                 "experience.irt.task3": "Travail en équipe agile avec méthodologie Scrum",
                 "experience.irt.task4": "Collaboration dans un projet de recherche multipartenaire",
+                "publication.title": "Publication",
+                "publication.rfiap.title": "Étude expérimentale du fine-tuning de YOLOv8 pour la détection routière multimodale RGB-SWIR",
+                "publication.rfiap.venue": "RFIAP 2026 (Reconnaissance des Formes, Image, Apprentissage et Perception)",
+                "publication.rfiap.description": "Co-écrit avec l'Institut Pascal (M. Labussière, A. Riffard, R. Mehra), issu de mon stage sur l'adaptation de YOLOv8 pour la détection multimodale RGB/SWIR.",
                 "projects.title": "Projets Réalisés",
                 "projects.irt.title": "Localisation Indoor Basée Vision",
                 "projects.irt.description": "Développement d'un dispositif de localisation indoor basée vision dans le cadre d'un projet IRT B<>COM. Système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
@@ -2639,11 +2705,11 @@
                 "imt.link": "Découvrir IMT Atlantique <i class=\"fas fa-external-link-alt\"></i>",
                 "associative.title": "Engagements Associatifs",
                 "associative.afneus.title": "AFNEUS",
-                "associative.afneus.role": "Vice-Trésorier en charge des partenariats",
-                "associative.afneus.description": "<strong>Association Fédérative Nationale des Étudiants Universitaires Scientifiques</strong>. Participation active aux événements et initiatives visant à promouvoir la diversité et l'inclusion dans l'enseignement supérieur. En tant que Vice-Trésorier, je gère les partenariats et la trésorerie de l'association.",
+                "associative.afneus.role": "Trésorier Adjoint - Depuis Oct 2025",
+                "associative.afneus.description": "<strong>Association Fédérative Nationale des Étudiants Universitaires Scientifiques</strong>. En tant que Trésorier Adjoint, je gère le budget et la comptabilité de l'association et participe à l'organisation d'événements étudiants nationaux.",
                 "associative.roboticlermont.title": "RobotiClermont",
-                "associative.roboticlermont.role": "Secrétaire & Membre Fondateur",
-                "associative.roboticlermont.description": "Association étudiante de robotique de Clermont-Ferrand. En tant que membre fondateur et secrétaire, je participe activement à l'organisation de projets de robotique collaborative, au développement de compétences techniques et au partage de connaissances avec la communauté locale.",
+                "associative.roboticlermont.role": "Secrétaire Général - Oct 2023 à 2025",
+                "associative.roboticlermont.description": "Association étudiante de robotique de Clermont-Ferrand. En tant que Secrétaire Général, je gère l'administratif de l'association, participe à la conception de robots et représente le club lors de compétitions nationales.",
                 "nav.associative": "Associatif",
                 "contact.title": "Me Contacter",
                 "contact.intro": "Vous avez un projet, une question ou simplement envie d'échanger ? N'hésitez pas à me contacter !",
