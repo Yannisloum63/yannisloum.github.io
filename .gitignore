@@ -31,3 +31,6 @@ npm-debug.log*
 # --- Fichiers privés ---
 # Spécstory (dossier interne)
 .specstory/
+
+# Claude Code (config locale)
+.claude/
