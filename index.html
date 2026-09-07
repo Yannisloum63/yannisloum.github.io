@@ -931,35 +931,7 @@
             margin-right: auto;
         }
 
-        .github-stats-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto 2rem;
-        }
-
-        .github-card {
-            background: var(--white);
-            padding: 1rem;
-            border: 1px solid var(--beige-dark);
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .github-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: var(--accent);
-        }
-
-        .github-card img,
-        .github-streak img,
-        .github-graph img,
-        .github-trophies img {
+        .github-streak img {
             width: 100%;
             height: auto;
             display: block;
@@ -967,16 +939,7 @@
             background: var(--beige-light);
         }
 
-        .github-trophies img {
-            min-height: 80px;
-        }
-
-        .github-card img[src*="top-langs"] {
-            min-height: 200px;
-        }
-
-        .github-streak,
-        .github-graph {
+        .github-streak {
             max-width: 1000px;
             margin: 2rem auto;
             background: var(--white);
@@ -986,8 +949,7 @@
             transition: all 0.3s ease;
         }
 
-        .github-streak:hover,
-        .github-graph:hover {
+        .github-streak:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             border-color: var(--accent);
@@ -1538,12 +1500,6 @@
                 padding: 0.4rem 0.8rem;
             }
 
-            /* GitHub Stats responsive */
-            .github-stats-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
             .imt-banner {
                 flex-direction: column;
                 text-align: center;
@@ -1753,15 +1709,15 @@
             <div class="about-content">
                 <div class="about-text">
                     <p data-i18n="about.paragraph1">
-                        Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en 
-                        <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, 
-                        je combine robotique, intelligence artificielle et vision par ordinateur pour créer des 
+                        Élève ingénieur en dernière année à <strong>IMT Atlantique</strong>, je me spécialise en
+                        <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe,
+                        je combine robotique, intelligence artificielle et vision par ordinateur pour créer des
                         solutions innovantes et intelligentes.
                     </p>
                     <br>
                     <p data-i18n="about.paragraph2">
                         Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez
-                        <strong>FORVIA Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour
+                        <strong>Faurecia Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour
                         la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal
                         axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module
                         d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une
@@ -1911,8 +1867,8 @@
                     </div>
                     <div class="education-description">
                         <p data-i18n="education.imt.description">
-                            Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>. 
-                            Actuellement en 2e année du cycle ingénieur.
+                            Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>.
+                            Actuellement en dernière année du cycle ingénieur (équivalent M2/Bac+5).
                         </p>
                     </div>
                 </div>
@@ -1978,7 +1934,7 @@
                         <div>
                             <h3 class="experience-title" data-i18n="experience.forvia.title">Stage R&D - Fusion Capteurs Radar-Caméra</h3>
                             <p class="experience-company">
-                                <span data-i18n="experience.forvia.company">FORVIA Clarion Electronics, Bercy</span>
+                                <span data-i18n="experience.forvia.company">Faurecia Clarion Electronics, Bercy</span>
                             </p>
                         </div>
                         <span class="experience-period" data-i18n="experience.forvia.period">Avril - Août 2026</span>
@@ -2349,36 +2305,6 @@
                 Mes statistiques et contributions sur GitHub en temps réel
             </p>
             
-            <!-- GitHub Trophies -->
-            <div class="github-trophies" style="text-align: center; margin-bottom: 2rem;">
-                <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer">
-                    <img src="https://github-profile-trophy.vercel.app/?username=Yannisloum63&theme=flat&no-frame=true&no-bg=true&margin-w=4&column=7" alt="GitHub Trophies" loading="lazy" />
-                </a>
-            </div>
-            
-            <!-- GitHub Contribution Graph -->
-            <div class="github-graph" style="text-align: center; margin-bottom: 2rem;">
-                <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer">
-                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Yannisloum63&theme=minimal&hide_border=true&bg_color=f8fafc&color=111827&line=2563eb&point=2563eb&area=true&area_color=2563eb" alt="Graphique d'activité GitHub" loading="lazy" style="width: 100%; max-width: 900px;" />
-                </a>
-            </div>
-            
-            <div class="github-stats-container">
-                <!-- GitHub Stats Card -->
-                <div class="github-card">
-                    <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-                        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=Yannisloum63&show_icons=true&theme=default&hide_border=true&bg_color=f8fafc&title_color=111827&text_color=1e293b&icon_color=2563eb&include_all_commits=true&count_private=true" alt="GitHub Stats de Yannis" loading="lazy" />
-                </a>
-                </div>
-                
-                <!-- Top Languages -->
-                <div class="github-card">
-                    <a href="https://github.com/Yannisloum63?tab=repositories" target="_blank" rel="noopener noreferrer" style="width: 100%;">
-                        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Yannisloum63&layout=compact&theme=default&hide_border=true&bg_color=f8fafc&title_color=111827&text_color=1e293b&langs_count=8" alt="Langages les plus utilisés" loading="lazy" />
-                    </a>
-                </div>
-            </div>
-            
             <!-- GitHub Streak -->
             <div class="github-streak">
                 <a href="https://github.com/Yannisloum63" target="_blank" rel="noopener noreferrer" style="display: block;">
@@ -2456,8 +2382,8 @@
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
                 "about.title": "About Me",
-                "about.paragraph1": "2nd year engineering student at <strong>IMT Atlantique</strong> (equivalent to M1/Bac+4 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
-                "about.paragraph2": "My journey has allowed me to work on concrete projects: an R&D internship at <strong>FORVIA Clarion Electronics</strong> on <strong>radar-camera sensor fusion</strong> for occupant monitoring, a <strong>deep learning</strong> internship at Institut Pascal focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>visual-inertial odometry</strong> module for indoor localization (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
+                "about.paragraph1": "Final-year engineering student at <strong>IMT Atlantique</strong> (equivalent to M2/Bac+5 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
+                "about.paragraph2": "My journey has allowed me to work on concrete projects: an R&D internship at <strong>Faurecia Clarion Electronics</strong> on <strong>radar-camera sensor fusion</strong> for occupant monitoring, a <strong>deep learning</strong> internship at Institut Pascal focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>visual-inertial odometry</strong> module for indoor localization (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
                 "about.highlight.robotics.title": "Advanced Robotics",
                 "about.highlight.robotics.text": "Designing and programming robotic systems",
                 "about.highlight.ai.title": "Artificial Intelligence",
@@ -2478,7 +2404,7 @@
                 "education.imt.degree": "Engineering Degree",
                 "education.imt.school": "IMT Atlantique",
                 "education.imt.period": "2025 - 2027",
-                "education.imt.description": "Generalist engineering training with a specialization in <strong>Robotics and Interaction</strong>. Currently in 2nd year of engineering cycle (equivalent to M1/Bac+4).",
+                "education.imt.description": "Generalist engineering training with a specialization in <strong>Robotics and Interaction</strong>. Currently in final year of the engineering cycle (equivalent to M2/Bac+5).",
                 "education.master1.degree": "Master 1 - Automation & Robotics",
                 "education.master1.school": "Université Clermont Auvergne (UCA), Clermont-Ferrand",
                 "education.master1.period": "2024 - 2025",
@@ -2493,7 +2419,7 @@
                 "education.cpge.description": "Intensive two-year preparatory program for entrance exams to top engineering schools. Focus on mathematics, physics, and engineering sciences.",
                 "experience.title": "Professional Experience",
                 "experience.forvia.title": "R&D Internship - Radar-Camera Sensor Fusion",
-                "experience.forvia.company": "FORVIA Clarion Electronics, Bercy",
+                "experience.forvia.company": "Faurecia Clarion Electronics, Bercy",
                 "experience.forvia.period": "April - August 2026",
                 "experience.forvia.description": "Contributed to a <strong>radar-camera sensor fusion</strong> pipeline for an automotive occupant monitoring system, applying deep learning methods to improve robustness over classical detection approaches.",
                 "experience.pascal.title": "Internship - Deep Learning & Vision",
@@ -2601,8 +2527,8 @@
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
                 "about.title": "À propos de moi",
-                "about.paragraph1": "Élève ingénieur en 2e année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
-                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez <strong>FORVIA Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
+                "about.paragraph1": "Élève ingénieur en dernière année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
+                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez <strong>Faurecia Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
                 "about.highlight.robotics.title": "Robotique Avancée",
                 "about.highlight.robotics.text": "Conception et programmation de systèmes robotiques",
                 "about.highlight.ai.title": "Intelligence Artificielle",
@@ -2623,7 +2549,7 @@
                 "education.imt.degree": "Diplôme d'Ingénieur",
                 "education.imt.school": "IMT Atlantique",
                 "education.imt.period": "2025 - 2027",
-                "education.imt.description": "Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>. Actuellement en 2e année du cycle ingénieur (équivalent M1/Bac+4).",
+                "education.imt.description": "Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>. Actuellement en dernière année du cycle ingénieur (équivalent M2/Bac+5).",
                 "education.master1.degree": "Master 1 - Automatique & Robotique",
                 "education.master1.school": "Université Clermont Auvergne (UCA), Clermont-Ferrand",
                 "education.master1.period": "2024 - 2025",
@@ -2638,7 +2564,7 @@
                 "education.cpge.description": "Formation intensive de deux ans préparant aux concours d'entrée des grandes écoles d'ingénieurs. Focus sur les mathématiques, la physique et les sciences de l'ingénieur.",
                 "experience.title": "Expérience Professionnelle",
                 "experience.forvia.title": "Stage R&D - Fusion Capteurs Radar-Caméra",
-                "experience.forvia.company": "FORVIA Clarion Electronics, Bercy",
+                "experience.forvia.company": "Faurecia Clarion Electronics, Bercy",
                 "experience.forvia.period": "Avril - Août 2026",
                 "experience.forvia.description": "Contribution à un pipeline de <strong>fusion de capteurs radar-caméra</strong> pour un système de surveillance des occupants d'un véhicule automobile, en appliquant des méthodes de deep learning pour améliorer la robustesse par rapport aux approches de détection classiques.",
                 "experience.pascal.title": "Stage - Deep Learning & Vision",
@@ -2888,7 +2814,7 @@
             revealObserver.observe(el);
         });
 
-        document.querySelectorAll('.imt-banner, .cv-section, .github-card, .github-streak, .github-graph').forEach(el => {
+        document.querySelectorAll('.imt-banner, .cv-section, .github-streak').forEach(el => {
             el.classList.add('reveal');
             revealObserver.observe(el);
         });
