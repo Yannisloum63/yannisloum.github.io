@@ -3120,8 +3120,14 @@
                         const content = originalSection.cloneNode(true);
                         const h2 = content.querySelector('h2');
                         if (h2) h2.remove();
-                        
+
                         accordionBody.innerHTML = content.innerHTML;
+
+                        // Le clone hérite des classes reveal/reveal-left/reveal-scale (opacity: 0)
+                        // mais n'est jamais observé par revealObserver : on l'affiche donc directement.
+                        accordionBody.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(el => {
+                            el.classList.add('revealed');
+                        });
                     }
                 });
             }
