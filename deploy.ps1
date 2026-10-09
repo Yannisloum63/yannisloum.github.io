@@ -37,5 +37,5 @@ git push origin main
 Write-Host ""
 Write-Host "✅ Déploiement terminé!" -ForegroundColor Green
 Write-Host "🌐 Votre site sera mis à jour dans 2-5 minutes à:" -ForegroundColor Cyan
-Write-Host "   https://yannisloum63.github.io" -ForegroundColor White
+Write-Host "   https://yannisloum63.github.io/yannisloum.github.io/" -ForegroundColor White
 Write-Host ""
