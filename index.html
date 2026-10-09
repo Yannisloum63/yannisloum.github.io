@@ -2065,6 +2065,7 @@
                         <div>
                             <h3 class="experience-title" data-i18n="experience.forvia.title">Stage Innovation – Fusion multimodale radar-caméra</h3>
                             <p class="experience-company">
+                                <img src="images/logo_forvia.svg" alt="Logo FORVIA" loading="lazy">
                                 <span data-i18n="experience.forvia.company">FORVIA – Faurecia Clarion Electronics, Paris</span>
                             </p>
                         </div>
@@ -2072,10 +2073,21 @@
                     </div>
                     <div class="experience-description">
                         <p data-i18n="experience.forvia.description">
-                            Contribution à un pipeline de <strong>fusion de capteurs radar-caméra</strong> pour un système de
-                            surveillance des occupants d'un véhicule automobile, en appliquant des méthodes de deep learning
-                            pour améliorer la robustesse par rapport aux approches de détection classiques.
+                            Stage dans l'équipe Innovation de Faurecia Clarion Electronics, sur les <strong>systèmes de surveillance des occupants (OMS)</strong>, que la réglementation Euro NCAP rend incontournables. La caméra souffre des occlusions et des variations d'éclairage, et les traitements radar classiques (détecteur <strong>CFAR</strong>) produisent des nuages de points trop épars. L'approche retenue remplace le CFAR par un <strong>réseau de neurones supervisé par LiDAR</strong>, qui génère une grille d'occupation 3D dense : la base d'une fusion radar + caméra pour l'habitacle.
                         </p>
+                        <ul>
+                            <li data-i18n="experience.forvia.task1">Preuve de concept sur le dataset public <strong>RADIal</strong> : reproduction de la méthode <a href="https://arxiv.org/abs/2402.12970" target="_blank" style="color: var(--accent); text-decoration: underline;">« See Further Than CFAR »</a>, avec une <strong>distance de Chamfer de 9 cm</strong> par rapport au LiDAR</li>
+                            <li data-i18n="experience.forvia.task2">Adaptation de la méthode à l'habitacle, sur des données internes FORVIA : radar FMCW intérieur, caméra infrarouge OMS et LiDAR</li>
+                            <li data-i18n="experience.forvia.task3">Préparation des données radar, caméra et LiDAR pour l'apprentissage</li>
+                            <li data-i18n="experience.forvia.task4">Entraînement et évaluation des modèles de deep learning en PyTorch</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-badge" data-i18n="experience.forvia.badge.radar">Radar FMCW</span>
+                            <span class="tech-badge" data-i18n="experience.forvia.badge.camera">Caméra IR</span>
+                            <span class="tech-badge">LiDAR</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">Deep Learning</span>
+                        </div>
                     </div>
                 </div>
                 <div class="experience-item">
@@ -2564,7 +2576,13 @@
                 "experience.forvia.title": "Innovation Internship – Multimodal Radar-Camera Sensor Fusion",
                 "experience.forvia.company": "FORVIA – Faurecia Clarion Electronics, Paris",
                 "experience.forvia.period": "April - August 2026",
-                "experience.forvia.description": "Contributed to a <strong>radar-camera sensor fusion</strong> pipeline for an automotive occupant monitoring system, applying deep learning methods to improve robustness over classical detection approaches.",
+                "experience.forvia.description": "Internship in the Innovation team of Faurecia Clarion Electronics, working on <strong>occupant monitoring systems (OMS)</strong>, which Euro NCAP regulations are making essential. Cameras struggle with occlusions and lighting changes, while classical radar processing (<strong>CFAR</strong> detection) yields point clouds that are too sparse. The approach replaces CFAR with a <strong>LiDAR-supervised neural network</strong> that outputs a dense 3D occupancy grid, laying the groundwork for in-cabin radar + camera fusion.",
+                "experience.forvia.task1": "Proof of concept on the public <strong>RADIal</strong> dataset: reproduced the <a href=\"https://arxiv.org/abs/2402.12970\" target=\"_blank\" style=\"color: var(--accent); text-decoration: underline;\">“See Further Than CFAR”</a> method, reaching a <strong>9 cm Chamfer distance</strong> to LiDAR",
+                "experience.forvia.task2": "Adapted the method to the vehicle cabin on internal FORVIA data: in-cabin FMCW radar, OMS infrared camera and LiDAR",
+                "experience.forvia.task3": "Prepared radar, camera and LiDAR data for training",
+                "experience.forvia.task4": "Trained and evaluated deep learning models in PyTorch",
+                "experience.forvia.badge.radar": "FMCW Radar",
+                "experience.forvia.badge.camera": "IR Camera",
                 "experience.pascal.title": "Internship - Deep Learning & Vision",
                 "experience.pascal.company": "Institut Pascal, Clermont-Ferrand",
                 "experience.pascal.period": "April - August 2025",
@@ -2712,7 +2730,13 @@
                 "experience.forvia.title": "Stage Innovation – Fusion multimodale radar-caméra",
                 "experience.forvia.company": "FORVIA – Faurecia Clarion Electronics, Paris",
                 "experience.forvia.period": "Avril - Août 2026",
-                "experience.forvia.description": "Contribution à un pipeline de <strong>fusion de capteurs radar-caméra</strong> pour un système de surveillance des occupants d'un véhicule automobile, en appliquant des méthodes de deep learning pour améliorer la robustesse par rapport aux approches de détection classiques.",
+                "experience.forvia.description": "Stage dans l'équipe Innovation de Faurecia Clarion Electronics, sur les <strong>systèmes de surveillance des occupants (OMS)</strong>, que la réglementation Euro NCAP rend incontournables. La caméra souffre des occlusions et des variations d'éclairage, et les traitements radar classiques (détecteur <strong>CFAR</strong>) produisent des nuages de points trop épars. L'approche retenue remplace le CFAR par un <strong>réseau de neurones supervisé par LiDAR</strong>, qui génère une grille d'occupation 3D dense : la base d'une fusion radar + caméra pour l'habitacle.",
+                "experience.forvia.task1": "Preuve de concept sur le dataset public <strong>RADIal</strong> : reproduction de la méthode <a href=\"https://arxiv.org/abs/2402.12970\" target=\"_blank\" style=\"color: var(--accent); text-decoration: underline;\">« See Further Than CFAR »</a>, avec une <strong>distance de Chamfer de 9 cm</strong> par rapport au LiDAR",
+                "experience.forvia.task2": "Adaptation de la méthode à l'habitacle, sur des données internes FORVIA : radar FMCW intérieur, caméra infrarouge OMS et LiDAR",
+                "experience.forvia.task3": "Préparation des données radar, caméra et LiDAR pour l'apprentissage",
+                "experience.forvia.task4": "Entraînement et évaluation des modèles de deep learning en PyTorch",
+                "experience.forvia.badge.radar": "Radar FMCW",
+                "experience.forvia.badge.camera": "Caméra IR",
                 "experience.pascal.title": "Stage - Deep Learning & Vision",
                 "experience.pascal.company": "Institut Pascal, Clermont-Ferrand",
                 "experience.pascal.period": "Avril - Août 2025",
