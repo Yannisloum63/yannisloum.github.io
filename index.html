@@ -136,6 +136,25 @@
             z-index: 1;
         }
 
+        .internship-banner {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(90deg, #0e7490, #7e22ce);
+            color: #ffffff;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding: 0.7rem 1rem;
+        }
+
+        .internship-banner a {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            white-space: nowrap;
+        }
+
         .header-eyebrow {
             font-family: var(--font-mono);
             font-size: 0.8rem;
@@ -381,7 +400,7 @@
             left: 0;
             width: 0%;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+            background: linear-gradient(90deg, #0e7490, #7e22ce);
             box-shadow: 0 0 10px var(--glow-cyan);
             z-index: 10000;
             transition: width 0.1s ease-out;
@@ -433,7 +452,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+            background: linear-gradient(90deg, #0e7490, #7e22ce);
             box-shadow: 0 0 8px var(--glow-cyan);
             transition: width 0.3s;
         }
@@ -498,7 +517,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+            background: linear-gradient(90deg, #0e7490, #7e22ce);
             box-shadow: 0 0 10px var(--glow-cyan);
         }
 
@@ -1760,6 +1779,8 @@
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
     
+    <div class="internship-banner" role="note" data-i18n="banner.internship"><strong>Recherche un stage de fin d'études</strong> · avril – octobre 2027 · Robotique, IA &amp; vision par ordinateur · Mobilité : France et international · <a href="#cv">Voir mon CV</a></div>
+
     <header>
         <canvas id="heroCanvas" aria-hidden="true"></canvas>
         <div class="header-content">
@@ -2496,6 +2517,8 @@
         const translations = {
             en: {
                 "meta.title": "Yannis LOUMOUAMOU - Robotics & AI",
+                "meta.description": "Portfolio of Yannis LOUMOUAMOU - Robotics and Artificial Intelligence Engineering student.",
+                "banner.internship": "<strong>Looking for an end-of-studies internship</strong> · April – October 2027 · Robotics, AI &amp; computer vision · Open to relocation in France and abroad · <a href=\"#cv\">See my CV</a>",
                 "meta.description": "Portfolio of Yannis LOUMOUAMOU - Robotics and Artificial Intelligence Engineering student at IMT Atlantique, seeking an end-of-studies internship (April – October 2027).",
                 "header.eyebrow": "Robotics × Artificial Intelligence",
                 "header.subtitle": "Robotics & Artificial Intelligence Engineering Student",
@@ -2644,7 +2667,8 @@
             },
             fr: {
                 "meta.title": "Yannis LOUMOUAMOU - Robotique & IA",
-                "meta.description": "Portfolio de Yannis LOUMOUAMOU - Élève ingénieur en Robotique et Intelligence Artificielle à IMT Atlantique, en recherche d'un stage de fin d'études (avril – octobre 2027).",
+                "meta.description": "Portfolio de Yannis LOUMOUAMOU - Élève Ingénieur en Robotique et Intelligence Artificielle",
+                "banner.internship": "<strong>Recherche un stage de fin d'études</strong> · avril – octobre 2027 · Robotique, IA &amp; vision par ordinateur · Mobilité : France et international · <a href=\"#cv\">Voir mon CV</a>",
                 "header.eyebrow": "Robotique × Intelligence Artificielle",
                 "header.subtitle": "Élève Ingénieur en Robotique & Intelligence Artificielle",
                 "header.description": "Passionné par les technologies de pointe, j'envisage de combiner Robotique, IA et Vision par Ordinateur pour créer des solutions innovantes et intelligentes.",
