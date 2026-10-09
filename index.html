@@ -150,6 +150,18 @@
             backdrop-filter: blur(8px);
         }
 
+        .header-availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            padding: 0.45rem 1.1rem;
+            margin: 0 auto 1.5rem;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1761,6 +1773,7 @@
             <p class="header-description" data-i18n="header.description">
                 Passionné par les technologies de pointe, j'envisage de combiner Robotique, IA et Vision par Ordinateur pour créer des solutions innovantes et intelligentes.
             </p>
+            <p class="header-availability"><i class="fas fa-briefcase"></i> <span data-i18n="header.availability">Recherche un stage de fin d'études · avril – octobre 2027</span></p>
             <div class="header-contact">
                 <a href="mailto:yannisloum@gmail.com" class="header-contact-item" title="Email">
                     <i class="fas fa-envelope"></i>
@@ -1794,7 +1807,7 @@
                 <li><a href="#about" data-i18n="nav.about">À propos</a></li>
                 <li><a href="#education" data-i18n="nav.education">Formation</a></li>
                 <li><a href="#experience" data-i18n="nav.experience">Expérience</a></li>
-                <li><a href="#publication" data-i18n="nav.publication">Publication</a></li>
+                <li><a href="#publication" data-i18n="nav.publication">Publications</a></li>
                 <li><a href="#associative" data-i18n="nav.associative">Associatif</a></li>
                 <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
@@ -1816,14 +1829,14 @@
                 <div class="about-text">
                     <p data-i18n="about.paragraph1">
                         Élève ingénieur en dernière année à <strong>IMT Atlantique</strong>, je me spécialise en
-                        <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe,
+                        <strong>Robotique et Automatique</strong>. Passionné par les technologies de pointe,
                         je combine robotique, intelligence artificielle et vision par ordinateur pour créer des
                         solutions innovantes et intelligentes.
                     </p>
                     <br>
                     <p data-i18n="about.paragraph2">
-                        Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez
-                        <strong>Faurecia Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour
+                        Mon parcours m'a permis de travailler sur des projets concrets : un stage innovation chez
+                        <strong>FORVIA (Faurecia Clarion Electronics)</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour
                         la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal
                         axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module
                         d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une
@@ -1963,17 +1976,17 @@
                 <div class="education-item">
                     <div class="education-header">
                         <div>
-                            <h3 class="education-title" data-i18n="education.imt.degree">Diplôme d'Ingénieur Généraliste</h3>
+                            <h3 class="education-title" data-i18n="education.imt.degree">Diplôme d'Ingénieur – Robotique & Automatique</h3>
                             <p class="education-institution">
                                 <img src="images/logo_IMT_Atlantique.png" alt="Logo IMT Atlantique" loading="lazy">
-                                <span data-i18n="education.imt.school">IMT Atlantique, Nantes (ex Mines Nantes), Nantes</span>
+                                <span data-i18n="education.imt.school">IMT Atlantique, Nantes</span>
                             </p>
                         </div>
                         <span class="education-period" data-i18n="education.imt.period">2025 - 2027</span>
                     </div>
                     <div class="education-description">
                         <p data-i18n="education.imt.description">
-                            Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>.
+                            Formation d'ingénieur avec spécialisation en <strong>Robotique et Automatique</strong>.
                             Actuellement en dernière année du cycle ingénieur (équivalent M2/Bac+5).
                         </p>
                     </div>
@@ -2038,9 +2051,9 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title" data-i18n="experience.forvia.title">Stage R&D - Fusion Capteurs Radar-Caméra</h3>
+                            <h3 class="experience-title" data-i18n="experience.forvia.title">Stage Innovation – Fusion multimodale radar-caméra</h3>
                             <p class="experience-company">
-                                <span data-i18n="experience.forvia.company">Faurecia Clarion Electronics, Bercy</span>
+                                <span data-i18n="experience.forvia.company">FORVIA – Faurecia Clarion Electronics, Paris</span>
                             </p>
                         </div>
                         <span class="experience-period" data-i18n="experience.forvia.period">Avril - Août 2026</span>
@@ -2081,7 +2094,7 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title" data-i18n="experience.irt.title">Projet de Diplomatisation - Localisation Indoor</h3>
+                            <h3 class="experience-title" data-i18n="experience.irt.title">Projet de diplomation – Localisation en intérieur</h3>
                             <p class="experience-company">
                                 <img src="images/collaboration_imt-irtbcom_banner.png" alt="Collaboration IRT B<>COM et IMT Atlantique" loading="lazy">
                                 <span data-i18n="experience.irt.company">IRT B<>COM & IMT Atlantique</span>
@@ -2108,7 +2121,7 @@
         </section>
 
         <section id="publication">
-            <h2 data-i18n="publication.title">Publication</h2>
+            <h2 data-i18n="publication.title">Publications</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-header">
@@ -2126,6 +2139,15 @@
                         <ul>
                             <li><a href="https://hal.science/hal-05657981v1" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline;"><i class="fas fa-file-alt"></i> HAL: hal-05657981</a></li>
                         </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Analysis of SWIR Imaging Detection Performance Under Adverse Environmental Conditions for Autonomous Driving Systems</h3>
+                            <p class="experience-company">IEEE Transactions on Intelligent Vehicles (T-IV)</p>
+                        </div>
+                        <span class="experience-period" data-i18n="publication.tiv.status">En cours d'évaluation</span>
                     </div>
                 </div>
             </div>
@@ -2474,10 +2496,11 @@
         const translations = {
             en: {
                 "meta.title": "Yannis LOUMOUAMOU - Robotics & AI",
-                "meta.description": "Portfolio of Yannis LOUMOUAMOU - Robotics and Artificial Intelligence Engineering student.",
+                "meta.description": "Portfolio of Yannis LOUMOUAMOU - Robotics and Artificial Intelligence Engineering student at IMT Atlantique, seeking an end-of-studies internship (April – October 2027).",
                 "header.eyebrow": "Robotics × Artificial Intelligence",
                 "header.subtitle": "Robotics & Artificial Intelligence Engineering Student",
                 "header.description": "Passionate about cutting-edge technologies, I aim to combine Robotics, AI, and Computer Vision to create innovative and intelligent solutions.",
+                "header.availability": "Seeking an end-of-studies internship · April – October 2027",
                 "cta.projects": "View my projects",
                 "cta.contact": "Get in touch",
                 "nav.about": "About",
@@ -2485,12 +2508,12 @@
                 "nav.experience": "Experience",
                 "nav.skills": "Skills",
                 "nav.projects": "Projects",
-                "nav.publication": "Publication",
+                "nav.publication": "Publications",
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
                 "about.title": "About Me",
-                "about.paragraph1": "Final-year engineering student at <strong>IMT Atlantique</strong> (equivalent to M2/Bac+5 in the French system), I specialize in <strong>Robotics and Interaction</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
-                "about.paragraph2": "My journey has allowed me to work on concrete projects: an R&D internship at <strong>Faurecia Clarion Electronics</strong> on <strong>radar-camera sensor fusion</strong> for occupant monitoring, a <strong>deep learning</strong> internship at Institut Pascal focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>visual-inertial odometry</strong> module for indoor localization (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
+                "about.paragraph1": "Final-year engineering student at <strong>IMT Atlantique</strong> (equivalent to M2/Bac+5 in the French system), I specialize in <strong>Robotics and Automation</strong>. Passionate about cutting-edge technologies, I combine robotics, artificial intelligence, and computer vision to create innovative and intelligent solutions.",
+                "about.paragraph2": "My journey has allowed me to work on concrete projects: an innovation internship at <strong>FORVIA (Faurecia Clarion Electronics)</strong> on <strong>radar-camera sensor fusion</strong> for occupant monitoring, a <strong>deep learning</strong> internship at Institut Pascal focused on adapting YOLOv8 for multimodal detection (RGB/SWIR), developing a <strong>visual-inertial odometry</strong> module for indoor localization (IRT B<>COM), and designing an <strong>autonomous mini car</strong> with parking assistance. My goal is to contribute to the development of technologies that enhance everyday life while pushing the boundaries of innovation.",
                 "about.highlight.robotics.title": "Advanced Robotics",
                 "about.highlight.robotics.text": "Designing and programming robotic systems",
                 "about.highlight.ai.title": "Artificial Intelligence",
@@ -2508,10 +2531,10 @@
                 "skills.programming.title": "Programming",
                 "skills.tools.title": "Tools & CAD",
                 "education.title": "Academic Background",
-                "education.imt.degree": "Engineering Degree",
-                "education.imt.school": "IMT Atlantique",
+                "education.imt.degree": "Engineering Degree – Robotics & Automation",
+                "education.imt.school": "IMT Atlantique, Nantes",
                 "education.imt.period": "2025 - 2027",
-                "education.imt.description": "Generalist engineering training with a specialization in <strong>Robotics and Interaction</strong>. Currently in final year of the engineering cycle (equivalent to M2/Bac+5).",
+                "education.imt.description": "Engineering training with a specialization in <strong>Robotics and Automation</strong>. Currently in final year of the engineering cycle (equivalent to M2/Bac+5).",
                 "education.master1.degree": "Master 1 - Automation & Robotics",
                 "education.master1.school": "Université Clermont Auvergne (UCA), Clermont-Ferrand",
                 "education.master1.period": "2024 - 2025",
@@ -2525,8 +2548,8 @@
                 "education.cpge.period": "2021 - 2022",
                 "education.cpge.description": "Intensive two-year preparatory program for entrance exams to top engineering schools. Focus on mathematics, physics, and engineering sciences.",
                 "experience.title": "Professional Experience",
-                "experience.forvia.title": "R&D Internship - Radar-Camera Sensor Fusion",
-                "experience.forvia.company": "Faurecia Clarion Electronics, Bercy",
+                "experience.forvia.title": "Innovation Internship – Multimodal Radar-Camera Sensor Fusion",
+                "experience.forvia.company": "FORVIA – Faurecia Clarion Electronics, Paris",
                 "experience.forvia.period": "April - August 2026",
                 "experience.forvia.description": "Contributed to a <strong>radar-camera sensor fusion</strong> pipeline for an automotive occupant monitoring system, applying deep learning methods to improve robustness over classical detection approaches.",
                 "experience.pascal.title": "Internship - Deep Learning & Vision",
@@ -2536,18 +2559,19 @@
                 "experience.pascal.task1": "Fine-tuning YOLOv8x, YOLOv8l, YOLOv8n for SWIR road detection",
                 "experience.pascal.task2": "Knowledge distillation to lightweight architectures",
                 "experience.pascal.task3": "Multimodal RGB/SWIR data processing and fusion",
-                "experience.irt.title": "Diplomation Project - Indoor Localization",
+                "experience.irt.title": "Capstone Project – Indoor Localization",
                 "experience.irt.company": "IRT B<>COM & IMT Atlantique",
                 "experience.irt.period": "Sept 2025 - Jan 2026",
-                "experience.irt.description": "Diplomation project in collaboration between <strong>IRT B<>COM and IMT Atlantique</strong>. Development and integration of a <strong>visual-inertial odometry</strong> module through camera and IMU data fusion, based on the <strong>OpenVINS</strong> framework, for precise indoor localization.",
+                "experience.irt.description": "Final-year capstone project in collaboration between <strong>IRT B<>COM and IMT Atlantique</strong>. Development and integration of a <strong>visual-inertial odometry</strong> module through camera and IMU data fusion, based on the <strong>OpenVINS</strong> framework, for precise indoor localization.",
                 "experience.irt.task1": "Camera and IMU data fusion for visual-inertial odometry",
                 "experience.irt.task2": "Integration and calibration under the OpenVINS framework",
                 "experience.irt.task3": "Agile teamwork with Scrum methodology",
                 "experience.irt.task4": "Collaboration within a multi-partner research project",
-                "publication.title": "Publication",
+                "publication.title": "Publications",
                 "publication.rfiap.title": "Experimental study of YOLOv8 fine-tuning for RGB-SWIR multimodal road object detection",
                 "publication.rfiap.venue": "RFIAP 2026 (Reconnaissance des Formes, Image, Apprentissage et Perception)",
                 "publication.rfiap.description": "Co-authored with Institut Pascal (M. Labussière, A. Riffard, R. Mehra), based on my internship work on adapting YOLOv8 for multimodal RGB/SWIR detection.",
+                "publication.tiv.status": "Under review",
                 "projects.title": "Completed Projects",
                 "projects.irt.title": "Vision-Based Indoor Localization",
                 "projects.irt.description": "Development of a vision-based indoor localization device as part of an IRT B<>COM project. Navigation system using computer vision for precise indoor localization.",
@@ -2620,10 +2644,11 @@
             },
             fr: {
                 "meta.title": "Yannis LOUMOUAMOU - Robotique & IA",
-                "meta.description": "Portfolio de Yannis LOUMOUAMOU - Élève Ingénieur en Robotique et Intelligence Artificielle",
+                "meta.description": "Portfolio de Yannis LOUMOUAMOU - Élève ingénieur en Robotique et Intelligence Artificielle à IMT Atlantique, en recherche d'un stage de fin d'études (avril – octobre 2027).",
                 "header.eyebrow": "Robotique × Intelligence Artificielle",
                 "header.subtitle": "Élève Ingénieur en Robotique & Intelligence Artificielle",
                 "header.description": "Passionné par les technologies de pointe, j'envisage de combiner Robotique, IA et Vision par Ordinateur pour créer des solutions innovantes et intelligentes.",
+                "header.availability": "Recherche un stage de fin d'études · avril – octobre 2027",
                 "cta.projects": "Voir mes projets",
                 "cta.contact": "Me contacter",
                 "nav.about": "À propos",
@@ -2631,12 +2656,12 @@
                 "nav.experience": "Expérience",
                 "nav.skills": "Compétences",
                 "nav.projects": "Projets",
-                "nav.publication": "Publication",
+                "nav.publication": "Publications",
                 "nav.cv": "CV",
                 "nav.github": "GitHub",
                 "about.title": "À propos de moi",
-                "about.paragraph1": "Élève ingénieur en dernière année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Interaction</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
-                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets : un stage R&D chez <strong>Faurecia Clarion Electronics</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
+                "about.paragraph1": "Élève ingénieur en dernière année à <strong>IMT Atlantique</strong>, je me spécialise en <strong>Robotique et Automatique</strong>. Passionné par les technologies de pointe, je combine robotique, intelligence artificielle et vision par ordinateur pour créer des solutions innovantes et intelligentes.",
+                "about.paragraph2": "Mon parcours m'a permis de travailler sur des projets concrets : un stage innovation chez <strong>FORVIA (Faurecia Clarion Electronics)</strong> sur la <strong>fusion de capteurs radar-caméra</strong> pour la surveillance des occupants d'un véhicule, un stage en <strong>deep learning</strong> à l'Institut Pascal axé sur l'adaptation de YOLOv8 pour la détection multimodale (RGB/SWIR), le développement d'un module d'<strong>odométrie visuo-inertielle</strong> pour la localisation indoor (IRT B<>COM), et la conception d'une <strong>mini voiture autonome</strong> avec assistance au stationnement. Mon objectif est de contribuer au développement de technologies qui améliorent la vie quotidienne tout en repoussant les limites de l'innovation.",
                 "about.highlight.robotics.title": "Robotique Avancée",
                 "about.highlight.robotics.text": "Conception et programmation de systèmes robotiques",
                 "about.highlight.ai.title": "Intelligence Artificielle",
@@ -2654,10 +2679,10 @@
                 "skills.programming.title": "Programmation",
                 "skills.tools.title": "Outils & CAO",
                 "education.title": "Formation Académique",
-                "education.imt.degree": "Diplôme d'Ingénieur",
-                "education.imt.school": "IMT Atlantique",
+                "education.imt.degree": "Diplôme d'Ingénieur – Robotique & Automatique",
+                "education.imt.school": "IMT Atlantique, Nantes",
                 "education.imt.period": "2025 - 2027",
-                "education.imt.description": "Formation d'ingénieur généraliste avec spécialisation en <strong>Robotique et Interaction</strong>. Actuellement en dernière année du cycle ingénieur (équivalent M2/Bac+5).",
+                "education.imt.description": "Formation d'ingénieur avec spécialisation en <strong>Robotique et Automatique</strong>. Actuellement en dernière année du cycle ingénieur (équivalent M2/Bac+5).",
                 "education.master1.degree": "Master 1 - Automatique & Robotique",
                 "education.master1.school": "Université Clermont Auvergne (UCA), Clermont-Ferrand",
                 "education.master1.period": "2024 - 2025",
@@ -2671,8 +2696,8 @@
                 "education.cpge.period": "2021 - 2022",
                 "education.cpge.description": "Formation intensive de deux ans préparant aux concours d'entrée des grandes écoles d'ingénieurs. Focus sur les mathématiques, la physique et les sciences de l'ingénieur.",
                 "experience.title": "Expérience Professionnelle",
-                "experience.forvia.title": "Stage R&D - Fusion Capteurs Radar-Caméra",
-                "experience.forvia.company": "Faurecia Clarion Electronics, Bercy",
+                "experience.forvia.title": "Stage Innovation – Fusion multimodale radar-caméra",
+                "experience.forvia.company": "FORVIA – Faurecia Clarion Electronics, Paris",
                 "experience.forvia.period": "Avril - Août 2026",
                 "experience.forvia.description": "Contribution à un pipeline de <strong>fusion de capteurs radar-caméra</strong> pour un système de surveillance des occupants d'un véhicule automobile, en appliquant des méthodes de deep learning pour améliorer la robustesse par rapport aux approches de détection classiques.",
                 "experience.pascal.title": "Stage - Deep Learning & Vision",
@@ -2682,7 +2707,7 @@
                 "experience.pascal.task1": "Fine-tuning de YOLOv8x, YOLOv8l, YOLOv8n pour détection routière en SWIR",
                 "experience.pascal.task2": "Knowledge distillation vers architectures légères",
                 "experience.pascal.task3": "Traitement et fusion de données RGB/SWIR multimodales",
-                "experience.irt.title": "Projet de Diplomatisation - Localisation Indoor",
+                "experience.irt.title": "Projet de diplomation – Localisation en intérieur",
                 "experience.irt.company": "IRT B<>COM & IMT Atlantique",
                 "experience.irt.period": "Sept 2025 - Janv 2026",
                 "experience.irt.description": "Projet de diplomation en collaboration entre <strong>IRT B<>COM et IMT Atlantique</strong>. Développement et intégration d'un module d'<strong>odométrie visuo-inertielle</strong> par fusion de données caméra et IMU, basé sur le framework <strong>OpenVINS</strong>, pour la localisation précise en environnement intérieur.",
@@ -2690,10 +2715,11 @@
                 "experience.irt.task2": "Intégration et calibration sous le framework OpenVINS",
                 "experience.irt.task3": "Travail en équipe agile avec méthodologie Scrum",
                 "experience.irt.task4": "Collaboration dans un projet de recherche multipartenaire",
-                "publication.title": "Publication",
+                "publication.title": "Publications",
                 "publication.rfiap.title": "Étude expérimentale du fine-tuning de YOLOv8 pour la détection routière multimodale RGB-SWIR",
                 "publication.rfiap.venue": "RFIAP 2026 (Reconnaissance des Formes, Image, Apprentissage et Perception)",
                 "publication.rfiap.description": "Co-écrit avec l'Institut Pascal (M. Labussière, A. Riffard, R. Mehra), issu de mon stage sur l'adaptation de YOLOv8 pour la détection multimodale RGB/SWIR.",
+                "publication.tiv.status": "En cours d'évaluation",
                 "projects.title": "Projets Réalisés",
                 "projects.irt.title": "Localisation Indoor Basée Vision",
                 "projects.irt.description": "Développement d'un dispositif de localisation indoor basée vision dans le cadre d'un projet IRT B<>COM. Système de navigation utilisant la vision par ordinateur pour la localisation précise en environnement intérieur.",
